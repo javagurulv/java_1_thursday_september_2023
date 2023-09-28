@@ -9,7 +9,6 @@ class LoginService {
 		System.out.println("You can login!");
 	}
 
-
 }
 
 Цель этого задания: обратить ваше внимание на синтаксис

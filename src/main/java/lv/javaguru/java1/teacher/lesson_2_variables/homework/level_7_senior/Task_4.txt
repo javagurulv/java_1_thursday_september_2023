@@ -1,22 +1,23 @@
-Проверьте, соответствует ли структура созданных вами пакетов структуре пакетов в папке teacher.
+Проверьте, соответствует ли структура созданных вами
+пакетов структуре пакетов в папке teacher.
 
 
 student_aleksandrs_padalko.lesson_1
-    daily_challenges_1
-    daily_challenges_2
-    daily_challenges_3
-    daily_challenges_4
-    daily_challenges_5
-    daily_challenges_6
-    daily_challenges_7
+    day_1
+    day_2
+    day_3
+    day_4
+    day_5
+    day_6
+    day_7
 student_aleksandrs_padalko.lesson_2
-    daily_challenges_1
-    daily_challenges_2
-    daily_challenges_3
-    daily_challenges_4
-    daily_challenges_5
-    daily_challenges_6
-    daily_challenges_7
+    day_1
+    day_2
+    day_3
+    day_4
+    day_5
+    day_6
+    day_7
     и так далее ...
 
 Если ваша структура пакетов не соответствует указанной выше
