@@ -1,0 +1,12 @@
+Напишите программу, которая конкатенирует (склеивает) строки.
+
+Набросок решение {
+    String firstName = "Vasja";
+    String lastName = "Pupkin";
+    String result = firstName + lastName;
+    System.out.println();
+}
+
+Цели:
+- познакомиться с типом данных String;
+- познакомиться с операцией конкатенации строк.

@@ -1,0 +1,16 @@
+Арифметические операции над целыми числами - калькулятор.
+Напишите программу, которая выполняет все арифметические операции
+(+/-/*/:) над целыми числами и выводит результаты на консоль.
+
+Набросок решение {
+    int number1 = 100;
+    int number2 = 200;
+    int additionResult = number1 + number2;
+    int subtractionResult = number1 - number2;
+    int multiplicationResult = number1 * number2;
+    int divisionResult = number1 / number2;
+    System.out.println();
+}
+
+Цели:
+- закрепить на практике создание переменных и их использование.

@@ -1,0 +1,34 @@
+Проверьте, соответствует ли структура созданных вами пакетов структуре пакетов в папке teacher.
+
+
+student_aleksandrs_padalko.lesson_1
+    daily_challenges_1
+    daily_challenges_2
+    daily_challenges_3
+    daily_challenges_4
+    daily_challenges_5
+    daily_challenges_6
+    daily_challenges_7
+student_aleksandrs_padalko.lesson_2
+    daily_challenges_1
+    daily_challenges_2
+    daily_challenges_3
+    daily_challenges_4
+    daily_challenges_5
+    daily_challenges_6
+    daily_challenges_7
+    и так далее ...
+
+Если ваша структура пакетов не соответствует указанной выше
+(той которая используется в папке teacher)
+пожалуйста исправьте её и приведите в точное соответствие
+со структурой пакетов в папке teacher.
+
+Это необходимо сделать по следующим причинам:
+- вам будет проще ориентироваться в коде, который вы написали;
+- преподавателю будет удобно проверять написанный
+  вами код (делать code review).
+
+Если структура ваших пакетов не будет соответствовать структуре
+пакетов в папке teacher, преподаватель
+не сможет проверить ваши работы (провести code review).

@@ -1,0 +1,18 @@
+Арифметические операции над вещественными числами - калькулятор.
+Напишите программу, которая выполняет все арифметические операции
+(+/-/*/:) над вещественными числами и выводит результаты на консоль.
+
+Набросок решение {
+    double number1 = 1.5;
+    double number2 = 2.7;
+    double additionResult = number1 + number2;
+    double subtractionResult = number1 - number2;
+    double multiplicationResult = number1 * number2;
+    double divisionResult = number1 / number2;
+    System.out.println();
+}
+
+Цели:
+- познакомиться с типом данных double;
+- познакомиться с операциями над вещественными числами;
+- потренироваться в придумывании названия класса.

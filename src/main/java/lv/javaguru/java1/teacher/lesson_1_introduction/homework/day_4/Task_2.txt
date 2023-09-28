@@ -1,0 +1,8 @@
+Подключите к среде разработки IntelliJ Idea
+JDK версии 19:
+
+SDK: corretto-19 Amazon Corretto version 19.0.2
+Language level: SDK default (19 - No new language features)
+
+
+https://www.jetbrains.com/help/idea/sdk.html#set-up-jdk

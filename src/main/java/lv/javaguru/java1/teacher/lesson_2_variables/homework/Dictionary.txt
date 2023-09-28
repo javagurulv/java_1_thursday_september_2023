@@ -1,0 +1,17 @@
+Тип данных
+Переменная
+CamelCase нотация
+JVM
+int, long, float, double
+String
+Присваивание/изменение значения переменной
+Вывод на консоль
+Ввод данных с консоли
+Git->pull
+Git->add
+Git->commit
+Git->push
+Название переменной
+Название класса
+psvm -> public static void main(String[] args)
+Компилятор

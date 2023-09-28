@@ -1,0 +1,20 @@
+Внутри вашей папки создайте папку (пакет) project_4.
+
+Выберите project_4 в окне Project и вызовите всплывающее меню.
+
+Выберите: New -> Java Class и введите название HelloWorld.
+
+Замените:
+
+public class HelloWorld {
+}
+
+на
+
+public class HelloWorld {
+
+    public static void main(String[] args) {
+        System.out.println("Hello from Java!");
+    }
+
+}
