@@ -1,0 +1,7 @@
+Установить на компьютер среду разработки (Idea Community Edition).
+Установить на компьютер систему контроля версий (Git).
+Клонировать проект с GitHub.
+Установить JDK.
+Настроить Gradle (File -> Settings -> Gradle,
+                  File -> Project Structure -> Project).
+Написать и запустить программу "Hello World!".
