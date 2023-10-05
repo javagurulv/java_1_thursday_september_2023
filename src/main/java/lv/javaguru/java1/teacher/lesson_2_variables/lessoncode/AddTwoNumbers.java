@@ -4,8 +4,8 @@ public class AddTwoNumbers {
 
     public static void main(String[] args) {
         // Zadatj chisla
-        int number1 = 738732;  // -2 (31) - +2(31)
-        int number2 = 777999;
+        int number1 = 67877686;  // -2 (31) - +2(31)
+        int number2 = 897798;
 
         // Slozitj chisla
         int result = number1 + number2;
