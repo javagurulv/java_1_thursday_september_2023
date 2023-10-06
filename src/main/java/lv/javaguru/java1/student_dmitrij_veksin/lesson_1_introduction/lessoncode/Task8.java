@@ -1,6 +1,6 @@
 package lv.javaguru.java1.student_dmitrij_veksin.lesson_1_introduction.lessoncode;
 
-public class task8 {
+public class Task8 {
     public static void main(String[] args) {
         String firsName = "Dmitrij";
         String lastName = "Veksin";
