@@ -1,4 +1,4 @@
-package lv.javaguru.java1.kirils_petrovs.lesson_2_variables.lessoncode;
+package lv.javaguru.java1.student_kirils_petrovs.lesson_2_variables.lessoncode;
 
 public class PrintMyNameAndSurname {
 
