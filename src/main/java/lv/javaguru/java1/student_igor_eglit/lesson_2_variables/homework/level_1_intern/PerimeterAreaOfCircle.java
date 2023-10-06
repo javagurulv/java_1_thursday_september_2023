@@ -5,7 +5,7 @@ import static java.lang.Math.pow;
 
 //импорт объектов класса Math
 //Библиотека классов java.lang.Math содержит константы и методы,
-// нужные для выполнения математических вычислений
+// нужные для выполнения математических вычислений.
 public class PerimeterAreaOfCircle {
     public static void main(String[] args){
 
