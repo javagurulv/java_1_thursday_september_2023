@@ -6,7 +6,7 @@ public class MultiplicationTable {
         System.out.println("Input number");
       int number = in.nextInt();
       //nextInt(): считывает введенное число int
-        int result1 = number * 1;
+        //int result1 = number;
         int result2 = number * 2;
         int result3 = number * 3;
         int result4 = number * 4;
@@ -15,7 +15,7 @@ public class MultiplicationTable {
         int result7 = number * 7;
         int result8 = number * 8;
         int result9 = number * 9;
-        System.out.println(number + " x 1 = " + result1);
+        System.out.println(number + " x 1 = " + number);
         System.out.println(number + " x 2 = " + result2);
         System.out.println(number + " x 3 = " + result3);
         System.out.println(number + " x 4 = " + result4);
