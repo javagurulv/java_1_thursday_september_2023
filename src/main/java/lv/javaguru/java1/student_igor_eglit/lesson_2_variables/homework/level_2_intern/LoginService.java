@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_igor_eglit.lesson_2_variables.homework.level_1_intern;
+package lv.javaguru.java1.student_igor_eglit.lesson_2_variables.homework.level_2_intern;
 
 public class LoginService {
     public static void main(String[] args) {

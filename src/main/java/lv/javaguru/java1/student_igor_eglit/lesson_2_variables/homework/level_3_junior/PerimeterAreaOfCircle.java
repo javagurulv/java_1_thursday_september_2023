@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_igor_eglit.lesson_2_variables.homework.level_1_intern;
+package lv.javaguru.java1.student_igor_eglit.lesson_2_variables.homework.level_3_junior;
 import java.util.Scanner;
 import java.lang.Math;
 import static java.lang.Math.pow;
