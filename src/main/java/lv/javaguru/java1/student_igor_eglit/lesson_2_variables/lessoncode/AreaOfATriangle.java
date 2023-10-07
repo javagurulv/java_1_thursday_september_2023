@@ -12,14 +12,15 @@ public class AreaOfATriangle {
         Scanner in = new Scanner(System.in);
         System.out.println("Введите значения для трех сторон треугольника");
         System.out.print("Triangle side A: ");
-        double TriangleSideA = in.nextInt();
+        double TriangleSideA = in.nextDouble();
         System.out.print("Triangle side B: ");
-        double TriangleSideB = in.nextInt();
+        double TriangleSideB = in.nextDouble();
         System.out.print("Triangle side C: ");
-        double TriangleSideC = in.nextInt();
+        double TriangleSideC = in.nextDouble();
 
         double P = (TriangleSideA + TriangleSideB + TriangleSideC) / 2;
         double Area = Math.sqrt(P*(P-TriangleSideA)*(P-TriangleSideB)*(P-TriangleSideC));
+
         System.out.println("Площадь треугольника составит \n" + Area);
 
         //\n  перевод каретки на следующую строку
