@@ -13,5 +13,3 @@ public class Home_Work_LV_1_Task4 {
 
 
 
-
-
