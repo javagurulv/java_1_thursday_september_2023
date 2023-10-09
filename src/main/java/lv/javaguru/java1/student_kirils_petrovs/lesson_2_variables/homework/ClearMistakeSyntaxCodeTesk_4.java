@@ -1,4 +1,4 @@
-package lv.javaguru.java1.kirils_petrovs.lesson_2_variables.homework;
+package lv.javaguru.java1.Student_kirils_petrovs.lesson_2_variables.homework;
 
 public class ClearMistakeSyntaxCodeTesk {
 
