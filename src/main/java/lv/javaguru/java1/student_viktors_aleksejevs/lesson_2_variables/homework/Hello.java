@@ -1,7 +1,9 @@
 package lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.homework;
 
 import java.util.Scanner;
+
 public class Hello {
+
     public static void main(String[] args) {
 
         System.out.println("What is your name?");
@@ -10,7 +12,6 @@ public class Hello {
         System.out.println("Hello " + Viktors);
 
     }
+
+
 }
-
-
-
