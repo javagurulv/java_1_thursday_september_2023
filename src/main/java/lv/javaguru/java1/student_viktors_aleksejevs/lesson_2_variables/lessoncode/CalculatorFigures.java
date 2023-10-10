@@ -16,6 +16,4 @@ public class CalculatorFigures {
         System.out.println("Result * = " + multiplyResult);
         System.out.println("Result / = " + divisionResult);
     }
-
-
 }
