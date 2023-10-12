@@ -20,8 +20,6 @@ public class UserFullName {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        dfsd
-
         System.out.println("Enter first name: ");
         String firstName = scanner.nextLine();
 
