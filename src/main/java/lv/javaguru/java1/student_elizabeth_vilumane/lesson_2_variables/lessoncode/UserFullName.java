@@ -23,5 +23,6 @@ public class UserFullName {
         System.out.println("Elizabeth");
 
         String lastname = Scaner.nextLine();
+        System.out.println(firstName + "" + lastname);
     }
 }
