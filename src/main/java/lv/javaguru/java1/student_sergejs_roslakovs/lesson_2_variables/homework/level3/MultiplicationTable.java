@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_sergejs_roslakovs.lesson_2_variables.homework;
+package lv.javaguru.java1.student_sergejs_roslakovs.lesson_2_variables.homework.level3;
 
 import java.util.Scanner;
 
