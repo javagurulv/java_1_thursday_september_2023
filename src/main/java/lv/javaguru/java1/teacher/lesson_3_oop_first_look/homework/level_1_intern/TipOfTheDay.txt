@@ -1,0 +1,85 @@
+В языке программирования Java объекты - это экземпляры классов,
+которые представляют конкретные сущности или элементы вашей программы.
+
+Объекты могут иметь свои собственные свойства (переменные) и
+методы (функции), которые определяют их состояние и поведение.
+
+Давайте рассмотрим примеры объектов в языке программирования Java:
+
+1. Пример объекта "Студент":
+   Создадим класс "Студент", который описывает свойства и
+   поведение студента. Объекты этого класса будут представлять
+   конкретных студентов. Каждый студент может иметь свое имя,
+   возраст, номер студенческого билета и другие характеристики.
+   Они также могут иметь методы, такие как "учиться()" или
+   "сдавать экзамены()".
+
+   ```java
+   public class Student {
+       private String name;
+       private int age;
+       private int studentId;
+
+       public Student(String name, int age, int studentId) {
+           this.name = name;
+           this.age = age;
+           this.studentId = studentId;
+       }
+
+       public void study() {
+           System.out.println("I'm studying!");
+       }
+
+       public void takeExams() {
+           System.out.println("Taking exams...");
+       }
+   }
+
+   // Создание объекта "Студент"
+   Student myStudent = new Student("John", 20, 12345);
+
+   // Обращение к свойствам объекта
+   System.out.println(myStudent.name);  // Выводит: John
+   System.out.println(myStudent.age);  // Выводит: 20
+
+   // Вызов методов объекта
+   myStudent.study();  // Выводит: I'm studying!
+   myStudent.takeExams();  // Выводит: Taking exams...
+   ```
+
+2. Пример объекта "Круг":
+   В этом примере создадим класс "Круг", который представляет
+   геометрическую фигуру круг. Объекты этого класса будут иметь
+   радиус и методы для вычисления площади и длины окружности.
+
+   ```java
+   public class Circle {
+       private double radius;
+
+       public Circle(double radius) {
+           this.radius = radius;
+       }
+
+       public double calculateArea() {
+           return Math.PI * radius * radius;
+       }
+
+       public double calculatePerimeter() {
+           return 2 * Math.PI * radius;
+       }
+   }
+
+   // Создание объекта "Круг"
+   Circle myCircle = new Circle(5.0);
+
+   // Вызов методов объекта
+   System.out.println("Площадь круга: " + myCircle.calculateArea());
+   System.out.println("Длина окружности: " + myCircle.calculatePerimeter());
+   ```
+
+В обоих примерах "Студент" и "Круг" - это классы,
+а объекты представляют конкретные экземпляры этих классов.
+Объекты имеют свои уникальные свойства и могут выполнять
+определенные действия с помощью методов. Они позволяют нам
+моделировать и работать с реальными или вымышленными сущностями
+в программе на языке Java.
