@@ -6,5 +6,5 @@ public class Home_Work_LV4_Task1 {
     public static void main(String[] args){
 
         System.out.println("tex print");
-    }
+     }
 }

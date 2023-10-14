@@ -63,5 +63,5 @@ public class Home_Work_LV3_Task1 {
         System.out.println("9*" + z + "=" + product9);
         System.out.println("10*" + z + "=" + product10);
 
-    }
+     }
 }

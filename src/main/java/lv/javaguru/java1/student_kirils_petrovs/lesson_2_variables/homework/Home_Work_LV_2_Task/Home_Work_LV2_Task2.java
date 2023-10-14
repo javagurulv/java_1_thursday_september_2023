@@ -9,6 +9,6 @@ public class Home_Work_LV2_Task2 {
             System.out.println("Hello!");
         }
 
-    }
+     }
 
 }

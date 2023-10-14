@@ -11,7 +11,7 @@ public class Home_Work_LV_6_Task3 {
 
             System.out.println("Code outside the method will not compile!");
 
-        }
+         }
     }
 
 

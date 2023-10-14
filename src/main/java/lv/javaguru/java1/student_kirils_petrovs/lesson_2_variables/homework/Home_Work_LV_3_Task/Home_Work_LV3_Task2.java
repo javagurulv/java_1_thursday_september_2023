@@ -17,5 +17,5 @@ public class Home_Work_LV3_Task2 {
 
         System.out.println("Perimeter is = " + String.format("%.14f", perimeter));
         System.out.println("Area is = " + String.format("%.14f", area));
-    }
+     }
 }

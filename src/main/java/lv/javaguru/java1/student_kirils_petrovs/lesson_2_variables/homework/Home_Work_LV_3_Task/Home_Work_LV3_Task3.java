@@ -43,7 +43,7 @@ public class Home_Work_LV3_Task3 {
         System.out.println("number4"+" "+number4+" "+"/"+" "+"3"+" "+"="+" "+number5);
         System.out.println("Среднее арифметическое:"+number5);
 
-    }
+     }
 }
 
 
