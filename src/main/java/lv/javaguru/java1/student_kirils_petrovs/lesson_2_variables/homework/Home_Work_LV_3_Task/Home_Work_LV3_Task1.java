@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_kirils_petrovs.lesson_2_variables.homework;
+package lv.javaguru.java1.student_kirils_petrovs.lesson_2_variables.homework.Home_Work_LV_3_Task;
 
 
 
@@ -18,11 +18,16 @@ package lv.javaguru.java1.student_kirils_petrovs.lesson_2_variables.homework;
 //8 x 10 = 80
 
 
+import java.util.Scanner;
+
 public class Home_Work_LV3_Task1 {
 
     public static void main(String[] args){
 
-        int z = 8;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ввидите ваше число:");
+
+        int z = scanner.nextInt();
 
         int a = 1;
         int b = 2;
