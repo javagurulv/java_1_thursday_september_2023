@@ -1,0 +1,11 @@
+Тип данных boolean
+true
+false
+if
+else
+AND (&&)
+OR (||)
+NOT (!)
+switch
+вложенный if else
+операторы сравнения (<, <=, >, >=, !=)

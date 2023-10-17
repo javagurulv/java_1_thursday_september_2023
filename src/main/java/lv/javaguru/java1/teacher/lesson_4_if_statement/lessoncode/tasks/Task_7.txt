@@ -1,0 +1,25 @@
+Оценка баллов.
+
+Напишите программу, которая принимает оценку студента
+от 0 до 100 и выводит соответствующую буквенную оценку
+(A для 90-100, B для 80-89, C для 70-79, D для 60-69 и F для 0-59).
+
+Цели:
+- знакомство с операторами if() else if().
+
+Набросок решения:
+{
+    int mark = 7;
+    if ((mark >= 90) && (mark <= 100)) {
+        System.out.println("A");
+    } else if ((mark >= 80) && (mark <= 89)) {
+        System.out.println("B");
+    } else if ((mark >= 70) && (mark <= 79)) {
+         System.out.println("C");
+    } else if ((mark >= 60) && (mark <= 69)) {
+          System.out.println("D");
+    } else if ((mark >= 0) && (mark <= 59)) {
+          System.out.println("F");
+    }
+
+}

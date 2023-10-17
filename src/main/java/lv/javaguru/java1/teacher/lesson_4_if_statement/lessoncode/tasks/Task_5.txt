@@ -1,0 +1,16 @@
+Создайте программу, которая принимает два целых
+числа и выводит на консоль, какое из них больше.
+
+Цели:
+- знакомство с оператором if() else.
+
+Набросок решения:
+{
+    int number1 = 10;
+    int number2 = 22;
+    if (number1 > number2) {
+        System.out.println("Biggest number is " + number1);
+    } else {
+        System.out.println("Biggest number is " + number2);
+    }
+}

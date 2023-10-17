@@ -1,0 +1,21 @@
+Создайте программу, которая запрашивает у пользователя
+целое число и выводит на консоль:
+- Number is negative = true/false
+- Number is zero = true/false
+- Number is positive = true/false.
+
+Цели:
+- знакомство с оператором (<);
+- знакомство с оператором (==);
+- знакомство с оператором (>).
+
+Набросок решения:
+{
+    int number = 10;
+    boolean isNegative = number < 0;
+    boolean isZero = number == 0;
+    boolean isPositive = number > 0;
+    System.out.println("Number is negative = " + isNegative);
+    System.out.println("Number is zero = " + isZero);
+    System.out.println("Number is positive = " + isPositive);
+}

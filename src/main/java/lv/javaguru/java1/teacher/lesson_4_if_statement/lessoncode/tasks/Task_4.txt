@@ -1,0 +1,15 @@
+Создайте программу, которая запрашивает у пользователя
+целое число и выводит на консоль "Number is positive!"
+в том случае если число положительное.
+
+Цели:
+- знакомство с оператором if().
+
+Набросок решения:
+{
+    int number = 10;
+    boolean isPositive = number > 0;
+    if (isPositive) {
+        System.out.println("Number is positive!");
+    }
+}
