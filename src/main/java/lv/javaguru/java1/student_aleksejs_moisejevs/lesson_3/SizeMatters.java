@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_aleksejs_moisejevs.lesson_2_variables.homework;
+package lv.javaguru.java1.student_aleksejs_moisejevs.lesson_3;
 
 public class SizeMatters {
 
