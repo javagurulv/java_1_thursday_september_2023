@@ -1,28 +1,21 @@
 package lv.javaguru.java1.teacher.lesson_3_oop_first_look.lessoncode;
 
-public class BankAccount {
+class BankAccount {
 
-    String owner;
-    int moneyAmount;
+    private String ownerName;
+    private int moneyAmount;
 
-    public BankAccount(String owner, int moneyAmount) {
-        this.owner = owner;
+    public BankAccount(String ownerName, int moneyAmount) {
+        this.ownerName = ownerName;
         this.moneyAmount = moneyAmount;
     }
 
-    public String getOwner() {
-        return owner;
-    }
-
-    public void setOwner(String owner) {
-        this.owner = owner;
+    public String getOwnerName() {
+        return this.ownerName;
     }
 
     public int getMoneyAmount() {
-        return moneyAmount;
+        return this.moneyAmount;
     }
 
-    public void setMoneyAmount(int moneyAmount) {
-        this.moneyAmount = moneyAmount;
-    }
 }
