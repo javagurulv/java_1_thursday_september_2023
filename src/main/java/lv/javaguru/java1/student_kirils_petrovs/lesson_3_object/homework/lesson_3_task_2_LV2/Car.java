@@ -25,8 +25,17 @@ class Car {
     public double getCarWieght() {
         return carWieght;
     }
+
+    public void setCarMake(String carMake) {
+        this.carMake = carMake;
+    }
+
+    public void setCarColor(String carColor) {
+        this.carColor = carColor;
+    }
+
+    public void setCarWieght(double carWieght) {
+        this.carWieght = carWieght;
+    }
 }
-
-
-
-
+//day1
