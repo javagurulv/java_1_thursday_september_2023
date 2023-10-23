@@ -1,6 +1,6 @@
-package lv.javaguru.java1.student_igor_eglit.lesson_3_oop_first_look.homework.lesson_5_middle;
+package lv.javaguru.java1.student_igor_eglit.lesson_3_oop_first_look.homework.level_5_middle;
 
-public class BankAccountDemo {
+class BankAccountDemo {
     public static void main(String[] args) {
         BankAccount bankAccount = new BankAccount("Viktor", "Popov", 100000);
         String ownerFirstName = bankAccount.getOwnerFirstName();

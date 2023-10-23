@@ -14,6 +14,5 @@ public class Bmi {
         System.out.println("Your BMI is " + bmi);
 
 
-
     }
 }
