@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_valera_kovs.lesson_2_variables;
+package lv.javaguru.java1.student_valera_kovs.lesson3;
 
 public class Robot {
 

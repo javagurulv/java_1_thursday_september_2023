@@ -1,6 +1,6 @@
-package lv.javaguru.java1.student_valera_kovs.lesson_2_variables;
+package lv.javaguru.java1.student_valera_kovs.lesson3;
 
-import lv.javaguru.java1.student_valera_kovs.lesson_2_variables.Robot;
+import lv.javaguru.java1.student_valera_kovs.lesson3.Robot;
 
 public class robot2 {
     public static void main(String[] args) {
