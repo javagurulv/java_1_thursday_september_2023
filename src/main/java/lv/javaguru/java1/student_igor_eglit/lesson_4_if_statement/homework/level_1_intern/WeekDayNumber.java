@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_igor_eglit.lesson_4_if_statement;
+package lv.javaguru.java1.student_igor_eglit.lesson_4_if_statement.homework.level_1_intern;
 
 import java.util.Scanner;
 
