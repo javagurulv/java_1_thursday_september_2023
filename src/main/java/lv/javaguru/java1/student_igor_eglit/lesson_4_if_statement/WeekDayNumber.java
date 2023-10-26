@@ -7,7 +7,7 @@ public class WeekDayNumber {
 
         System.out.print("Ввод: ");
         var day = new Scanner(System.in).nextInt();
-        String weekday = "";
+        String weekday;
         if (day == 1) {
             weekday = "Monday";
         } else if (day == 2) {
