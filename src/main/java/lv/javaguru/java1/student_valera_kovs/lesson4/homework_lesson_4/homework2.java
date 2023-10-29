@@ -14,6 +14,7 @@ public class homework2 {
 
         } else {
             System.out.println("Number is negative");
+
         }
     }
         }
