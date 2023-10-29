@@ -18,5 +18,12 @@ public class BookApp {
 
         String title2 = ch2.getChapterTitle();
         String text2 = ch2.getChapterText();
+
+        System.out.println(title);
+        System.out.println(author);
+        System.out.println(year);
+        System.out.println(title1);
+        System.out.println(text1);
+
     }
 }
