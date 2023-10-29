@@ -10,10 +10,10 @@ public class MoneyWithdrawal {
             var commissionResult = (moneyWithdrawal * 3.0) / 100;
             System.out.println("комиссия за использование кредитной карты составит: " + commissionResult);
         } else if (moneyWithdrawal >= 1000 && moneyWithdrawal < 5000) {
-            var commissionResult = (moneyWithdrawal * 4) / 100;
+            var commissionResult = (moneyWithdrawal * 4.0) / 100;
             System.out.println("комиссия за использование кредитной карты составит: " + commissionResult);
         } else if (moneyWithdrawal >= 5000) {
-            var commissionResult = (moneyWithdrawal * 5) / 100;
+            var commissionResult = (moneyWithdrawal * 5.0) / 100;
             System.out.println("комиссия за использование кредитной карты составит: " + commissionResult);
         } else {
             System.out.println("Сумма должна быть больше нуля");
