@@ -4,13 +4,13 @@ class CountryApp {
 
     public static void main(String[] args) {
 
-        Country country1 = new Country("Latvia", "LV", 1000000);
-        Country country2 = new Country("Estonia", "EE", 1200000);
-        Country country3 = new Country("Lithuania", "LT", 1400000);
+        Country lv = new Country("Latvia", "LV", 1000000);
+        Country ee = new Country("Estonia", "EE", 1200000);
+        Country lt = new Country("Lithuania", "LT", 1400000);
 
-        System.out.println("Country =" + country1.getCountryName() + country1.getCountryCode() + country1.getCountryQuantity());
-        System.out.println("Country =" + country2.getCountryName());
-        System.out.println("Country =" + country3.getCountryName());
+        System.out.println("country 1 =" + lv.getCountryName() + " " + lv.getCountryQuantity());
+        System.out.println("country 2 =" + ee.getCountryName() + " " + ee.getCountryQuantity());
+        System.out.println("country 3 =" + lt.getCountryName() + " " + lt.getCountryQuantity());
 
     }
 
