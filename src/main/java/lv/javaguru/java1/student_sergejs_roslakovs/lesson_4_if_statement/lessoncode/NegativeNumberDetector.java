@@ -2,7 +2,7 @@ package lv.javaguru.java1.student_sergejs_roslakovs.lesson_4_if_statement.lesson
 
 import java.util.Scanner;
 
-public class NegativeNumberDetector {
+class NegativeNumberDetector {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number: ");

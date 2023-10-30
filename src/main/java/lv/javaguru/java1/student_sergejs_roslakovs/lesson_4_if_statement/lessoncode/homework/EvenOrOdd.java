@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_sergejs_roslakovs.lesson_4_if_statement;
+package lv.javaguru.java1.student_sergejs_roslakovs.lesson_4_if_statement.lessoncode.homework;
 
 import java.util.Scanner;
 
