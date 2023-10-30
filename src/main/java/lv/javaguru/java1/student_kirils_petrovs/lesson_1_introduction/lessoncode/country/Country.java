@@ -1,10 +1,9 @@
 package lv.javaguru.java1.student_kirils_petrovs.lesson_1_introduction.lessoncode.country;
-class Country {
+
+public class Country {
 
 
-
-
-        private String countryName;
+    private String countryName;
         private String coudeCountr;
         private int population;
 
