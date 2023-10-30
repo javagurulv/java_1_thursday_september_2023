@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_milans_micko.lesson_4;
+package lv.javaguru.java1.student_milans_micko.lesson_4.lessoncode;
 
 import java.util.Scanner;
 
