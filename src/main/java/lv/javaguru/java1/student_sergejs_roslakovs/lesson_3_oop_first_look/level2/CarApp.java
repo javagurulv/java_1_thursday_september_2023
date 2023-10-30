@@ -1,6 +1,6 @@
-package lv.javaguru.java1.student_sergejs_roslakovs.lesson_3_oop_first_look.homework.level2;
+package lv.javaguru.java1.student_sergejs_roslakovs.lesson_3_oop_first_look.level2;
 
-public class CarApp {
+class CarApp {
     public static void main(String[] args) {
         Car car1 = new Car("Toyota", "Red", 25000);
         Car car2 = new Car("Honda", "Blue", 30000);

@@ -1,9 +1,8 @@
-package lv.javaguru.java1.student_milans_micko.lesson_4;
+package lv.javaguru.java1.student_sergejs_roslakovs.lesson_4_if_statement.lessoncode;
 
 import java.util.Scanner;
 
-public class PositiveNumberDetector {
-
+class PositiveNumber {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number: ");
@@ -13,6 +12,11 @@ public class PositiveNumberDetector {
         if (isPositive) {
             System.out.println("Number is positive!");
         }
-        // if (number > 0) { System.out.println("Number is positive!"); } --kak analog reshenija
+
+
     }
+
+
+
+
 }

@@ -1,6 +1,6 @@
-package lv.javaguru.java1.student_sergejs_roslakovs.lesson_3_oop_first_look.homework.level1;
+package lv.javaguru.java1.student_sergejs_roslakovs.lesson_3_oop_first_look.level1;
 
-public class Robot {
+class Robot {
     private String name;
 
     public Robot(String name) {
