@@ -3,7 +3,7 @@ package lv.javaguru.java1.student_sergejs_roslakovs.lesson_3_oop_first_look.home
 
 import java.time.LocalTime;
 
-public class Doctor {
+class Doctor {
     private String firstName;
     private String lastName;
     private String specialty;

@@ -3,7 +3,7 @@ package lv.javaguru.java1.student_sergejs_roslakovs.lesson_3_oop_first_look.home
 
 import java.time.LocalTime;
 
-public class DoctorApp {
+class DoctorApp {
     public static void main(String[] args) {
         Doctor doctor = new Doctor("Sergej", "Roslakov", "Dentist");
 
