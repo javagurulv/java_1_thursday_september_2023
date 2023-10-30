@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_sergejs_roslakovs.lesson_3_oop_first_look.homework.level3;
+package lv.javaguru.java1.student_sergejs_roslakovs.lesson_3_oop_first_look.level3;
 
 class BookApp {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_sergejs_roslakovs.lesson_3_oop_first_look.homework.level7;
+package lv.javaguru.java1.student_sergejs_roslakovs.lesson_3_oop_first_look.level7;
 
 class MusicSpeaker {
     private String model;
