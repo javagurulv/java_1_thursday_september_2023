@@ -2,7 +2,8 @@ package lv.javaguru.java1.student_andrejs_picilevics.lesson_3.homework.level_4;
 
 import java.time.LocalDate;
 
-class DoctorApp {
+class
+DoctorApp {
     public static void main(String[] args) {
 
 
