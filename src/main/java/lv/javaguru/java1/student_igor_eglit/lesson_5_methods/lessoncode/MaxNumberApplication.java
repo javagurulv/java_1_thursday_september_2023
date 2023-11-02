@@ -6,5 +6,7 @@ public class MaxNumberApplication {
         System.out.println("2 and 3 = "+maxNumber.findMax(2,3));
         System.out.println("8 and 3 = "+maxNumber.findMax(8,3));
         System.out.println("8 and 11 = "+maxNumber.findMax(8,11));
+        System.out.println();
+        System.out.println("5, 3, 7 = "+maxNumber.findMax3(5,3,7));
     }
 }
