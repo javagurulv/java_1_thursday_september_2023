@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_sergejs_roslakovs.lesson_5_methods;
+package lv.javaguru.java1.student_sergejs_roslakovs.lesson_5_methods.lessoncode;
 
 
 public class CalculatorApplication {
