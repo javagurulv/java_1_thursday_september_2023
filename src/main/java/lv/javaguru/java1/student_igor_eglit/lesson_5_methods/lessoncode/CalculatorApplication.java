@@ -9,5 +9,11 @@ public class CalculatorApplication {
         System.out.println("6 = "+ calculator.isEven(6));
         System.out.println("7 = "+ calculator.isEven(7));
         System.out.println("8 = "+ calculator.isEven(8));
+        System.out.println();
+        System.out.println("4 = "+ calculator.isOdd(4));
+        System.out.println("5 = "+ calculator.isOdd(5));
+        System.out.println("6 = "+ calculator.isOdd(6));
+        System.out.println("7 = "+ calculator.isOdd(7));
+        System.out.println("8 = "+ calculator.isOdd(8));
     }
 }
