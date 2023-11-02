@@ -1,0 +1,41 @@
+WARNING: плохое название метода класса!
+В названии метода старайтесь использовать глагол, чтобы
+указать на действие которое реализовано внутри метода.
+
+class SalaryTax {
+    public double SalaryTaxCalculator(double salary) {
+        double tax = 0;
+        if (salary < 0) {
+            tax = 0;
+        } else if (salary < 10000) {
+            tax = (salary / 100) * 30;
+        } else if ((salary >= 10000) && (salary < 50000)) {
+            tax = 3000 + (((salary - 10000) / 100) * 40);
+        } else if (salary >= 50000) {
+            tax = 19000 + (((salary - 50000) / 100) * 50);
+        } else {
+            return tax;
+        }
+        return tax;
+    }
+}
+
+Лучше:
+
+class SalaryTax {
+    public double calculateSalary(double salary) {
+        double tax = 0;
+        if (salary < 0) {
+            tax = 0;
+        } else if (salary < 10000) {
+            tax = (salary / 100) * 30;
+        } else if ((salary >= 10000) && (salary < 50000)) {
+            tax = 3000 + (((salary - 10000) / 100) * 40);
+        } else if (salary >= 50000) {
+            tax = 19000 + (((salary - 50000) / 100) * 50);
+        } else {
+            return tax;
+        }
+        return tax;
+    }
+}

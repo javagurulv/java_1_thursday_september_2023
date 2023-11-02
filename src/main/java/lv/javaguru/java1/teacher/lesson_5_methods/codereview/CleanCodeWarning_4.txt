@@ -1,0 +1,60 @@
+WARNING: класс не использует свои свойства для вычислений!
+Есть два понятия: данные и алгоритм.
+Их можно совместить в одном классе или разнести по разным классам.
+Если они совмещены в одном классе, то алгоритм должен использовать
+данные (свойства) класса.
+
+class Scorecard {
+
+    String studentName;
+    String studentLastName;
+    int mathMark;
+    int literatureMark;
+    int geographyMark;
+    int physicsMark;
+
+    public Scorecard(String studentName, String studentLastName, int mathMark, int literatureMark, int geographyMark, int physicsMark) {
+        this.studentName = studentName;
+        this.studentLastName = studentLastName;
+        this.mathMark = mathMark;
+        this.literatureMark = literatureMark;
+        this.geographyMark = geographyMark;
+        this.physicsMark = physicsMark;
+    }
+
+    public double findAverage(int mathMark, int literatureMark, int geographyMark, int physicsMark) {
+        return (mathMark + literatureMark + geographyMark + physicsMark) / (double) 4;
+    }
+
+}
+
+Лучше:
+
+class Scorecard {
+
+    String studentName;
+    String studentLastName;
+    int mathMark;
+    int literatureMark;
+    int geographyMark;
+    int physicsMark;
+
+    public Scorecard(String studentName,
+                     String studentLastName,
+                     int mathMark,
+                     int literatureMark,
+                     int geographyMark,
+                     int physicsMark) {
+        this.studentName = studentName;
+        this.studentLastName = studentLastName;
+        this.mathMark = mathMark;
+        this.literatureMark = literatureMark;
+        this.geographyMark = geographyMark;
+        this.physicsMark = physicsMark;
+    }
+
+    public double findAverageMark() {
+        return (this.mathMark + this.literatureMark + this.geographyMark + this.physicsMark) / (double) 4;
+    }
+
+}

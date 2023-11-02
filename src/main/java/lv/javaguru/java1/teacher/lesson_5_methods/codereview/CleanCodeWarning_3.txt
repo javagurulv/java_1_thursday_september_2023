@@ -1,0 +1,66 @@
+WARNING: класс не реализует целиком всю логику программы!
+Для выполнения кода нужно вызывать много публичных методов класса
+вместо одного. Детали реализации алгоритма не спрятаны внутри
+класса, а видны из вне.
+
+class FizzBuzz {
+
+    public String isDivideByThree(int number) {
+        if (number % 3 == 0) {
+            return "Fizz";
+        } else {
+            return "" + number;
+        }
+    }
+
+    public String isDivideByFive(int number) {
+        if (number % 5 == 0) {
+            return "Buzz";
+        } else {
+            return "" + number;
+        }
+
+    }
+
+    public String isDivideBYThreeAndFive(int number) {
+        if (number % 3 == 0 && number % 5 == 0) {
+            return "FizzBuzz";
+        } else {
+            return "" + number;
+        }
+    }
+
+    public String translateNumber(int number) {
+        if (number % 15 == 0) {
+            return "" + number;
+        }
+        else {
+            return "FizzBuzz";
+        }
+    }
+
+}
+
+Лучше:
+
+class FizzBuzz {
+    public String translate(int number) {
+        if (isDividedBy3(number) && isDividedBy5(number)) {
+            return "Fizz" + "Buzz";
+        } else if (isDividedBy5(number)) {
+            return "Buzz";
+        } else if (isDividedBy3(number)) {
+            return "Fizz";
+        } else {
+            return Integer.toString(number);
+        }
+    }
+
+    private static boolean isDividedBy5(int number) {
+        return number % 5 == 0;
+    }
+
+    private static boolean isDividedBy3(int number) {
+        return number % 3 == 0;
+    }
+}

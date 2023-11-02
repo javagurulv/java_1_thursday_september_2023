@@ -1,0 +1,53 @@
+Попробуйте разбить на методы следующую задачу:
+
+PS: если вы хотите вызывать метод напрямую из main()
+сделайте его static как и сам метод main().
+
+
+import java.util.Scanner;
+
+class StockApp {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите название акции: ");
+        String stockName = scanner.nextLine();
+
+        System.out.print("Введите количество котировок акции: ");
+        int stockPriceCount = Integer.parseInt(scanner.nextLine());
+
+        double[] prices = new double[stockPriceCount];
+
+        for (int i = 0; i < stockPriceCount; i++) {
+            System.out.print("Введите цену акции " + (i + 1) + ": ");
+            prices[i] = Double.parseDouble(scanner.nextLine());
+        }
+
+        double maxPrice = prices[0];
+        for (double price : prices) {
+            if (price > maxPrice) {
+                maxPrice = price;
+            }
+        }
+        System.out.println("Максимальная цена акции " + stockName + ": " + maxPrice);
+
+        double minPrice = prices[0];
+        for (double price : prices) {
+            if (price < minPrice) {
+                minPrice = price;
+            }
+        }
+        System.out.println("Минимальная цена акции " + stockName + ": " + minPrice);
+
+        double totalPrice = 0.0;
+        for (double price : prices) {
+            totalPrice = totalPrice + price;
+        }
+        double averagePrice = totalPrice / prices.length;
+        System.out.println("Средняя цена акции " + stockName + ": " + averagePrice);
+
+        System.out.println("Программа завершена.");
+    }
+
+}

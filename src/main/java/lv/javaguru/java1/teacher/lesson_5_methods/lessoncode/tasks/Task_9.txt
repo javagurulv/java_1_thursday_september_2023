@@ -1,0 +1,39 @@
+Изучите следующие методы, определите что они делают и как.
+
+
+public boolean isPalindrome(String text) {
+    String reversed = new StringBuilder(text).reverse().toString();
+    return text.equalsIgnoreCase(reversed);
+}
+
+
+
+public int sumNumbers(int number) {
+    if (number <= 0) {
+        throw new IllegalArgumentException("Число должно быть положительным");
+    }
+    if (number == 1) {
+        return 1;
+    }
+    return number + sumNumbers(number - 1);
+}
+
+
+public int countDigits(int number) {
+    if (number < 0) {
+        number = -number;  // Учитываем отрицательные числа
+    }
+    if (number < 10) {
+        return 1;
+    }
+    return 1 + countDigits(number / 10);
+}
+
+
+
+import java.util.Random;
+
+public int generateRandomNumber(int min, int max) {
+    Random random = new Random();
+    return random.nextInt(max - min + 1) + min;
+}

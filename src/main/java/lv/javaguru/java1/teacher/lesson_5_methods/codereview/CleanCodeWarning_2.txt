@@ -1,0 +1,35 @@
+WARNING: плохое название методов класса!
+В названии метода старайтесь использовать глагол, чтобы
+указать на действие которое реализовано внутри метода.
+
+Возможность выполнить inline Variable рефакторинг.
+Вместо:
+        double area = Math.PI * radius * radius;
+        return area;
+Используйте:
+        return = Math.PI * radius * radius;
+
+
+class CirclePerimeterAreaCalculator {
+    public double CircleArea(double radius){
+        double area = Math.PI * radius * radius;
+        return area;
+    }
+
+    public double CirclePerimeter(double radius){
+        double perimeter = 2 * Math.PI * radius;
+        return perimeter;
+    }
+}
+
+Лучше:
+
+class CirclePerimeterAreaCalculator {
+    public double calculateArea(double radius){
+        return Math.PI * radius * radius;
+    }
+
+    public double calculatePerimeter(double radius){
+        return 2 * Math.PI * radius;
+    }
+}
