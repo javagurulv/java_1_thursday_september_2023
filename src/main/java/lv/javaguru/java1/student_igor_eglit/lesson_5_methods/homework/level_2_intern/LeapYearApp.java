@@ -8,6 +8,5 @@ public class LeapYearApp {
         System.out.println(findOutLeap.year(1978));
         System.out.println(findOutLeap.year(2001));
         System.out.println(findOutLeap.year(2005));
-
     }
 }
