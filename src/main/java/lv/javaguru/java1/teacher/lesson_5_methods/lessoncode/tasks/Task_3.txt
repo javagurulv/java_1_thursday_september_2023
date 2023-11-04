@@ -6,7 +6,7 @@ PS: подсказка - реализуйте алгоритм
 в классе Calculator в виде метода.
 
 class Calculator {
-    boolean findAverage(int number1, int number2) { ... }
+    int findAverage(int number1, int number2) { ... }
 }
 
 Продемонстрируйте использование алгоритма несколько раз.

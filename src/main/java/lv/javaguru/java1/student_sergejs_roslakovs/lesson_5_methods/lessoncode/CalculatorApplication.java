@@ -1,6 +1,7 @@
-package lv.javaguru.java1.teacher.lesson_5_methods.lessoncode;
+package lv.javaguru.java1.student_sergejs_roslakovs.lesson_5_methods.lessoncode;
 
-class CalculatorApplication {
+
+public class CalculatorApplication {
 
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
@@ -23,5 +24,10 @@ class CalculatorApplication {
         System.out.println("5-4 = " + calculator.findAverageDouble(5, 4));
 
     }
+
+
+
+
+
 
 }

@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_igor_eglit.lesson_5_methods.lessoncode;
+package lv.javaguru.java1.student_andrejs_picilevics.lesson_5.lessoncode;
 
 class Calculator {
     boolean isEven(int number) {
@@ -10,7 +10,7 @@ class Calculator {
     }
 
     boolean isOdd(int number) {
-        if (number % 2 == 1) {
+        if (number % 2 != 0) {
             return true;
         } else {
             return false;
@@ -22,7 +22,10 @@ class Calculator {
         return average;
     }
     double findAverageDouble(int number1, int number2) {
-        double average = (number1 + number2) / 2D;//D является указатель на дабл.
+        double average = (number1 + number2) / 2D;
         return average;
     }
+
+
+
 }
