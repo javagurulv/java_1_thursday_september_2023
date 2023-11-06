@@ -33,7 +33,7 @@ public class MaxNumber {
         }
     }
 
-    int findMaxShorVersion(int number1, int number2) {
+    int findMaxShortVersion(int number1, int number2) {
         return number1 > number2 ? number1 : number2;
     }
 
