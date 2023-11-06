@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_sergejs_roslakovs.lesson_5_methods.homework;
+package lv.javaguru.java1.student_sergejs_roslakovs.lesson_5_methods.homework.level1;
 
 import java.util.Scanner;
 
