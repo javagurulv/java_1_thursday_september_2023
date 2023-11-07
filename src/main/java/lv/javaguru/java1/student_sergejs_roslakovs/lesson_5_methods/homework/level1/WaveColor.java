@@ -1,6 +1,5 @@
 package lv.javaguru.java1.student_sergejs_roslakovs.lesson_5_methods.homework.level1;
 
-import java.util.Scanner;
 
 class WaveColor {
 
@@ -27,21 +26,27 @@ class WaveColor {
         }
     }
     static boolean violet(int wavelenght) {
+
         return wavelenght >= 380 && wavelenght < 449;
     }
     static boolean blue(int wavelenght) {
+
         return wavelenght >= 450 && wavelenght < 494;
     }
     static boolean green(int wavelenght) {
+
         return wavelenght >= 495 && wavelenght < 569;
     }
     static boolean yellow(int wavelenght) {
+
         return wavelenght >= 570 && wavelenght < 589;
     }
     static boolean orange(int wavelenght) {
+
         return wavelenght >= 590 && wavelenght < 619;
     }
     static boolean red(int waveenght) {
+
         return waveenght >= 620 && waveenght < 750;
     }
 
