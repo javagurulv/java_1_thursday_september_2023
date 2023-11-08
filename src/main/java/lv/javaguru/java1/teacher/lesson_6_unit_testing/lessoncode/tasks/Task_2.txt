@@ -1,0 +1,45 @@
+Написать автоматические тесты на класс OddNumber методы:
+
+    boolean isOdd(int number) {...}
+
+Для этого создайте класс OddNumberTest.
+
+Набросок решения:
+
+class OddNumberTest {
+
+    public static void main(String[] args) {
+        OddNumberTest test = new OddNumberTest();
+        test.shouldBeOdd();
+        test.shouldNotBeOdd();
+    }
+
+    public void shouldBeOdd() {
+        OddNumber oddNumber = new OddNumber();
+        boolean isOdd = oddNumber.isEven(11);
+        if (isOdd) {
+            System.out.println("TEST IS OK!");
+        } else {
+            System.out.println("TEST IS FAIL!");
+        }
+    }
+
+    public void shouldNotBeOdd() {
+        OddNumber oddNumber = new OddNumber();
+        boolean notOdd = oddNumber.isEven(12);
+        if (notOdd) {
+            System.out.println("TEST IS OK!");
+        } else {
+            System.out.println("TEST IS FAIL!");
+        }
+    }
+}
+
+
+Цели:
+- познакомиться с написанием автоматических тестов;
+- научиться генерировать тестовые варианты;
+- три шага в написании автоматического теста:
+    подготовка тестовых данных,
+    вызов продакшн кода,
+    проверка результата.

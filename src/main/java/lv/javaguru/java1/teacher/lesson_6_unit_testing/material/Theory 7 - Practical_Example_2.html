@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Пример 2. Пошаговая инструкция создания простых автоматических тестов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+<body>
+<h1>Пример 2. Пошаговая инструкция создания простых автоматических тестов</h1>
+
+<p>
+    Приведём пошаговую инструкцию по созданию автоматических тестов
+    и обнаружению с помощью них ошибок в программном коде.
+</p>
+
+<p>
+    Бизнес предоставил следующие требования к программе:
+    <ul>
+        <li>- если переданное число делится на три возвращайте "Fizz";</li>
+        <li>- если переданное число делится на пять возвращайте "Buzz";</li>
+        <li>- если переданное число делится на три и на пять возвращайте "FizzBuzz";</li>
+        <li>- иначе возвращайте само число в виде строки (подсказка: return "" +  number).</li>
+    </ul>
+</p>
+
+<p>
+    Программист написал следующий код реализующий выше
+    перечисленные бизнес требования:
+</p>
+
+<pre><code>
+
+class FizzBuzz {
+
+    public static final int NUMBER_5 = 5;
+    public static final int NUMBER_3 = 3;
+
+    public String detect(int number) {
+        String result;
+        if (isDividedBy15(number)) result = "fizzBuzz";
+        else if (isDividedBy3(number)) result = "fizz";
+        else if (isDividedBy5(number)) result = "Buzz";
+        else result = "" + number;
+        return result;
+    }
+
+    private boolean isDividedBy15(int number) {
+        return isDividedBy3(number) && isDividedBy5(number);
+    }
+
+    private boolean isDividedBy5(int number) {
+        return number % NUMBER_5 == 0;
+    }
+
+    private boolean isDividedBy3(int number) {
+        return number % NUMBER_3 == 0;
+    }
+
+}
+
+</code></pre>
+
+<p>
+    Наша задача - доказать при помощи автоматических тестов,
+    что указанный выше код работает правильно.
+</p>
+<p>
+    Далее приведено пошаговое описание процесса создания простых (без применения
+    дополнительных библиотек) автоматических тестов.
+</p>
+
+
+<h2>Шаг номер 1: Создание тестового класса</h2>
+<p>Рядом (в том же пакете) с классом <code>FizzBuzz</code> создайте класс с названием <code>FizzBuzzTest</code>.</p>
+
+<h2>Шаг номер 2: Генерирование (придумывание) тестовых данных</h2>
+<p>Тестовые данные можно записать внутри тестового класса в виде многострочного комментария.</p>
+<pre><code>class FizzBuzzTest {
+    /*
+        Test data 1: number = 9, expected result = "Fizz".
+        Test data 2: number = 10, expected result = "Buzz".
+        Test data 3: number = 15, expected result = "FizzBuzz".
+        Test data 4: number = 11, expected result = "11".
+    */
+}</code></pre>
+
+<p>
+    От куда взялись приведённые выше тестовые данные?
+    Они были созданы на основе бизнес требований приведённых в самом начале.
+    Один тестовый набор на одно бизнес правило.
+</p>
+
+<h2>Шаг номер 3: Реализация (кодирование) тестовых сценариев</h2>
+<p>Для написания автоматических тестов нужно в тестовом классе для каждого тестового набора создать отдельный метод.</p>
+<pre><code>
+
+class FizzBuzzTest {
+
+    // 1. num = 9, result = Fizz
+    // 2. num = 10, result = Buzz
+    // 3. num = 15, result = FizzBuzz
+    // 4. num = 11, result = 11
+
+    public void test1() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.detect(9);
+        checkResult(result, "Fizz", "test1");
+    }
+
+    public void test2() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.detect(10);
+        checkResult(result, "Buzz", "test2");
+    }
+
+    public void test3() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.detect(15);
+        checkResult(result, "FizzBuzz", "test3");
+    }
+
+    public void test4() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.detect(11);
+        checkResult(result, "11", "test4");
+    }
+
+    private void checkResult(String realResult,
+                             String expectedResult,
+                             String testScenarioName) {
+        if (realResult.equals(expectedResult)) {
+            System.out.println(testScenarioName + ": TEST OK!");
+        } else {
+            System.out.println(testScenarioName + ": TEST FAIL!" + " ExpectedResult = " + expectedResult + " but real result = " + realResult);
+        }
+    }
+
+}
+</code></pre>
+
+<h2>Шаг номер 4: Запуск тестовых сценариев</h2>
+<p>Для запуска тестовых сценариев, создайте в тестовом классе метод <code>main()</code> и вызовите по порядку все тестовые методы.</p>
+<pre><code>
+class FizzBuzzTest {
+
+    // 1. num = 9, result = Fizz
+    // 2. num = 10, result = Buzz
+    // 3. num = 15, result = FizzBuzz
+    // 4. num = 11, result = 11
+
+    public static void main(String[] args) {
+        FizzBuzzTest test = new FizzBuzzTest();
+        test.test1();
+        test.test2();
+        test.test3();
+        test.test4();
+    }
+
+    public void test1() { ... }
+
+    public void test2() { ... }
+
+    public void test3() { ... }
+
+    public void test4() { ... }
+
+}
+</code></pre>
+
+<h2>Запуск тестов и проверка результатов</h2>
+<p>
+    Для запуска тестовых сценариев, просто выполните метод <code>main()</code>
+    в классе <code>FizzBuzzTest</code>. Результаты выполнения тестов будут выведены в консоли.
+</p>
+
+<p>
+    Тесты 1 и 3 не прошли. Это означает, что есть ошибка или в
+    подготовленных нами тестовых данных либо в тестируемом коде.
+</p>
+
+<p>
+    Проверим подготовленные нами тестовые данные для 1 и 3 теста.
+    С ними всё в порядке. Но тест 1 и 3 не проходят, значит ошибка
+    кроется в программном коде. Программный код выдаёт не правильный
+    результат, если мы подаём на вход число делящееся на 3 или на 3 и на 5 одновременно.
+</p>
+
+<p>
+    В случае деления на 3 программа выдаёт "fizz" вместо "Fizz".
+</p>
+
+<p>
+    В случае деления на 3 и на 5 программа выдаёт "fizzBuzz" вместо "FizzBuzz".
+</p>
+
+<p>
+    Вернёмся в код класса FizzBuzz и исправим ошибки!
+</p>
+
+<pre><code>
+
+class FizzBuzz {
+
+    public static final int NUMBER_5 = 5;
+    public static final int NUMBER_3 = 3;
+
+    public String detect(int number) {
+        String result;
+        if (isDividedBy15(number)) result = "FizzBuzz";
+        else if (isDividedBy3(number)) result = "Fizz";
+        else if (isDividedBy5(number)) result = "Buzz";
+        else result = "" + number;
+        return result;
+    }
+
+    private boolean isDividedBy15(int number) {
+        return isDividedBy3(number) && isDividedBy5(number);
+    }
+
+    private boolean isDividedBy5(int number) {
+        return number % NUMBER_5 == 0;
+    }
+
+    private boolean isDividedBy3(int number) {
+        return number % NUMBER_3 == 0;
+    }
+
+}
+
+</code></pre>
+
+<p>
+    После внесения исправлений в продакшн код вернитесь в тестовый
+    класс и запустите автоматические тесты еще раз. Теперь они должны
+    проходить.
+</p>
+
+<p>
+    В данном примере мы показали как при помощи автоматических
+    тестов можно находить и исправлять в коде бизнес ошибки.
+</p>
+
+</body>
+</html>
