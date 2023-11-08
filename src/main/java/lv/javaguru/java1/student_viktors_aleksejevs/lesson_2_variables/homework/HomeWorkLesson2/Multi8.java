@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.homework;
+package lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.homework.HomeWorkLesson2;
 
 public class Multi8 {
     public static void main(String[] args){
@@ -24,16 +24,16 @@ public class Multi8 {
         int multiplyResult9 = number8 * number9;
         int multiplyResult10 = number8 * number10;
 
-        System.out.println("Result * = " + multiplyResult1);
-        System.out.println("Result * = " + multiplyResult2);
-        System.out.println("Result * = " + multiplyResult3);
-        System.out.println("Result * = " + multiplyResult4);
-        System.out.println("Result * = " + multiplyResult5);
-        System.out.println("Result * = " + multiplyResult6);
-        System.out.println("Result * = " + multiplyResult7);
-        System.out.println("Result * = " + multiplyResult8);
-        System.out.println("Result * = " + multiplyResult9);
-        System.out.println("Result * = " + multiplyResult10);
+        System.out.println("8 * 1 = " + multiplyResult1);
+        System.out.println("8 * 2 = " + multiplyResult2);
+        System.out.println("8 * 3 = " + multiplyResult3);
+        System.out.println("8 * 4 = " + multiplyResult4);
+        System.out.println("8 * 5 = " + multiplyResult5);
+        System.out.println("8 * 6 = " + multiplyResult6);
+        System.out.println("8 * 7 = " + multiplyResult7);
+        System.out.println("8 * 8 = " + multiplyResult8);
+        System.out.println("8 * 9 = " + multiplyResult9);
+        System.out.println("8 * 10 = " + multiplyResult10);
     }
 }
 

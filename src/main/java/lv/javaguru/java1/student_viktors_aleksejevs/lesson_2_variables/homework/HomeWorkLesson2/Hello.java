@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.homework;
+package lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.homework.HomeWorkLesson2;
 
 import java.util.Scanner;
 
