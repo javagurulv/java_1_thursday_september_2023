@@ -7,8 +7,8 @@ class FizzBuzz {
 
     public String detect(int number) {
         String result;
-        if (isDivisibleBy15(number)) result = "fizzBuzz";
-        else if (isDivisibleBy3(number)) result = "fizz";
+        if (isDivisibleBy15(number)) result = "FizzBuzz";
+        else if (isDivisibleBy3(number)) result = "Fizz";
         else if (isDivisibleBy5(number)) result = "Buzz";
         else result = "" + number;
         return result;
