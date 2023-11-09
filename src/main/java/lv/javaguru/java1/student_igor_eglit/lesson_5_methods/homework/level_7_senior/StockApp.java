@@ -5,7 +5,6 @@ import java.util.Scanner;
 class StockApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         System.out.print("Введите название акции: ");
         String stockName = scanner.nextLine();
 
