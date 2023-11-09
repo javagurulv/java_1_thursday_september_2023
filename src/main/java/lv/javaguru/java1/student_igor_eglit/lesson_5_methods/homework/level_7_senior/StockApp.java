@@ -3,29 +3,29 @@ package lv.javaguru.java1.student_igor_eglit.lesson_5_methods.homework.level_7_s
 import java.util.Scanner;
 
 class StockApp {
-        public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-            System.out.print("Введите название акции: ");
-            String stockName = scanner.nextLine();
+        System.out.print("Введите название акции: ");
+        String stockName = scanner.nextLine();
 
-            System.out.print("Введите количество котировок акции: ");
-            int stockPriceCount = Integer.parseInt(scanner.nextLine());
+        System.out.print("Введите количество котировок акции: ");
+        int stockPriceCount = Integer.parseInt(scanner.nextLine());
 
-            var prices = getPrices(stockPriceCount, scanner);
+        var prices = getPrices(stockPriceCount, scanner);
 
-            var maxPrice = getMaxPrice(prices);
-            System.out.println("Максимальная цена акции " + stockName + ": " + maxPrice);
+        var maxPrice = getMaxPrice(prices);
+        System.out.println("Максимальная цена акции " + stockName + ": " + maxPrice);
 
-            var minPrice = getMinPrice(prices);
-            System.out.println("Минимальная цена акции " + stockName + ": " + minPrice);
+        var minPrice = getMinPrice(prices);
+        System.out.println("Минимальная цена акции " + stockName + ": " + minPrice);
 
-            var totalPrice = getTotalPrice(prices);
-            double averagePrice = totalPrice / prices.length;
-            System.out.println("Средняя цена акции " + stockName + ": " + averagePrice);
+        var totalPrice = getTotalPrice(prices);
+        double averagePrice = totalPrice / prices.length;
+        System.out.println("Средняя цена акции " + stockName + ": " + averagePrice);
 
-            System.out.println("Программа завершена.");
-        }
+        System.out.println("Программа завершена.");
+    }
 
     private static double getTotalPrice(double[] prices) {
         double totalPrice = 0.0;
