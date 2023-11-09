@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.homework.BookPirates;
+package lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.homework.HomeWorkLesson3.BookPirates;
 
 public class BookApp {
     public static void main(String[] args) {

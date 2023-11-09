@@ -1,6 +1,4 @@
-package lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.homework.Car;
-
-import lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.homework.Car.Car;
+package lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.homework.HomeWorkLesson3.Car;
 
 public class CarApp {
     public static void main(String[] args) {
