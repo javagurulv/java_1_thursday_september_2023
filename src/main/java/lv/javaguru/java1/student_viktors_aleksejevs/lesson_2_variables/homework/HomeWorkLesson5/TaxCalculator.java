@@ -1,7 +1,7 @@
 package lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.homework.HomeWorkLesson5;
 
 class TaxCalculator {
-    public double taxCalculator(double salary) {
+    public double calculateTax(double salary) {
         double tax = 0;
         if (salary < 0) {
             tax = 0;
