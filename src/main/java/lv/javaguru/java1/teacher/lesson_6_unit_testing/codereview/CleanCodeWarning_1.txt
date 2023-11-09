@@ -1,0 +1,29 @@
+WARNING: переменные для тестовых данных объявлены, но не используются.
+
+    public void test1 () {
+        int a = 10; // input
+        int b= 15;
+        int c = 13;
+        TriangleSquare perimeter = new TriangleSquare();
+        double result = perimeter.calculateSemiPerimeter(10,15,13);
+        checkResult(result, 19, "test1");
+    }
+
+Лучше:
+
+    public void test1 () {
+        int a = 10; // input
+        int b= 15;
+        int c = 13;
+        TriangleSquare perimeter = new TriangleSquare();
+        double result = perimeter.calculateSemiPerimeter(a, b, c);
+        checkResult(result, 19, "test1");
+    }
+
+или:
+
+    public void test1 () {
+        TriangleSquare perimeter = new TriangleSquare();
+        double result = perimeter.calculateSemiPerimeter(10,15,13);
+        checkResult(result, 19, "test1");
+    }
