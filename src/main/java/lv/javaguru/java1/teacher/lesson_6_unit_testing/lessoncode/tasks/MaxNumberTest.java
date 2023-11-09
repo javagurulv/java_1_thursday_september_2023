@@ -12,8 +12,8 @@ class MaxNumberTest {
     // test case 1: 6, 4; expected result 6
     public void testCase1() {
         MaxNumber maxNumber = new MaxNumber();
-        int expectedResult = maxNumber.findMax(6, 4);
-        if (expectedResult == 6) {
+        int result = maxNumber.findMax(6, 4);
+        if (result == 6) {
             System.out.println("Test 1 = OK");
         } else {
             System.out.println("Test 1 = FAIL");
@@ -23,8 +23,8 @@ class MaxNumberTest {
     // test case 2: 2, 10; expected result 10
     public void testCase2() {
         MaxNumber maxNumber = new MaxNumber();
-        int expectedResult = maxNumber.findMax(2, 10);
-        if (expectedResult == 10) {
+        int result = maxNumber.findMax(2, 10);
+        if (result == 10) {
             System.out.println("Test 2 = OK");
         } else {
             System.out.println("Test 2 = FAIL");
@@ -34,8 +34,8 @@ class MaxNumberTest {
     // test case 3: 2, 2; expected result 2
     public void testCase3() {
         MaxNumber maxNumber = new MaxNumber();
-        int expectedResult = maxNumber.findMax(2, 2);
-        if (expectedResult == 2) {
+        int result = maxNumber.findMax(2, 2);
+        if (result == 2) {
             System.out.println("Test 3 = OK");
         } else {
             System.out.println("Test 3 = FAIL");
