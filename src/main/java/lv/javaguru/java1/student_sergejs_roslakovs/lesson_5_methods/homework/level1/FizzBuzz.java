@@ -1,29 +1,23 @@
 package lv.javaguru.java1.student_sergejs_roslakovs.lesson_5_methods.homework.level1;
 
 class FizzBuzz {
-    public String convert(int number) {
+    public void convert(int number) {
         if (number % 3 == 0 && number % 5 == 0) {
-            return "FizzBuzz";
+            //return "FizzBuzz";
+            printString("FizzBuzz");
         } else if (number % 3 == 0) {
-            return "Fizz";
+            printString("Fizz");
         } else if (number % 5 == 0) {
-            return "Buzz";
+            printString("Buzz");
         } else {
-            return "" + number;
+            printString("" + number);
         }
     }
-    boolean isDivisibleByThreeAndFive(int number) {
-        return number % 3 == 0 && number % 5 == 0;
+
+    public void printString(String str){
+        System.out.println(str);
     }
 
-    boolean isDivisibleByThree(int number) {
-        return number % 3 == 0;
-    }
-
-    boolean isDivisibleByFive(int number) {
-        return number % 5 == 0;
-
-        }
     }
 
 
