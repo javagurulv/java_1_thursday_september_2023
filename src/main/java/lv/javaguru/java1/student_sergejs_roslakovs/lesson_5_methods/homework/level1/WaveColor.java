@@ -7,19 +7,19 @@ class WaveColor {
         if (violet(wavelength)) {
             return "Violet";
         }
-        if (blue(wavelength)) {
+        else if (blue(wavelength)) {
             return "Blue";
         }
-        if (green(wavelength)) {
+        else if (green(wavelength)) {
             return "Green";
         }
-        if (yellow(wavelength)) {
+        else if (yellow(wavelength)) {
             return "Yellow";
         }
-        if (orange(wavelength)) {
+        else if (orange(wavelength)) {
             return "Orange";
         }
-        if (red(wavelength)) {
+        else if (red(wavelength)) {
             return "Red";
         } else {
             return "Invisible Light";
