@@ -2,7 +2,7 @@ package lv.javaguru.java1.student_sergejs_roslakovs.lesson_5_methods.homework.le
 
 import java.util.Scanner;
 
-public class WaveColorApp {
+class WaveColorApp {
 
     public static void main(String[] args) {
 

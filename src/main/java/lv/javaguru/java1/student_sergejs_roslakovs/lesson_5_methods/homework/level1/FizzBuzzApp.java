@@ -1,21 +1,22 @@
 package lv.javaguru.java1.student_sergejs_roslakovs.lesson_5_methods.homework.level1;
 
+import java.util.Scanner;
+
 class FizzBuzzApp {
 
     public static void main(String[] args) {
 
         FizzBuzz fizzbuzz = new FizzBuzz();
+        Scanner scanner = new Scanner(System.in);
+        while(true){
+            System.out.println("Enter integer number");
+            int number = scanner.nextInt();
 
-            System.out.println(fizzbuzz.convert(9));
-            System.out.println(fizzbuzz.convert(25));
-            System.out.println(fizzbuzz.convert(15));
-            System.out.println(fizzbuzz.convert(7));
 
 
-            System.out.println(fizzbuzz.isDivisibleByThree(6));
-            System.out.println(fizzbuzz.isDivisibleByFive(10));
-            System.out.println(fizzbuzz.isDivisibleByThreeAndFive(60));
-            System.out.println(fizzbuzz.isDivisibleByThreeAndFive(19));
+        }
+
+
 
 
 

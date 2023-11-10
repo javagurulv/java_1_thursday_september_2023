@@ -1,7 +1,6 @@
-package lv.javaguru.java1.teacher.lesson_6_unit_testing.lessoncode.tasks;
+package lv.javaguru.java1.student_sergejs_roslakovs.lesson_6_unit_testing.lessoncode;
 
 class FizzBuzz {
-
     public static final int NUMBER_5 = 5;
     public static final int NUMBER_3 = 3;
 
@@ -25,5 +24,4 @@ class FizzBuzz {
     private boolean isDivisibleBy3(int number) {
         return number % NUMBER_3 == 0;
     }
-
 }

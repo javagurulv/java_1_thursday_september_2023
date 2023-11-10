@@ -1,4 +1,4 @@
-package lv.javaguru.java1.teacher.lesson_6_unit_testing.lessoncode.tasks;
+package lv.javaguru.java1.student_igor_eglit.lesson_6_unit_testing.lessoncode;
 
 class FizzBuzz {
 
@@ -7,8 +7,8 @@ class FizzBuzz {
 
     public String detect(int number) {
         String result;
-        if (isDivisibleBy15(number)) result = "FizzBuzz";
-        else if (isDivisibleBy3(number)) result = "Fizz";
+        if (isDivisibleBy15(number)) result = "fizzBuzz";
+        else if (isDivisibleBy3(number)) result = "fizz";
         else if (isDivisibleBy5(number)) result = "Buzz";
         else result = "" + number;
         return result;

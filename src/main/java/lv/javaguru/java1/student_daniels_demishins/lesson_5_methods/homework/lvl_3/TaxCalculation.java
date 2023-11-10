@@ -2,15 +2,15 @@ package lv.javaguru.java1.student_daniels_demishins.lesson_5_methods.homework.lv
 
 class TaxCalculation {
 
-    String Tax(int a) {
-        if (a > 0 && a <= 10000) {
-            return a + " euro = nalog 30%";
-        } else if (a >= 10001 && a <= 50000) {
-            return a + " euro = nalog 40%";
-        } else if( a>50001){
-            return a + " euro = nalog 50%";
-        } else{
-            return a + " euro.  Wrong sum!";
-        }
+    double calculate10k30(double numA) {
+        return numA / 100 * 30;
+    }
+
+    double calculate10_50k40(double numB) {
+        return numB / 100 * 40;
+    }
+
+    double calculate50k50(double numC) {
+        return numC / 100 * 50;
     }
 }

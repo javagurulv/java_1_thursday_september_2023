@@ -1,6 +1,6 @@
 package lv.javaguru.java1.student_sergejs_roslakovs.lesson_5_methods.homework.level5;
 
-public class CompoundInterestCalculator {
+class CompoundInterestCalculator {
 
     public static void main(String[] args) {
         CompoundInterest interest = new CompoundInterest();
