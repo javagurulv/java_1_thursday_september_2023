@@ -1,7 +1,6 @@
 package lv.javaguru.java1.student_igor_eglit.lesson_6_unit_testing.homework.level_7_senior;
 
 class CompoundInterestCalculator {
-
     public double compoundInterest(double sum,
                                    double interest,
                                    double years){

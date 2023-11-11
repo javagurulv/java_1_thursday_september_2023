@@ -3,7 +3,7 @@ package lv.javaguru.java1.student_igor_eglit.lesson_6_unit_testing.homework.leve
 /*
 Test Case       Sum      Interest      Years        Expected Result              Actual Result
 id1           10000           4          10        14802.442849183444
-id2             0             4          10             0
+id2             0             4          10           0
 id3           10000           0          10         10000
 id4           10000           4           0         10000
 
