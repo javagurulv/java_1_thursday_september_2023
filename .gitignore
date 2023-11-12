@@ -2,6 +2,9 @@
 *.class
 *.jar
 
+#Mac
+**/.DS_Store
+
 ### Gradle ###
 .gradle
 !gradle/wrapper/gradle-wrapper.jar
