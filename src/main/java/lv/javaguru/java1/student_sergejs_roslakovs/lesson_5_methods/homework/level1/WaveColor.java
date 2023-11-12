@@ -7,19 +7,19 @@ class WaveColor {
         if (violet(wavelength)) {
             return "Violet";
         }
-        if (blue(wavelength)) {
+        else if (blue(wavelength)) {
             return "Blue";
         }
-        if (green(wavelength)) {
+        else if (green(wavelength)) {
             return "Green";
         }
-        if (yellow(wavelength)) {
+        else if (yellow(wavelength)) {
             return "Yellow";
         }
-        if (orange(wavelength)) {
+        else if (orange(wavelength)) {
             return "Orange";
         }
-        if (red(wavelength)) {
+        else if (red(wavelength)) {
             return "Red";
         } else {
             return "Invisible Light";
@@ -27,27 +27,27 @@ class WaveColor {
     }
     static boolean violet(int wavelenght) {
 
-        return wavelenght >= 380 && wavelenght < 449;
+        return wavelenght >= 380 && wavelenght <= 449;
     }
     static boolean blue(int wavelenght) {
 
-        return wavelenght >= 450 && wavelenght < 494;
+        return wavelenght >= 450 && wavelenght <= 494;
     }
     static boolean green(int wavelenght) {
 
-        return wavelenght >= 495 && wavelenght < 569;
+        return wavelenght >= 495 && wavelenght <= 569;
     }
     static boolean yellow(int wavelenght) {
 
-        return wavelenght >= 570 && wavelenght < 589;
+        return wavelenght >= 570 && wavelenght <= 589;
     }
     static boolean orange(int wavelenght) {
 
-        return wavelenght >= 590 && wavelenght < 619;
+        return wavelenght >= 590 && wavelenght <= 619;
     }
     static boolean red(int waveenght) {
 
-        return waveenght >= 620 && waveenght < 750;
+        return waveenght >= 620 && waveenght <= 750;
     }
 
 }

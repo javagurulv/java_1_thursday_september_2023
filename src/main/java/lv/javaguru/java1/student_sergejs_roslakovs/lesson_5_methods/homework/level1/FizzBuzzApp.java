@@ -9,19 +9,15 @@ class FizzBuzzApp {
         FizzBuzz fizzbuzz = new FizzBuzz();
         Scanner scanner = new Scanner(System.in);
         while(true){
-            System.out.println("Enter integer number");
+            System.out.println("Enter integer number (or Zero to exit program): ");
             int number = scanner.nextInt();
-
-
-
+            if (number == 0) break;
+            fizzbuzz.convert(number);
         }
 
-
-
-
-
-        }
     }
+
+}
 
 
 

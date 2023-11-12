@@ -8,18 +8,16 @@ class WaveColorApp {
 
         Scanner scanner = new Scanner((System.in));
         while (true) {
-            System.out.println("Enter the wavelength: ");
+            System.out.println("Enter the wavelength(or Zero to exit program): ");
             int wavelength = scanner.nextInt();
             String color = WaveColor.getColor(wavelength);
             System.out.println(" Color: " + color);
-            if (wavelength < 100) {
+            if (wavelength == 0) {
                 break;
             }
             }
             
 
-            {
-            }
 
         }
     }

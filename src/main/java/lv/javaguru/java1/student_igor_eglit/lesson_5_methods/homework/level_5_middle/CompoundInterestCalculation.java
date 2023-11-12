@@ -4,9 +4,9 @@ public class CompoundInterestCalculation {
     public static void main(String[] args) {
         CompoundInterest deposit = new CompoundInterest();
 
-        double startingDeposit = 1000;
-        double yearRate = 6;
-        double numberOfPeriod = 20;
+        double startingDeposit = 10000;
+        double yearRate = 0;
+        double numberOfPeriod = 10;
 
         System.out.println("Starting deposit = " + startingDeposit);
         System.out.println("Year rate = " + yearRate);
