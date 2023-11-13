@@ -1,6 +1,6 @@
 package lv.javaguru.java1.student_sergejs_roslakovs.lesson_5_methods.homework.level3;
 
-public class ProgressiveTax {
+class ProgressiveTax {
     public static String getTax(double money) {
         if (tax30(money)) {
             return "30% tax money: " + (money * 0.3);

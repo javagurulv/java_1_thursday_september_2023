@@ -2,7 +2,7 @@ package lv.javaguru.java1.student_sergejs_roslakovs.lesson_4_if_statement.homewo
 
 import java.util.Scanner;
 
-public class RomanianNumbers {
+class RomanianNumbers {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
