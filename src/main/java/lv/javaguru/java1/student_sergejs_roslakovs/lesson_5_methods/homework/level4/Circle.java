@@ -1,6 +1,6 @@
 package lv.javaguru.java1.student_sergejs_roslakovs.lesson_5_methods.homework.level4;
 
-public class Circle {
+class Circle {
     private double radius;
 
     public Circle(double radius) {

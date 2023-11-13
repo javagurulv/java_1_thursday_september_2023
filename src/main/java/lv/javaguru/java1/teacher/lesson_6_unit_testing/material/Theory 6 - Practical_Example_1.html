@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Пример 1. Пошаговая инструкция создания простых автоматических тестов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+<body>
+<h1>Пример 1. Пошаговая инструкция создания простых автоматических тестов</h1>
+
+<p>
+    Опишем пошаговую инструкцию по созданию автоматических тестов
+    на простом практическом примере.
+</p>
+
+<p>
+    Дан следующий класс:
+</p>
+
+<pre><code>
+
+    class EvenNumber {
+
+        public boolean isEven(int number) {
+            return number % 2 == 0;
+        }
+
+    }
+</code></pre>
+
+<p>
+    В этом классе реализован алгоритм определения является ли
+    целое число чётным.
+</p>
+<p>
+    Нам нужно написать автоматические тесты на этот класс.
+</p>
+<p>
+    Далее приведена пошаговая инструкция создания простых (без применения
+    дополнительных библиотек) автоматических тестов.
+</p>
+
+
+<h2>Шаг номер 1: Создание тестового класса</h2>
+<p>Рядом (в том же пакете) с классом <code>EvenNumber</code> создайте класс с названием <code>EvenNumberTest</code>.</p>
+
+<h2>Шаг номер 2: Генерирование (придумывание) тестовых данных</h2>
+<p>Тестовые данные можно записать внутри тестового класса в виде многострочного комментария.</p>
+<pre><code>class EvenNumberTest {
+    /*
+        Test data 1: number = 2, expected result = true.
+        Test data 2: number = 3, expected result = false.
+    */
+}</code></pre>
+
+<h2>Шаг номер 3: Реализация (кодирование) тестовых сценариев</h2>
+<p>Для написания автоматических тестов нужно в тестовом классе для каждого тестового набора создать отдельный метод.</p>
+<pre><code>class EvenNumberTest {
+    /*
+        Test data 1: number = 2, expected result = true.
+        Test data 2: number = 3, expected result = false.
+    */
+
+    public void testCase1() {
+        // Подготовка тестовых данных
+        int number = 2;
+
+        // Вызов продакшн кода и получение реального результата
+        EvenNumber evenNumber = new EvenNumber();
+        boolean realResult = evenNumber.isEven(number);
+
+        // Сравнение реального результата с ожидаемым результатом
+        if (realResult == true) {
+            System.out.println("Test case 1 = OK!");
+        } else {
+            System.out.println("Test case 1 = FAIL!");
+        }
+    }
+
+    public void testCase2() {
+        // Подготовка тестовых данных
+        int number = 3;
+
+        // Вызов продакшн кода и получение реального результата
+        EvenNumber evenNumber = new EvenNumber();
+        boolean realResult = evenNumber.isEven(number);
+
+        // Сравнение реального результата с ожидаемым результатом
+        if (realResult == false) {
+            System.out.println("Test case 2 = OK!");
+        } else {
+            System.out.println("Test case 2 = FAIL!");
+        }
+    }
+}</code></pre>
+
+<h2>Шаг номер 4: Запуск тестовых сценариев</h2>
+<p>Для запуска тестовых сценариев, создайте в тестовом классе метод <code>main()</code> и вызовите по порядку все тестовые методы.</p>
+<pre><code>class EvenNumberTest {
+
+    public static void main(String[] args) {
+        EvenNumberTest test = new EvenNumberTest();
+        test.testCase1();
+        test.testCase2();
+    }
+
+    public void testCase1() { ... }
+
+    public void testCase2() { ... }
+
+}</code></pre>
+
+<h2>Запуск тестов и проверка результатов</h2>
+<p>Для запуска тестовых сценариев, просто выполните метод <code>main()</code>
+    в классе <code>EvenNumberTest</code>. Результаты выполнения тестов будут выведены в консоли.</p>
+</body>
+</html>

@@ -1,6 +1,6 @@
 package lv.javaguru.java1.student_sergejs_roslakovs.lesson_5_methods.homework.level2;
 
-public class LeapYearChecker {
+class LeapYearChecker {
 
     public boolean isLeapYear(int year) {
         boolean isLeapYear;

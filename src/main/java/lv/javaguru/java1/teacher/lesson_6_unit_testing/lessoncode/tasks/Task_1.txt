@@ -1,0 +1,45 @@
+Написать автоматические тесты на класс EvenNumber метод:
+
+    boolean isEven(int number) {...}
+
+Для этого создайте класс EvenNumberTest.
+
+Набросок решения:
+
+class EvenNumberTest {
+
+    public static void main(String[] args) {
+        EvenNumberTest test = new EvenNumberTest();
+        test.shouldBeEven();
+        test.shouldNotBeEven();
+    }
+
+    public void shouldBeEven() {
+        EvenNumber evenNumber = new EvenNumber();
+        boolean isEven = evenNumber.isEven(10);
+        if (isEven) {
+            System.out.println("TEST IS OK!");
+        } else {
+            System.out.println("TEST IS FAIL!");
+        }
+    }
+
+    public void shouldNOtBeEven() {
+        EvenNumber evenNumber = new EvenNumber();
+        boolean notEven = evenNumber.isEven(11);
+        if (notEven) {
+            System.out.println("TEST IS OK!");
+        } else {
+            System.out.println("TEST IS FAIL!");
+        }
+    }
+}
+
+
+Цели:
+- познакомиться с написанием автоматических тестов;
+- научиться генерировать тестовые варианты;
+- три шага в написании автоматического теста:
+    подготовка тестовых данных,
+    вызов продакшн кода,
+    проверка результата.

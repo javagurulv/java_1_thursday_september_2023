@@ -2,7 +2,7 @@ package lv.javaguru.java1.student_sergejs_roslakovs.lesson_4_if_statement.homewo
 
 import java.util.Scanner;
 
-public class SeasonDetermination {
+class SeasonDetermination {
     
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
