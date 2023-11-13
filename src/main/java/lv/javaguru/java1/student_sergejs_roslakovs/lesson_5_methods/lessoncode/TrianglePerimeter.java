@@ -1,6 +1,6 @@
 package lv.javaguru.java1.student_sergejs_roslakovs.lesson_5_methods.lessoncode;
 
-public class TrianglePerimeter {
+class TrianglePerimeter {
     // три стороны их длина
     //  p=(a+b+c)÷2
     // S =

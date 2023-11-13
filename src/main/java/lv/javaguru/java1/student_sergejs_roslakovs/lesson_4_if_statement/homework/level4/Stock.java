@@ -1,6 +1,6 @@
 package lv.javaguru.java1.student_sergejs_roslakovs.lesson_4_if_statement.homework.level4;
 
-public class Stock {
+class Stock {
     private String companyName;
     private int currentPrice;
     private int minPrice;

@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_sergejs_roslakovs.lesson_6_unit_testing.homework;
+package lv.javaguru.java1.student_sergejs_roslakovs.lesson_6_unit_testing.homework.level1;
 
 class AverageFinder {
     public double findAverage(int num1, int num2) {

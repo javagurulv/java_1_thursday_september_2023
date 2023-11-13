@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_sergejs_roslakovs.lesson_6_unit_testing.homework;
+package lv.javaguru.java1.student_sergejs_roslakovs.lesson_6_unit_testing.homework.level1;
 
 class AverageFinderTest {
 
@@ -35,9 +35,7 @@ class AverageFinderTest {
 }
 
         /*
-        1.Public class != OK
-          Class = OK
-        2.The result of the average of two numbers
+        The result of the average of two numbers
         can be equals to a fractional number.
         So int != OK
            double = OK
