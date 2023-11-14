@@ -19,6 +19,11 @@ class CalculatorApp {
         System.out.println("4-5 = " + calculator.findAverage(4, 5));
         System.out.println("4-6 = " + calculator.findAverage(4, 6));
         System.out.println("4-8 = " + calculator.findAverage(4, 8));
+
+        System.out.println(" " + calculator.discriminant(4, -5, 2));
+        System.out.println(" " + calculator.isSquareRoot(4, -5, 2));
+        System.out.println(" " + calculator.firstRoot(4, -5, 2));
+        System.out.println(" " + calculator.secondRoot(4, -5, 2));
     }
 
 }

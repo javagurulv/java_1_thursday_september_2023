@@ -2,10 +2,11 @@ package lv.javaguru.java1.student_milans_micko.lesson_6.homework.lvl3;
 
 class SquareEquation {
 
-    //testcase1: a = 4, b = -5, c = 2; expected result:
-    //testcase2: a = 4, b = -5, c = 2; expected result:
-    //testcase3: a = 4, b = -5, c = 2; expected result:
-    //testcase4: a = 4, b = -5, c = 2; expected result:
+    //testcase discriminant: a = 1, b = 5, c = 6; expected result: 1
+    //testcase square root: a = 1, b = 5, c = 6; expected result: true
+    //testcase first root: a = 1, b = 5, c = 6; expected result: -3
+    //testcase second root: a = 1, b = 5, c = 6; expected result: -2
+
 
     public double discriminant(int a, int b, int c) {
         return b * b - 4 * a * c;
