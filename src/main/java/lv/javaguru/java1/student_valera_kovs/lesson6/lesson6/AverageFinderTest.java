@@ -1,6 +1,5 @@
 package lv.javaguru.java1.student_valera_kovs.lesson6.lesson6;
 
-import lv.javaguru.java1.teacher.lesson_6_unit_testing.homework.level_1_intern.AverageFinder;
 
 public class AverageFinderTest {
 
