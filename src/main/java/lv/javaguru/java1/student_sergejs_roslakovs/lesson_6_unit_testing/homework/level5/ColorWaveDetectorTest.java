@@ -22,7 +22,7 @@ public class ColorWaveDetectorTest {
             if (result.equals("Violet")) {
                 System.out.println("Wave: " + 400 + " " + result + " - OK");
             } else {
-                System.out.println("Wave: " + 400 + " " + result + " - OK");
+                System.out.println("Wave: " + 400 + " " + result + " - FAIL");
             }
         }
     public void n2() {
@@ -31,7 +31,7 @@ public class ColorWaveDetectorTest {
         if (result.equals("Blue")) {
             System.out.println("Wave: " + 470 + " " + result + " - OK");
         } else {
-            System.out.println("Wave: " + 470 + " " + result + " - OK");
+            System.out.println("Wave: " + 470 + " " + result + " - FAIL");
         }
     }
     public void n3() {
@@ -40,7 +40,7 @@ public class ColorWaveDetectorTest {
         if (result.equals("Green")) {
             System.out.println("Wave: " + 550 + " " + result + " - OK");
         } else {
-            System.out.println("Wave: " + 550 + " " + result + " - OK");
+            System.out.println("Wave: " + 550 + " " + result + " - FAIL");
         }
     }
     public void n4() {
@@ -49,7 +49,7 @@ public class ColorWaveDetectorTest {
         if (result.equals("Yellow")) {
             System.out.println("Wave: " + 580 + " " + result + " - OK");
         } else {
-            System.out.println("Wave: " + 580 + " " + result + " - OK");
+            System.out.println("Wave: " + 580 + " " + result + " - FAIL");
         }
     }
     public void n5() {
@@ -58,7 +58,7 @@ public class ColorWaveDetectorTest {
         if (result.equals("Orange")) {
             System.out.println("Wave: " + 600 + " " + result + " - OK");
         } else {
-            System.out.println("Wave: " + 600 + " " + result + " - OK");
+            System.out.println("Wave: " + 600 + " " + result + " - FAIL");
         }
     }
     public void n6() {
@@ -67,7 +67,7 @@ public class ColorWaveDetectorTest {
         if (result.equals("Red")) {
             System.out.println("Wave: " + 650 + " " + result + " - OK");
         } else {
-            System.out.println("Wave: " + 650 + " " + result + " - OK");
+            System.out.println("Wave: " + 650 + " " + result + " - FAIL");
         }
     }
     public void n7() {
@@ -76,7 +76,7 @@ public class ColorWaveDetectorTest {
         if (result.equals("Invisible Light")) {
             System.out.println("Wave: " + 100 + " " + result + " - OK");
         } else {
-            System.out.println("Wave: " + 100 + " " + result + " - OK");
+            System.out.println("Wave: " + 100 + " " + result + " - FAIL");
         }
     }
 
