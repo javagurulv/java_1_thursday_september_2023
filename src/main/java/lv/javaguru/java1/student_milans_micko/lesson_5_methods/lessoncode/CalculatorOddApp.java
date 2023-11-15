@@ -1,4 +1,6 @@
-package lv.javaguru.java1.student_milans_micko.lesson_5_methods;
+package lv.javaguru.java1.student_milans_micko.lesson_5_methods.lessoncode;
+
+import lv.javaguru.java1.student_milans_micko.lesson_5_methods.lessoncode.CalculatorOdd;
 
 public class CalculatorOddApp {
 
