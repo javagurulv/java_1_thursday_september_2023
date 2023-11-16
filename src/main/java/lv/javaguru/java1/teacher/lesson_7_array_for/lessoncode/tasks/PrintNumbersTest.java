@@ -9,7 +9,7 @@ class PrintNumbersTest {
 
     public void testCase1() {
         PrintNumbers numbers = new PrintNumbers();
-        String str = numbers.collectNumbersToString();
+        String str = numbers.collectNumbersToString(1, 10);
         if (str.equals("1 2 3 4 5 6 7 8 9 10 ")) {
             System.out.println("TEST OK");
         } else {
