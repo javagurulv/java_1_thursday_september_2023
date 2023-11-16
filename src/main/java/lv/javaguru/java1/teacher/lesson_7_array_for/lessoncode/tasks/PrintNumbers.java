@@ -2,14 +2,17 @@ package lv.javaguru.java1.teacher.lesson_7_array_for.lessoncode.tasks;
 
 class PrintNumbers {
 
-    public void printNumbers() {
+    public String collectNumbersToString() {
         // i = i + 1
         // i++
+        String str = "";
 
         for (int i = 1; i <= 10; i++) {
-            System.out.print(i);
-            System.out.print(" ");
+            str = str + i;
+            str = str + " ";
         }
+
+        return str;
     }
 
 }

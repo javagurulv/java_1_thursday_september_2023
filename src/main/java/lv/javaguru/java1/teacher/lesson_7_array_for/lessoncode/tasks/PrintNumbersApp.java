@@ -4,7 +4,8 @@ class PrintNumbersApp {
 
     public static void main(String[] args) {
         PrintNumbers printNumbers = new PrintNumbers();
-        printNumbers.printNumbers();
+        String str = printNumbers.collectNumbersToString();
+        System.out.println(str);
     }
 
 }
