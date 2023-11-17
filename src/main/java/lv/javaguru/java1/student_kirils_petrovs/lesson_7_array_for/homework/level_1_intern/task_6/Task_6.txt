@@ -1,0 +1,10 @@
+Найдите логическую ошибку в программе и исправить её:
+
+class ArrayLength1 {
+
+    public static void main(String[] args) {
+        int[] numbers = new int[1];
+        System.out.println(numbers[-1]);
+    }
+
+}

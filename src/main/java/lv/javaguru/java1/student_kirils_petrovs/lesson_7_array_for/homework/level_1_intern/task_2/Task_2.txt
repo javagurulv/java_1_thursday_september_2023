@@ -1,0 +1,10 @@
+Найдите ошибку в программе и исправить её:
+(переменная numbers должна ссылаться на массив byte)
+
+class ArrayDefinition2 {
+
+    public static void main(String[] args) {
+        int numbers = new byte[10];
+    }
+
+}
