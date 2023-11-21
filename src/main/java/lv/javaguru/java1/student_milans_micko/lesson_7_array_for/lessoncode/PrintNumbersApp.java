@@ -1,6 +1,4 @@
-package lv.javaguru.java1.student_milans_micko.lesson_7_array_for.lessoncode.lessoncode;
-
-import lv.javaguru.java1.student_milans_micko.lesson_7_array_for.lessoncode.lessoncode.PrintNumbers;
+package lv.javaguru.java1.student_milans_micko.lesson_7_array_for.lessoncode;
 
 class PrintNumbersApp {
 

@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_milans_micko.lesson_7_array_for.lessoncode.lessoncode;
+package lv.javaguru.java1.student_milans_micko.lesson_7_array_for.lessoncode;
 
 public class SumCalculatorApp {
 
