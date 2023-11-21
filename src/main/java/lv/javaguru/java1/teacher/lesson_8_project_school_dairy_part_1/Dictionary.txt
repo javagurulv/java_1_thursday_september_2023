@@ -1,0 +1,10 @@
+List
+ArrayList
+foreach
+list.add()
+list.get()
+list.size()
+list.remove()
+Структура данных
+Модель данных
+Use Cases - варианты использования
