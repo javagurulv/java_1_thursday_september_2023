@@ -26,6 +26,17 @@ public class MarkBusinessLogic {
                 maxMark = mark.getMarkValue();
             }
         }
+
+/*
+        for (Mark mark : marks) {
+            String markSubject = mark.getSubject();
+            if (markSubject.equals(subject)
+                    && mark.getMarkValue() > maxMark) {
+                maxMark = mark.getMarkValue();
+            }
+        }
+*/
+
         return maxMark;
     }
 
