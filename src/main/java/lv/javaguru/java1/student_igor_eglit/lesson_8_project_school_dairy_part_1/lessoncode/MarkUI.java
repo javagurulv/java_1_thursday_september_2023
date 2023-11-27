@@ -9,10 +9,9 @@ public class MarkUI {
 
         mainMenu();
 
-
     }
 
-    private static String mainMenu() {
+    private static void mainMenu() {
         MarkBusinessLogic businessLogic = new MarkBusinessLogic();
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -35,11 +34,10 @@ public class MarkUI {
 
             findAverageSubjectMark(mainMenuItem, scanner, businessLogic);
 
-            findAverageMark(mainMenuItem, scanner, businessLogic);
+            findAverageMark(mainMenuItem, businessLogic);
 
             if (finishProgram(mainMenuItem)) break;
         }
-        return null;
     }
 
 
@@ -83,9 +81,9 @@ public class MarkUI {
         }
     }
 
-    private static void findAverageMark(int mainMenuItem, Scanner scanner, MarkBusinessLogic businessLogic) {
+    private static void findAverageMark(int mainMenuItem, MarkBusinessLogic businessLogic) {
         if (mainMenuItem == 5) {
-            float averageMark = businessLogic.averageMark();
+            float averageMark = businessLogic.findAverageMark();
             System.out.println("Average tabel mark = " + averageMark);
         }
     }
@@ -99,7 +97,6 @@ public class MarkUI {
     }
 
     private static String chooseSubjectMenu(Scanner scanner) {
-
         System.out.println("Select the subject: ");
         System.out.println("1. Math");
         System.out.println("2. Eng");
@@ -110,9 +107,9 @@ public class MarkUI {
             case "1" -> subject = "Math";
             case "2" -> subject = "Eng";
             case "3" -> subject = "Lat";
-            case "4" -> subject = mainMenu();
+            case "4" -> mainMenu();
             default -> {
-                System.out.println("Use number from 1 to 3");
+                System.out.println("Use number from 1 to 4");
                 subject = chooseSubjectMenu(scanner);
             }
         }

@@ -42,35 +42,39 @@ public class MarkBusinessLogic {
         return maxMark;
     }
 
+
     public int findMinMark(String subject) {
-        int minMark = 0;
-        for (Mark mark : marks) {
+        int minMark = 11;
+        for (int i = 0; i < marks.size(); i++) {
+            Mark mark = marks.get(i);
             String markSubject = mark.getSubject();
             if (markSubject.equals(subject)
-                    && mark.getMarkValue() > minMark) {
+                    && mark.getMarkValue() < minMark) {
                 minMark = mark.getMarkValue();
             }
         }
-        return minMark;
+        return minMark != 11 ? minMark : 0;
     }
 
     public float findAverageSubjectMark(String subject) {
         int averageSubjectMark = 0;
+        int subjectElementCount = 0;
         for (Mark mark : marks) {
             String markSubject = mark.getSubject();
             if (markSubject.equals(subject)) {
                 averageSubjectMark += mark.getMarkValue();
+                subjectElementCount++;
             }
         }
-        return averageSubjectMark / marks.size();
+        return subjectElementCount != 0 ? (averageSubjectMark / subjectElementCount) : averageSubjectMark;
     }
 
-    public float averageMark() {
+    public float findAverageMark() {
         int averageMark = 0;
         for (Mark mark : marks) {
             averageMark += mark.getMarkValue();
         }
-        return averageMark / marks.size();
+        return marks.size() != 0 ? averageMark / marks.size() : averageMark;
     }
 
 }
