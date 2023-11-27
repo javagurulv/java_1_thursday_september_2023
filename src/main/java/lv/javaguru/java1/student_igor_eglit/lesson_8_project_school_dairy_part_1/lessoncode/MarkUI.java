@@ -3,7 +3,7 @@ package lv.javaguru.java1.student_igor_eglit.lesson_8_project_school_dairy_part_
 
 import java.util.Scanner;
 
-public class MarkUI {
+class MarkUI {
 
     public static void main(String[] args) {
 

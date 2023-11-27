@@ -1,7 +1,7 @@
 package lv.javaguru.java1.student_igor_eglit.lesson_8_project_school_dairy_part_1.lessoncode;
 
 
-public class MarkBusinessLogicTest {
+class MarkBusinessLogicTest {
 
     public static void main(String[] args) {
         MarkBusinessLogicTest test = new MarkBusinessLogicTest();
