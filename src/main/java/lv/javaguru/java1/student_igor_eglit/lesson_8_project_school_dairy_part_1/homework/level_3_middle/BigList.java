@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-class Duplicates {
+class BigList {
     public static void main(String[] args) {
         List<Integer> list = new ArrayList<>(1_000_000);
         for (int i = 0; i < 1_000_000; i++) {
