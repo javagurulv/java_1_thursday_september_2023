@@ -19,7 +19,7 @@ class IntegerListDemo {
             System.out.println(integer);
         }
         System.out.println("размер списка " + list.size());
-        list.remove(new Integer(6));
+        list.remove(Integer.valueOf(6));
         System.out.println("удаление элемента 6 " + list);
         list.remove(0);
         System.out.println("удаление по индексу 0 " + list);
