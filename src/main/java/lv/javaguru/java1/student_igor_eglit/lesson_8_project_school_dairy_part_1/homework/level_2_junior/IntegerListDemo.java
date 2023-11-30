@@ -2,7 +2,7 @@ package lv.javaguru.java1.student_igor_eglit.lesson_8_project_school_dairy_part_
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
+
 
 class IntegerListDemo {
     public static void main(String[] args) {
@@ -15,11 +15,11 @@ class IntegerListDemo {
         System.out.println("добавление в конец списка " + list);
         list.add(0, 4);
         System.out.println("добавление в начало списка " + list);
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
+        for (Integer integer : list) {
+            System.out.println(integer);
         }
         System.out.println("размер списка " + list.size());
-        list.remove("6");
+        list.remove(new Integer(6));
         System.out.println("удаление элемента 6 " + list);
         list.remove(0);
         System.out.println("удаление по индексу 0 " + list);
