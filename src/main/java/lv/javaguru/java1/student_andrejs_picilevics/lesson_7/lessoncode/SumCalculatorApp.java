@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_andrejs_picilevics.lesson_7;
+package lv.javaguru.java1.student_andrejs_picilevics.lesson_7.lessoncode;
 
 public class SumCalculatorApp {
 
