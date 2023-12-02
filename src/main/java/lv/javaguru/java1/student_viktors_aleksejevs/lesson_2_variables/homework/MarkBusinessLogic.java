@@ -57,8 +57,7 @@ public class MarkBusinessLogic {
         return minMark;
     }
 
-  /*  public int findAverageMark(String subject) {
-      List<Mark> subjectMarks = findAverageMark(subject);
+   /* public int findAverageMark(String subject) {
         int sum = 0;
         for (int i = 0; i < subjectMarks.size(); i++) {
             Mark mark = subjectMarks.get(i);
