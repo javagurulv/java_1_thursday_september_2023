@@ -1,7 +1,5 @@
 package lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.homework;
 
-import lv.javaguru.java1.teacher.lesson_8_project_school_dairy_part_1.lessoncode.tasks.MarkBusinessLogic;
-
 import java.util.Scanner;
 
 public class MarkUI {
