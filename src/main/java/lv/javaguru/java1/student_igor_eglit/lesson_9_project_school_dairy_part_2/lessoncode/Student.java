@@ -30,8 +30,6 @@ class Student {
     public List<Mark> getMarks() {
         return marks;
     }
-    public void removeMark(int markValue){
-        marks.remove(Integer.valueOf(markValue));
-    }
+
 
 }

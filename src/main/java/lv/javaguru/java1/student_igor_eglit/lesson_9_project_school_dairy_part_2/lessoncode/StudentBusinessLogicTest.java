@@ -12,10 +12,12 @@ studentBusinessLogicTest.deleteMarkFromListTest();
         StudentBusinessLogic studentBusinessLogic = new StudentBusinessLogic();
         studentBusinessLogic.addStudent("Ivan", "Ivanov");
         studentBusinessLogic.addMark("Ivan", "Ivanov", "Math", 2);
+        studentBusinessLogic.addMark("Ivan", "Ivanov", "Math", 6);
+        studentBusinessLogic.addMark("Ivan", "Ivanov", "Math", 9);
         List<Mark> marks = studentBusinessLogic.getMarks("Ivan", "Ivanov", "Math");
         if (!marks.isEmpty()) {
             for (Mark mark : marks) {
-                System.out.print(mark.getMarkValue() + " , ");
+                System.out.println(mark.getMarkValue() + " , ");
             }
         }
         studentBusinessLogic.deleteMarkFromList("Ivan", "Ivanov","Math", 2);

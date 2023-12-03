@@ -55,15 +55,7 @@ class StudentUI {
                 String lastName = scanner.nextLine();
                 System.out.println("Enter subject: ");
                 String subject = scanner.nextLine();
-                List<Mark> marks = studentBusinessLogic.getMarks(firstName, lastName, subject);
-                if (!marks.isEmpty()) {
-                    for (Mark mark : marks) {
-                        System.out.print(mark.getMarkValue() + " , ");
-                    }
-                } else {
-                    System.out.println("!!There is no such student, or no marks for this subject!!");
-                }
-                System.out.println();
+                studentBusinessLogic.showMarks(firstName, lastName, subject);
             }
 
             if (menuItem == 5) {
@@ -73,12 +65,7 @@ class StudentUI {
                 String lastName = scanner.nextLine();
                 System.out.println("Enter subject: ");
                 String subject = scanner.nextLine();
-                List<Mark> marks = studentBusinessLogic.getMarks(firstName, lastName, subject);
-                int sum = 0;
-                for (Mark mark : marks) {
-                    sum += mark.getMarkValue();
-                }
-                System.out.println(sum / marks.size());
+                studentBusinessLogic.calculateAverageSubjectMark(firstName, lastName, subject);
 
             }
             if (menuItem == 6) {
@@ -96,7 +83,7 @@ class StudentUI {
                 System.out.println("Enter subject: ");
                 String subject = scanner.nextLine();
                 System.out.println("Enter mark value: ");
-                int markValue = Integer.parseInt(scanner.nextLine());
+                int markValue = scanner.nextInt();
                 studentBusinessLogic.deleteMarkFromList(firstName, lastName, subject, markValue);
             }
 

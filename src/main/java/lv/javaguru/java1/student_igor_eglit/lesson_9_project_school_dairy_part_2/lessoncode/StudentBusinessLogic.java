@@ -2,6 +2,7 @@ package lv.javaguru.java1.student_igor_eglit.lesson_9_project_school_dairy_part_
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 class StudentBusinessLogic {
 
@@ -85,20 +86,45 @@ class StudentBusinessLogic {
         }
     }
 
-    public void deleteMarkFromList(String firstName,
+    public void showMarks(String firstName,
+                          String lastName,
+                          String subject) {
+        List<Mark> marks = getMarks(firstName, lastName, subject);
+        if (!marks.isEmpty()) {
+            for (Mark mark : marks) {
+                System.out.print(mark.getMarkValue() + " , ");
+            }
+        } else {
+            System.out.println("!!There is no such student, or no marks for this subject!!");
+        }
+        System.out.println();
+    }
+
+    public void calculateAverageSubjectMark(String firstName,
+                                            String lastName,
+                                            String subject) {
+        List<Mark> marks = getMarks(firstName, lastName, subject);
+        int sum = 0;
+        for (Mark mark : marks) {
+            sum += mark.getMarkValue();
+        }
+        System.out.println(sum / marks.size());
+    }
+
+    public List<Mark> deleteMarkFromList(String firstName,
                                    String lastName,
                                    String subject,
                                    int markValue) {
         Student student = findStudent(firstName, lastName);
-        if (student != null) {
-            for (Mark mark : student.getMarks()) {
-                if (mark.getSubject().equals(subject)) {
-                    student.removeMark(markValue);
-                    System.out.println(markValue + " was deleted");
-                } else {
-                    System.out.println("No marks for this subject");
-                }
+        assert student != null;
+        List<Mark> marks = student.getMarks();
+        for (Mark mark : student.getMarks()) {
+            if (mark.getSubject().equals(subject)
+                    && Objects.equals(mark.getMarkValue(), markValue)) {
+                marks.remove(Integer.valueOf(markValue));
+                System.out.println(markValue + " was deleted");
             }
         }
+        return marks;
     }
 }
