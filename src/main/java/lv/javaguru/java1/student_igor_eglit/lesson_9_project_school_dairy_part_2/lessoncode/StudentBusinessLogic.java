@@ -89,12 +89,16 @@ class StudentBusinessLogic {
                                    String lastName,
                                    String subject,
                                    int markValue) {
-        List<Mark> markToDelete = getMarks(firstName, lastName, subject);
-        if (!markToDelete.isEmpty()) {
-            markToDelete.remove(Integer.valueOf(markValue));
-            System.out.println(markValue + " was deleted");
-        } else {
-            System.out.println("No marks for this subject");
+        Student student = findStudent(firstName, lastName);
+        if (student != null) {
+            for (Mark mark : student.getMarks()) {
+                if (mark.getSubject().equals(subject)) {
+                    student.removeMark(markValue);
+                    System.out.println(markValue + " was deleted");
+                } else {
+                    System.out.println("No marks for this subject");
+                }
+            }
         }
     }
 }
