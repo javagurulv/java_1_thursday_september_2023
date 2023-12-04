@@ -44,6 +44,4 @@ class ListDataTypes {
             list.add(null);
         }
     }
-
-
 }
