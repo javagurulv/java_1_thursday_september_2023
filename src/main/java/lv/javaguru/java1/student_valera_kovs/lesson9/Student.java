@@ -8,7 +8,6 @@ public class Student {
     private int mark;
 
 
-
     public Student(String firstName, String lastName) {
 
         this.firstName = firstName;
@@ -16,19 +15,30 @@ public class Student {
 
     }
 
-        public String getFirstName() {
-            return firstName;
+    public String getFirstName() {
+        return firstName;
 
-        }
-            public String getLastName() {
-            return lastName;
-
-        }
-    public int getMark() {
-        return mark;
     }
 
-                }
+    public String getLastName() {
+        return lastName;
+
+    }
+
+
+
+    public void addMark(Mark mark) {
+
+    }
+
+    public Mark[] getMarks() {
+
+        return new Mark[0];
+    }
+}
+
+
+
 
 
 
