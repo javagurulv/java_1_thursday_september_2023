@@ -63,10 +63,10 @@ public class MarkBusinessLogic {
             Mark mark = subjectMarks.get(i);
             sum = sum + mark.getMark();
         }
-       return sum / subjectMarks.size();
-*/
-    }
+        return sum / subjectMarks.size();
 
+    }*/
+}
 
 
 

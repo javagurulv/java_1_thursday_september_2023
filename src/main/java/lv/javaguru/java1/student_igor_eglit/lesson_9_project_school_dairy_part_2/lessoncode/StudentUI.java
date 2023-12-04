@@ -83,7 +83,7 @@ class StudentUI {
                 System.out.println("Enter subject: ");
                 String subject = scanner.nextLine();
                 System.out.println("Enter mark value: ");
-                int markValue = scanner.nextInt();
+                int markValue = Integer.parseInt(scanner.nextLine());
                 studentBusinessLogic.deleteMarkFromList(firstName, lastName, subject, markValue);
             }
 

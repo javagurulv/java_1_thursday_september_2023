@@ -1,6 +1,7 @@
 package lv.javaguru.java1.student_igor_eglit.lesson_9_project_school_dairy_part_2.lessoncode;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 
@@ -111,20 +112,34 @@ class StudentBusinessLogic {
         System.out.println(sum / marks.size());
     }
 
-    public List<Mark> deleteMarkFromList(String firstName,
+
+
+    public void deleteMarkFromList(String firstName,
                                    String lastName,
                                    String subject,
                                    int markValue) {
         Student student = findStudent(firstName, lastName);
         assert student != null;
-        List<Mark> marks = student.getMarks();
+        Iterator<Mark> marks = student.getMarks().iterator();
+        while (marks.hasNext()) {
+            Mark nextMark = marks.next();
+            if (nextMark.getSubject().equals(subject)
+            && Objects.equals(nextMark.getMarkValue(),markValue))
+            {
+                marks.remove();
+            }
+        }
+        /*List <Mark> markToDelete= collectStudentMarksBySubject(subject,student);
+        int index = markToDelete.indexOf((markValue));
+        System.out.println(index);*/
+
+        /*List<Mark> marks = student.getMarks();
         for (Mark mark : student.getMarks()) {
             if (mark.getSubject().equals(subject)
                     && Objects.equals(mark.getMarkValue(), markValue)) {
-                marks.remove(Integer.valueOf(markValue));
-                System.out.println(markValue + " was deleted");
+                System.out.println(marks.indexOf());
+
             }
-        }
-        return marks;
+        }*/
     }
 }

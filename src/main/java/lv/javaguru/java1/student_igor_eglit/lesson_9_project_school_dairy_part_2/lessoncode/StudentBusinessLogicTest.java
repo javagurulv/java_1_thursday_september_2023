@@ -20,7 +20,7 @@ studentBusinessLogicTest.deleteMarkFromListTest();
                 System.out.println(mark.getMarkValue() + " , ");
             }
         }
-        studentBusinessLogic.deleteMarkFromList("Ivan", "Ivanov","Math", 2);
+        studentBusinessLogic.deleteMarkFromList("Ivan", "Ivanov","Math", 9);
         if (!marks.isEmpty()) {
             for (Mark mark : marks) {
                 System.out.println(mark.getMarkValue() + " , ");
