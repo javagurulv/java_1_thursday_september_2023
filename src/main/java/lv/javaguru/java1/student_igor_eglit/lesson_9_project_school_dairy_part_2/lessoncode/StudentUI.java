@@ -28,7 +28,7 @@ class StudentUI {
                 String lastName = scanner.nextLine();
                 studentBusinessLogic.addStudent(firstName, lastName);
             }
-            if (menuItem == 2){
+            if (menuItem == 2) {
                 studentBusinessLogic.showStudents();
             }
 
@@ -75,7 +75,7 @@ class StudentUI {
                 String lastName = scanner.nextLine();
                 studentBusinessLogic.deleteStudentFromList(firstName, lastName);
             }
-            if(menuItem == 7){
+            if (menuItem == 7) {
                 System.out.println("Enter student first name: ");
                 String firstName = scanner.nextLine();
                 System.out.println("Enter student last name: ");

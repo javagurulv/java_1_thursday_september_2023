@@ -120,26 +120,26 @@ class StudentBusinessLogic {
                                    int markValue) {
         Student student = findStudent(firstName, lastName);
         assert student != null;
-        Iterator<Mark> marks = student.getMarks().iterator();
+
+        /*Iterator<Mark> marks = student.getMarks().iterator();
         while (marks.hasNext()) {
             Mark nextMark = marks.next();
             if (nextMark.getSubject().equals(subject)
             && Objects.equals(nextMark.getMarkValue(),markValue))
             {
                 marks.remove();
+            }*/
+
+
+        List<Mark> marks = student.getMarks();
+
+        for (int i = 0; i < marks.size();i++){
+            Mark mark=marks.get(i);
+            if(Objects.equals(mark.getSubject(), subject)
+                    && Objects.equals(mark.getMarkValue(), markValue)){
+                marks.remove(i);
+                break;
             }
         }
-        /*List <Mark> markToDelete= collectStudentMarksBySubject(subject,student);
-        int index = markToDelete.indexOf((markValue));
-        System.out.println(index);*/
-
-        /*List<Mark> marks = student.getMarks();
-        for (Mark mark : student.getMarks()) {
-            if (mark.getSubject().equals(subject)
-                    && Objects.equals(mark.getMarkValue(), markValue)) {
-                System.out.println(marks.indexOf());
-
-            }
-        }*/
     }
 }
