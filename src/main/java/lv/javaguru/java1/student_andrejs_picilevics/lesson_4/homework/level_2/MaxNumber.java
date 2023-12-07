@@ -18,4 +18,8 @@ public class MaxNumber {
             System.out.println("Numbers are the same!");
         }
     }
+
+    public int findMax(int i, int i1) {
+        return 0;
+    }
 }
