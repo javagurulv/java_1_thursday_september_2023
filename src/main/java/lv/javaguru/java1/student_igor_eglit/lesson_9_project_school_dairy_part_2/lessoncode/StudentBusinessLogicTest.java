@@ -4,8 +4,8 @@ import java.util.List;
 
 class StudentBusinessLogicTest {
     public static void main(String[] args) {
-StudentBusinessLogicTest studentBusinessLogicTest=new StudentBusinessLogicTest();
-studentBusinessLogicTest.deleteMarkFromListTest();
+        StudentBusinessLogicTest studentBusinessLogicTest = new StudentBusinessLogicTest();
+        studentBusinessLogicTest.deleteMarkFromListTest();
     }
 
     public void deleteMarkFromListTest() {
@@ -15,16 +15,14 @@ studentBusinessLogicTest.deleteMarkFromListTest();
         studentBusinessLogic.addMark("Ivan", "Ivanov", "Math", 6);
         studentBusinessLogic.addMark("Ivan", "Ivanov", "Math", 9);
         List<Mark> marks = studentBusinessLogic.getMarks("Ivan", "Ivanov", "Math");
-        if (!marks.isEmpty()) {
-            for (Mark mark : marks) {
-                System.out.println(mark.getMarkValue() + " , ");
-            }
+        for (Mark mark : marks) {
+            System.out.println(mark.getMarkValue() + " , ");
         }
-        studentBusinessLogic.deleteMarkFromList("Ivan", "Ivanov","Math", 9);
-        if (!marks.isEmpty()) {
-            for (Mark mark : marks) {
-                System.out.println(mark.getMarkValue() + " , ");
-            }
+
+        studentBusinessLogic.deleteMarkFromList("Ivan", "Ivanov", "Math", 9);
+        for (Mark mark : marks) {
+            System.out.println(mark.getMarkValue() + " , ");
         }
     }
 }
+

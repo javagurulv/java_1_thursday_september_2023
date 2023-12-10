@@ -24,5 +24,11 @@ class IntegerListDemo {
         list.remove(0);
         System.out.println("удаление по индексу 0 " + list);
         System.out.println("пустой список? " + list.isEmpty());
+
+        for (Integer element: list)
+        {
+            System.out.print(element+" ");
+        }
+
     }
 }

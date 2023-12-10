@@ -2,8 +2,7 @@ package lv.javaguru.java1.teacher.lesson_10_project_fraud_detector.step_16.fraud
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class FraudRule1Test {
 
@@ -13,7 +12,7 @@ class FraudRule1Test {
     public void shouldBeFraud() {
         Trader trader = new Trader("Pokemon", "Kingston", "Germany");
         Transaction transaction = new Transaction(trader, 100);
-        assertTrue(fraudRule.isFraud(transaction));
+        assertEquals(true, fraudRule.isFraud(transaction));
     }
 
     @Test
