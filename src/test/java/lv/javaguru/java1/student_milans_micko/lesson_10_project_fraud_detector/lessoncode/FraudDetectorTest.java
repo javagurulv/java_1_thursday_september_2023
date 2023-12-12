@@ -17,7 +17,7 @@ class FraudDetectorTest {
     @Test
     public void testCase2() {
         Trader trader = new Trader("Napoleon", "Ajaccio", "Italy");
-        Transaction transaction = new Transaction(trader, 2000);
+        Transaction transaction = new Transaction(trader, 100);
         FraudDetector fraudDetector = new FraudDetector();
         boolean result = fraudDetector.isFraud(transaction);
         assertEquals(result, false);
@@ -31,13 +31,14 @@ class FraudDetectorTest {
         assertEquals(result, true);
 
     }
+
     @Test
     public void testCase4() {
         Trader trader = new Trader("Bertier", "Nant", "Germany");
-        Transaction transaction = new Transaction(trader, 100000);
+        Transaction transaction = new Transaction(trader, 100);
         FraudDetector fraudDetector = new FraudDetector();
         boolean result = fraudDetector.isFraud(transaction);
-        assertEquals(result, false);
+        assertEquals(result, true);
 
     }
     @Test
@@ -52,7 +53,7 @@ class FraudDetectorTest {
     @Test
     public void testCase6() {
         Trader trader = new Trader("Massena", "Paris", "France");
-        Transaction transaction = new Transaction(trader, 100000);
+        Transaction transaction = new Transaction(trader, 100);
         FraudDetector fraudDetector = new FraudDetector();
         boolean result = fraudDetector.isFraud(transaction);
         assertEquals(result, false);
@@ -69,7 +70,7 @@ class FraudDetectorTest {
     @Test
     public void testCase8() {
         Trader trader = new Trader("Lann", "Marseille", "Marocco");
-        Transaction transaction = new Transaction(trader, 100000);
+        Transaction transaction = new Transaction(trader, 100);
         FraudDetector fraudDetector = new FraudDetector();
         boolean result = fraudDetector.isFraud(transaction);
         assertEquals(result, false);

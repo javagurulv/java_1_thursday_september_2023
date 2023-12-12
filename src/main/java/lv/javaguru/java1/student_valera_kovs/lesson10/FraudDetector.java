@@ -15,7 +15,7 @@ public class FraudDetector {
             return true;
         }
 
-        if (trader.getCity().equals("Spain")) {
+        if (trader.getCountry().equals("Spain")) {
             return true;
         }
 

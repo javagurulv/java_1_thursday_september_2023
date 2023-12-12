@@ -6,7 +6,7 @@ class Trader {
     private String city;
     private String country;
 
-    public Trader(String fullName, String city, String Spain) {
+    public Trader(String fullName, String city, String country) {
         this.fullName = fullName;
         this.city = city;
         this.country = country;

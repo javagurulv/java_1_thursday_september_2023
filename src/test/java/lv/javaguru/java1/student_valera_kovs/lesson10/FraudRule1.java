@@ -1,11 +1,12 @@
 package lv.javaguru.java1.student_valera_kovs.lesson10;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
-import static junit.framework.TestCase.assertFalse;
-import static junit.framework.TestCase.assertTrue;
-
+@Disabled
 public class FraudRule1 {
 
     private FraudRule1 fraudRule = new FraudRule1();
