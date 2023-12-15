@@ -6,10 +6,14 @@ class FraudDetector {
         FraudRule1 rule1 = new FraudRule1();
         FraudRule2 rule2 = new FraudRule2();
         FraudRule3 rule3 = new FraudRule3();
+        FraudRule4 rule4 = new FraudRule4();
+        FraudRule5 rule5 = new FraudRule5();
 
         return rule1.isFraud(transaction)
                 || rule2.isFraud(transaction)
-                || rule3.isFraud(transaction);
+                || rule3.isFraud(transaction)
+                || rule4.isFraud(transaction)
+                || rule5.isFraud(transaction);
 
 
 

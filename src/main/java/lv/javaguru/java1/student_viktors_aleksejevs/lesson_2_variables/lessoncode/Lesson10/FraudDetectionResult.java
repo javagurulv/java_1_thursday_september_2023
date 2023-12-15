@@ -3,18 +3,18 @@ package lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.lessonco
 public class FraudDetectionResult {
     private boolean fraud;
 
-    private String rullName;
+    private String ruleName;
 
-    public FraudDetectionResult(boolean fraud, String rullName) {
+    public FraudDetectionResult(boolean fraud, String ruleName) {
         this.fraud = fraud;
-        this.rullName = rullName;
+        this.ruleName = ruleName;
     }
 
     public boolean isFraud() {
         return fraud;
     }
 
-    public String getRullName() {
-        return rullName;
+    public String getRuleName() {
+        return ruleName;
     }
 }
