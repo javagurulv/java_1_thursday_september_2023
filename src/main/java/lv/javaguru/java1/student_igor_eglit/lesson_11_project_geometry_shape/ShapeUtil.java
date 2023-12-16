@@ -48,12 +48,19 @@ class ShapeUtil {
 //        }
 //        return sum;
     // }
-    public double  calculatePerimeter(Shape[] shapes) {
+    public double calculatePerimeter(Shape[] shapes) {
         var sum = 0;
         for (Shape shape : shapes) {
             sum += shape.perimeterRoomCalculator();
         }
         return sum;
     }
+    double calculateSquare(Shape shape) {
+        return shape.squareRoomCalculator();
     }
+
+    double calculatePerimeter(Shape shape) {
+        return shape.perimeterRoomCalculator();
+    }
+}
 
