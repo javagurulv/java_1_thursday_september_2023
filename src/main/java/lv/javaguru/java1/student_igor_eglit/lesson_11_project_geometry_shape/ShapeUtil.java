@@ -10,6 +10,9 @@ class ShapeUtil {
     public Square createRandomSquare() {
         return new Square(new Random().nextInt(10));
     }
+    public Rectangle createRandomRectangle(){
+        return new Rectangle(new Random().nextInt(10),new Random().nextInt(10));
+    }
 
 }
 
