@@ -5,73 +5,77 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FraudDetectorTest {
-    Trader trader;
-    Transaction transaction;
-    FraudDetector fraudDetector = new FraudDetector();
-    FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
-
+    private FraudDetector fraudDetector = new FraudDetector();
 
     @Test
     void testCase1() {
-        trader = new Trader("Pokemon", "Riga", "Latvia");
-        transaction = new Transaction(trader, 1000);
-        assertTrue(fraudDetectionResult.isFraud());
-        assertEquals(fraudDetectionResult.getRuleName(), "Rule 1");
+        var trader = new Trader("Pokemon", "Riga", "Latvia");
+        var transaction = new Transaction(trader, 1000);
+        var result = fraudDetector.isFraud(transaction);
+        assertTrue(result.isFraud());
+        assertEquals(result.getRuleName(), "Rule 1");
     }
 
     @Test
     void testCase2() {
-        trader = new Trader("Lucky", "Riga", "Latvia");
-        transaction = new Transaction(trader, 1);
-        assertFalse(fraudDetectionResult.isFraud());
-        assertNull(fraudDetectionResult.getRuleName());
+        var trader = new Trader("Lucky", "Riga", "Latvia");
+        var transaction = new Transaction(trader, 1);
+        var result = fraudDetector.isFraud(transaction);
+        assertFalse(result.isFraud());
+        assertNull(result.getRuleName());
     }
 
     @Test
     void testCase3() {
-        trader = new Trader("Lucky", "Riga", "Latvia");
-        transaction = new Transaction(trader, 1000001);
-        assertTrue(fraudDetectionResult.isFraud());
-        assertEquals(fraudDetectionResult.getRuleName(), "Rule 2");
+        var trader = new Trader("Lucky", "Riga", "Latvia");
+        var transaction = new Transaction(trader, 1000001);
+        var result = fraudDetector.isFraud(transaction);
+        assertTrue(result.isFraud());
+        assertEquals(result.getRuleName(), "Rule 2");
     }
 
     @Test
     void testCase4() {
-        trader = new Trader("Lucky", "Riga", "Latvia");
-        transaction = new Transaction(trader, 1000000);
-        assertFalse(fraudDetectionResult.isFraud());
-        assertNull(fraudDetectionResult.getRuleName());
+        var trader = new Trader("Lucky", "Riga", "Latvia");
+        var transaction = new Transaction(trader, 1000000);
+        var result = fraudDetector.isFraud(transaction);
+        assertFalse(result.isFraud());
+        assertNull(result.getRuleName());
     }
 
     @Test
     void testCase5() {
-        trader = new Trader("Lucky", "Sydney", "Australia");
-        transaction = new Transaction(trader, 10000);
-        assertTrue(fraudDetectionResult.isFraud());
-        assertEquals(fraudDetectionResult.getRuleName(), "Rule 3");
+        var trader = new Trader("Lucky", "Sydney", "Australia");
+        var transaction = new Transaction(trader, 10000);
+        var result = fraudDetector.isFraud(transaction);
+        assertTrue(result.isFraud());
+        assertEquals(result.getRuleName(), "Rule 3");
     }
 
     @Test
     public void testCase6() {
-        trader = new Trader("Lucky", "Riga", "Jamaica");
-        transaction = new Transaction(trader, 10000);
-        assertTrue(fraudDetectionResult.isFraud());
-        assertEquals(fraudDetectionResult.getRuleName(), "Rule 4");
+        var trader = new Trader("Lucky", "Riga", "Jamaica");
+        var transaction = new Transaction(trader, 10000);
+        var result = fraudDetector.isFraud(transaction);
+        assertTrue(result.isFraud());
+        assertEquals(result.getRuleName(), "Rule 4");
     }
 
     @Test
     void testCase8() {
-        trader = new Trader("Lucky", "Berlin", "Germany");
-        transaction = new Transaction(trader, 1001);
-        assertTrue(fraudDetectionResult.isFraud());
-        assertEquals(fraudDetectionResult.getRuleName(), "Rule 5");
+        var trader = new Trader("Lucky", "Berlin", "Germany");
+        var transaction = new Transaction(trader, 1001);
+        var result = fraudDetector.isFraud(transaction);
+        assertTrue(result.isFraud());
+        assertEquals(result.getRuleName(), "Rule 5");
     }
 
     @Test
     void testCase9() {
-        trader = new Trader("Lucky", "Berlin", "Germany");
-        transaction = new Transaction(trader, 1000);
-        assertFalse(fraudDetectionResult.isFraud());
-        assertNull(fraudDetectionResult.getRuleName());
+        var trader = new Trader("Lucky", "Berlin", "Germany");
+        var transaction = new Transaction(trader, 1000);
+        var result = fraudDetector.isFraud(transaction);
+        assertFalse(result.isFraud());
+        assertNull(result.getRuleName());
     }
 }
