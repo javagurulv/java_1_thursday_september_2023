@@ -29,12 +29,12 @@ class ShapeUtil {
     public double calculateArea(Shape[] shapes) {
         var sum = 0;
         for (Shape shape : shapes) {
-            sum += (double) shape.squareRoomCalculator();
+            sum += shape.squareRoomCalculator();
         }
         return sum;
     }
 
-//        Circle circle = new Circle(2);
+    //        Circle circle = new Circle(2);
 //        Square square = new Square(3);
 //        Rectangle rectangle = new Rectangle(2, 3);
 //        shapes = new double[]{
@@ -48,5 +48,12 @@ class ShapeUtil {
 //        }
 //        return sum;
     // }
-}
+    public double  calculatePerimeter(Shape[] shapes) {
+        var sum = 0;
+        for (Shape shape : shapes) {
+            sum += shape.perimeterRoomCalculator();
+        }
+        return sum;
+    }
+    }
 
