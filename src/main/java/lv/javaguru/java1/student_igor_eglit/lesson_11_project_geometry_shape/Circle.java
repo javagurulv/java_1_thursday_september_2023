@@ -5,6 +5,11 @@ class Circle extends Shape {
     int radius;
     double result;
 
+    public Circle(int radius) {
+        this.radius = radius;
+
+    }
+
     @Override
     double squareRoomCalculator() {
         return radius > 0 ? result = 3.14 * (radius * radius) : -1;

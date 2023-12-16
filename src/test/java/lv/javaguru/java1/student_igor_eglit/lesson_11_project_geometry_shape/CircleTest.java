@@ -5,11 +5,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CircleTest {
-    Circle circle;
+
 
     @Test
     void circleCalculationTest() {
-
+        Circle circle = new Circle(1);
+        var p = circle.perimeterRoomCalculator();
+        var s = circle.squareRoomCalculator();
+        assertEquals(3.14,s, "squareCircleTest");
+        assertEquals(6.28, p, "perimeterCircleTest");
     }
 
 }
