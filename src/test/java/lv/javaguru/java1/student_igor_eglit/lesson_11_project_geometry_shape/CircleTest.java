@@ -9,11 +9,19 @@ class CircleTest {
 
     @Test
     void circleCalculationTest() {
-        Circle circle = new Circle(1);
-        var p = circle.perimeterRoomCalculator();
-        var s = circle.squareRoomCalculator();
-        assertEquals(3.14,s, "squareCircleTest");
-        assertEquals(6.28, p, "perimeterCircleTest");
+        var circle = new Circle(1);
+        var perimeter = circle.perimeterRoomCalculator();
+        var square = circle.squareRoomCalculator();
+        assertEquals(3.14,square, "squareCircleTest");
+        assertEquals(6.28, perimeter, "perimeterCircleTest");
+    }
+    @Test
+    void circleCalculationTestZero(){
+        var circle = new Circle(0);
+        var perimeter = circle.perimeterRoomCalculator();
+        var square = circle.squareRoomCalculator();
+        assertEquals(-1,square, "squareCircleTest=<0");
+        assertEquals(-1, perimeter, "perimeterCircleTest=<0");
     }
 
 }
