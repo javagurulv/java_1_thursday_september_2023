@@ -3,9 +3,20 @@ package lv.javaguru.java1.student_igor_eglit.lesson_11_project_geometry_shape;
 class Circle extends Shape {
 
     int radius;
+    String shapeName;
 
-    public Circle(int radius) {
+    public int getRadius() {
+        return radius;
+    }
+
+    public String getShapeName() {
+        return shapeName;
+    }
+
+    public Circle(String shapeName, int radius) {
+        super(shapeName);
         this.radius = radius;
+        this.shapeName = shapeName;
 
     }
 

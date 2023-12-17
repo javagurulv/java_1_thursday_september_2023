@@ -3,7 +3,8 @@ package lv.javaguru.java1.student_igor_eglit.lesson_11_project_geometry_shape;
 class Square extends Shape {
     int side;
 
-    public Square(int side) {
+    public Square(String shapeName, int side) {
+        super(shapeName);
         this.side = side;
     }
 

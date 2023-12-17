@@ -1,19 +1,22 @@
 package lv.javaguru.java1.student_igor_eglit.lesson_11_project_geometry_shape;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 
 class ShapeUtil {
 
     public Circle createRandomCircle() {
-        return new Circle(new Random().nextInt(10));
+        return new Circle("Circle", new Random().nextInt(1, 10));
     }
 
     public Square createRandomSquare() {
-        return new Square(new Random().nextInt(10));
+        return new Square("Square", new Random().nextInt(1, 10));
     }
 
     public Rectangle createRandomRectangle() {
-        return new Rectangle(new Random().nextInt(10), new Random().nextInt(10));
+        return new Rectangle("Rectangle", new Random().nextInt(1, 10), new Random().nextInt(1, 10));
     }
 
     public Shape createRandomShape() {
@@ -55,12 +58,24 @@ class ShapeUtil {
         }
         return sum;
     }
+
     double calculateSquare(Shape shape) {
         return shape.squareRoomCalculator();
     }
 
     double calculatePerimeter(Shape shape) {
         return shape.perimeterRoomCalculator();
+    }
+
+    List<Shape> findEquals(List<Shape> allShapes, Shape shapeToCompare) {
+        List<Shape> equals = new ArrayList<>();
+        for (Shape element : allShapes) {
+            if (Objects.equals(shapeToCompare, element)) {
+                equals.add(element);
+            }
+        }
+        System.out.println(equals.size() + " equals List");
+        return equals;
     }
 }
 

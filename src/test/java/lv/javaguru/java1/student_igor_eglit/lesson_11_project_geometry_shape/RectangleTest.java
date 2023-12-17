@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class RectangleTest {
     @Test
     void rectangularCalculationTest(){
-        var rectangle = new Rectangle(1,1);
+        var rectangle = new Rectangle("Rectangle",1,1);
         var square = rectangle.squareRoomCalculator();
         var perimeter = rectangle.perimeterRoomCalculator();
         assertEquals(4,perimeter,"PerimeterTest");
@@ -15,7 +15,7 @@ class RectangleTest {
     }
     @Test
     void rectangularCalculationTestZero(){
-        var rectangle = new Rectangle(0, 0);
+        var rectangle = new Rectangle("Rectangle",0, 0);
         var perimeter = rectangle.perimeterRoomCalculator();
         var square = rectangle.squareRoomCalculator();
         assertEquals(-1,perimeter,"PerimeterTest <=0");

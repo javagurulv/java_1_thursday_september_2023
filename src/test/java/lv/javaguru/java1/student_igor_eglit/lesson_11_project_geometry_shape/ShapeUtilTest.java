@@ -9,9 +9,9 @@ class ShapeUtilTest {
     void shapesCalculationTest1() {
         ShapeUtil shapeUtil = new ShapeUtil();
         Shape[] shapes = {
-                new Circle(1),
-                new Square(1),
-                new Rectangle(2, 3)
+                new Circle("Circle", 1),
+                new Square("Square", 1),
+                new Rectangle("Rectangle", 2, 3)
         };
         assertEquals(10.14, shapeUtil.calculateArea(shapes), "Array area calculation test");
     }
@@ -20,9 +20,9 @@ class ShapeUtilTest {
     void shapesCalculationTest2() {
         ShapeUtil shapeUtil = new ShapeUtil();
         Shape[] shapes = {
-                new Circle(1),
-                new Square(1),
-                new Rectangle(2, 3)
+                new Circle("Circle", 1),
+                new Square("Square", 1),
+                new Rectangle("Rectangle", 2, 3)
         };
         assertEquals(20.28, shapeUtil.calculatePerimeter(shapes), "Array perimeter calculation test");
     }

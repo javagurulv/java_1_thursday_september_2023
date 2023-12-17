@@ -4,4 +4,9 @@ abstract class Shape {
     abstract double squareRoomCalculator();
 
     abstract double perimeterRoomCalculator();
+    private String shapeName;
+
+    Shape(String shapeName) {
+        this.shapeName = shapeName;
+    }
 }
