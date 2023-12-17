@@ -39,18 +39,17 @@ class ShapeUtilDemo {
     private static void findEquals() {
         List<Shape> allShapes = new ArrayList<>();
         ShapeUtil shapeUtil = new ShapeUtil();
-        Circle circleTest = new Circle("Circle", 1);
-        for (int i = 0; i < 20; i++) {
-            Shape circle = shapeUtil.createRandomCircle();
-            Shape square = shapeUtil.createRandomSquare();
-            Shape rectangle = shapeUtil.createRandomRectangle();
-
-            allShapes.add(circle);
-            allShapes.add(square);
-            allShapes.add(rectangle);
+        Circle circle1 = new Circle("Circle", 1);
+        Circle circle2 = new Circle("Circle", 2);
+        for (int i = 0; i < 100; i++) {
+            Shape randomShape = shapeUtil.createRandomShape();
+            allShapes.add(randomShape);
         }
-        System.out.println(allShapes.size() + " allShapes");
-        shapeUtil.findEquals(allShapes, circleTest);
+        System.out.println(allShapes.size() + " allShapes List");
+        var a = shapeUtil.findEquals(allShapes, circle1);
+        var b =shapeUtil.findEquals(allShapes, circle2);
+        System.out.println(a.size() + " equals circle1 List");
+        System.out.println(b.size() + " equals circle2 List");
 
     }
 

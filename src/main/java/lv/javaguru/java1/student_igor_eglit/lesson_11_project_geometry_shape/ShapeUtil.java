@@ -74,7 +74,6 @@ class ShapeUtil {
                 equals.add(element);
             }
         }
-        System.out.println(equals.size() + " equals List");
         return equals;
     }
 }
