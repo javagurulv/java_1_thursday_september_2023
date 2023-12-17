@@ -1,19 +1,27 @@
 package lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.lessoncode.Lesson10;
 
-class FraudDetector {
+import java.util.ArrayList;
+import java.util.List;
 
-    public boolean isFraud(Transaction transaction) {
-        FraudRule1 rule1 = new FraudRule1();
-        FraudRule2 rule2 = new FraudRule2();
-        FraudRule3 rule3 = new FraudRule3();
-        FraudRule4 rule4 = new FraudRule4();
-        FraudRule5 rule5 = new FraudRule5();
+public class FraudDetector {
 
-        return rule1.isFraud(transaction)
-                || rule2.isFraud(transaction)
-                || rule3.isFraud(transaction)
-                || rule4.isFraud(transaction)
-                || rule5.isFraud(transaction);
+    public FraudDetectionResult isFraud(Transaction transaction) {
+        List<FraudRule> fraudRules = new ArrayList<>();
+        fraudRules.add(new FraudRule1());
+        fraudRules.add(new FraudRule2());
+        fraudRules.add(new FraudRule3());
+        fraudRules.add(new FraudRule4());
+        fraudRules.add(new FraudRule5());
+
+        for (FraudRule fraudRule : fraudRules) {
+            if (fraudRule.isFraud(transaction)) {
+                return new FraudDetectionResult(true, fraudRule.getName());
+            }
+        }
+            return new FraudDetectionResult(false, null);
+        }
+    }
+
 
 
 
@@ -47,5 +55,4 @@ class FraudDetector {
 }
 */
 
-    }
-    }
+
