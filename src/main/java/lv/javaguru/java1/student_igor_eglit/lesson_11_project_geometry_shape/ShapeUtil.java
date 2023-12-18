@@ -70,8 +70,9 @@ class ShapeUtil {
     List<Shape> findEquals(List<Shape> allShapes, Shape shapeToCompare) {
         List<Shape> equals = new ArrayList<>();
         for (Shape element : allShapes) {
-            if (Objects.equals(shapeToCompare, element)) {
+            if (shapeToCompare.equals(element)) {
                 equals.add(element);
+                System.out.println("Найден эквивалентный объект: " + element.shapeName + ", площадь: " + element.squareRoomCalculator()+'\t');
             }
         }
         return equals;

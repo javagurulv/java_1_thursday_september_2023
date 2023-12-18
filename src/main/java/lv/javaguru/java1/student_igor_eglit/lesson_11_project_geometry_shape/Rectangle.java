@@ -1,8 +1,8 @@
 package lv.javaguru.java1.student_igor_eglit.lesson_11_project_geometry_shape;
 
 class Rectangle extends Shape {
-    int sideA;
-    int sideB;
+    public int sideA;
+    public int sideB;
 
 
     public Rectangle(String shapeName,int sideA, int sideB) {

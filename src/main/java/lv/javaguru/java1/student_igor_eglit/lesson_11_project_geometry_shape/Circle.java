@@ -2,8 +2,8 @@ package lv.javaguru.java1.student_igor_eglit.lesson_11_project_geometry_shape;
 
 class Circle extends Shape {
 
-    int radius;
-    String shapeName;
+    public int radius;
+    public String shapeName;
 
     public int getRadius() {
         return radius;

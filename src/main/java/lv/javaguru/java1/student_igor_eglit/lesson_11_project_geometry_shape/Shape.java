@@ -4,9 +4,18 @@ abstract class Shape {
     abstract double squareRoomCalculator();
 
     abstract double perimeterRoomCalculator();
-    private String shapeName;
+
+    String shapeName;
 
     Shape(String shapeName) {
         this.shapeName = shapeName;
+    }
+
+    public boolean equals(Object obj) {
+        if (obj instanceof Shape) {
+            Shape other = (Shape) obj;
+            return this.shapeName.equals(other.shapeName) && this.squareRoomCalculator() == other.squareRoomCalculator();
+        }
+        return false;
     }
 }

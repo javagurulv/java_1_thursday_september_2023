@@ -6,9 +6,13 @@ import java.util.List;
 
 class ShapeUtilDemo {
     public static void main(String[] args) {
+        System.out.println("Получение случайного круга");
         circleCalculation();
+        System.out.println('\n' + "получение случайного квадрата");
         squareCalculation();
+        System.out.println('\n' + "получение случайного прямоугольника");
         rectangleCalculation();
+        System.out.println('\n'+ "Нахождение эквивалентов в списке");
         findEquals();
     }
 
@@ -41,15 +45,23 @@ class ShapeUtilDemo {
         ShapeUtil shapeUtil = new ShapeUtil();
         Circle circle1 = new Circle("Circle", 1);
         Circle circle2 = new Circle("Circle", 2);
+        Square square1 = new Square("Square", 6);
+        Rectangle rectangle1 = new Rectangle("Rectangle", 2, 3);
         for (int i = 0; i < 100; i++) {
             Shape randomShape = shapeUtil.createRandomShape();
             allShapes.add(randomShape);
         }
-        System.out.println(allShapes.size() + " allShapes List");
+
         var a = shapeUtil.findEquals(allShapes, circle1);
-        var b =shapeUtil.findEquals(allShapes, circle2);
-        System.out.println(a.size() + " equals circle1 List");
-        System.out.println(b.size() + " equals circle2 List");
+        var b = shapeUtil.findEquals(allShapes, circle2);
+        var c = shapeUtil.findEquals(allShapes, square1);
+        var d = shapeUtil.findEquals(allShapes, rectangle1);
+        System.out.println(allShapes.size() + " объектов в allShapes List");
+        System.out.println(a.size() + " объектов в equals circle1 List");
+        System.out.println(b.size() + " объектов в equals circle2 List");
+        System.out.println(c.size() + " объектов в equals square1 List");
+        System.out.println(d.size() + " объектов в equals rectangle1 List");
+
 
     }
 
