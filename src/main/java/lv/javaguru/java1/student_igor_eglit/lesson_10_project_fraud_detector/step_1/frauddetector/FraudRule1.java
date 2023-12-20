@@ -1,9 +1,14 @@
 package lv.javaguru.java1.student_igor_eglit.lesson_10_project_fraud_detector.step_1.frauddetector;
-class FraudRule1 implements FraudRule {
+
+class FraudRule1 extends FraudRule {
     @Override
-    public boolean isFraud(Transaction transaction) {
+    boolean isFraud(Transaction transaction) {
         Trader trader = transaction.getTrader();
-        //String traderName = trader.getFullName();
         return trader.getFullName().equals("Pokemon");
+    }
+
+    @Override
+    String ruleName() {
+        return "Rule 1";
     }
 }

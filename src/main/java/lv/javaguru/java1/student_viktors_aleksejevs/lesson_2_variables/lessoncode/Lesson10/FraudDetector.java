@@ -1,9 +1,35 @@
 package lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.lessoncode.Lesson10;
 
-class FraudDetector {
+import java.util.ArrayList;
+import java.util.List;
 
-    boolean isFraud(Transaction transaction) {
+public class FraudDetector {
 
+    public FraudDetectionResult isFraud(Transaction transaction) {
+        List<FraudRule> fraudRules = new ArrayList<>();
+        fraudRules.add(new FraudRule1());
+        fraudRules.add(new FraudRule2());
+        fraudRules.add(new FraudRule3());
+        fraudRules.add(new FraudRule4());
+        fraudRules.add(new FraudRule5());
+
+        for (FraudRule fraudRule : fraudRules) {
+            if (fraudRule.isFraud(transaction)) {
+                return new FraudDetectionResult(true, fraudRule.getName());
+            }
+        }
+            return new FraudDetectionResult(false, null);
+        }
+    }
+
+
+
+
+
+
+
+
+/*
         Trader trader = transaction.getTrader();
         String traderName = trader.getFullName();
         int amount = transaction.getAmount();
@@ -21,11 +47,12 @@ class FraudDetector {
         if (country.equals("Jamaica")){
             return true;
         }
+        if (country.equals("Germany") && amount > 1000){
+            return true;
+        }
         return false;
     }
 }
-
-
-
+*/
 
 

@@ -7,26 +7,20 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Disabled
-public class FraudRule3 {
+class FraudRule3 extends FraudRule {
 
-    private FraudRule3 fraudRule = new FraudRule3();
 
-    @Test
-    public void BeFraud() {
-        Trader trader = new Trader("Alex", "Madride", "Spain");
-        Transaction transaction = new Transaction(trader, 100);
-        assertTrue(fraudRule.isFraud(transaction));
-    }
-
-    @Test
-    public void NotBeFraud() {
-        Trader trader = new Trader("Alex", "Berline", "Germany");
-        Transaction transaction = new Transaction(trader, 100);
-        assertFalse(fraudRule.isFraud(transaction));
-    }
-
-    private boolean isFraud(Transaction transaction) {
+    @Override
+    public boolean isFraud(Transaction transaction) {
+        Trader trader = transaction.getTrader();
+        if (trader.getCity().equals("Sidney")) {
+            return true;
+        }
         return false;
     }
 
+    @Override
+    public String getRuleName() {
+        return "FraudRule3";
+    }
 }
