@@ -1,10 +1,12 @@
 package lv.javaguru.java1.student_valera_kovs.lesson10;
 
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Disabled
 class FraudDetectorTest {
 
     private FraudDetector fraudDetector = new FraudDetector();

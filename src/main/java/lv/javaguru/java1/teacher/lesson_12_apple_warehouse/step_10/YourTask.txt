@@ -1,0 +1,9 @@
+В классе AppleWarehouse вы найдёте реализацию метода:
+
+List<Apple> findApples(AppleSearchCriteria searchCriteria)
+
+а так же в классе AppleWarehouseTest тесты этого метода.
+
+
+Ваша задача: создайте реализацию AppleSearchCriteria
+для поиска тяжёлых зелёных яблок.

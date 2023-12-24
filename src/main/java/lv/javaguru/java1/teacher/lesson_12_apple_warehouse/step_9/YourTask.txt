@@ -1,0 +1,24 @@
+В коде приложения вы можете найти классы реализующие
+критерии поиска и соответствующие им тесты для:
+- зелёных яблок (GreenAppleSearchCriteria);
+- красных яблок (RedAppleSearchCriteria);
+- тяжелых яблок (> 150 г.) (HeavyAppleSearchCriteria);
+- лёгких яблок (< 150 г.) (LightAppleSearchCriteria).
+
+Теперь пришла пора воспользоваться созданными критериями поиска.
+
+Как это сделать?
+
+Для этого создайте метод в классе AppleWarehouse, например:
+
+List<Apple> findApples(AppleSearchCriteria searchCriteria)
+
+и напишите его реализацию (поиск яблок, которые
+соответствуют переданному критерию поиска).
+
+Напишите тесты на метод findApples() в которых
+протестируйте работу метода с разными критериями поиска:
+- findApples(new GreenAppleSearchCriteria());
+- findApples(new RedAppleSearchCriteria());
+- findApples(new HeavyAppleSearchCriteria());
+- findApples(new LightAppleSearchCriteria()).

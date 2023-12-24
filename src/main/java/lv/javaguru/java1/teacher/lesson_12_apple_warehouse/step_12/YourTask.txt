@@ -1,0 +1,20 @@
+Тесты с использованием анонимных классов для задания критериев поиска
+можно найти в классе AppleWarehouseTest.shouldFindApplesUsingAnonymousClass().
+
+Интерфейс AppleSearchCriteria является функциональным интерфейсом.
+
+В Java функциональным интерфейсом является тот интерфейс,
+у которого есть всего один метод.
+
+У интерфейса AppleSearchCriteria есть только один метод test().
+Поэтому он является функциональным интерфейсом!
+
+Для обозначения функциональных интерфейсов в Java применяется
+аннотация @FunctionalInterface:
+
+@FunctionalInterface
+interface AppleSearchCriteria {
+    boolean test (Apple apple);
+}
+
+Добавьте аннотацию @FunctionalInterface на интерфейс AppleSearchCriteria.
