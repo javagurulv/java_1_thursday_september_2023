@@ -1,0 +1,17 @@
+Метод для сортировки транзакций по параметру value от меньшего к большему:
+
+TransactionAnalysisService.sortTransactionsByValueASC().
+
+Тесты для метода sortTransactionsByValueASC() можно найти в классе
+TransactionAnalysisServiceTest.
+
+Ваше задание: в классе TransactionAnalysisService
+напишите метод, который принимает на вход список транзакций
+и сортирует их по параметру value от большего к меньшему.
+
+Реализацию этого метода напишите с использованием Stream API.
+
+В классе TransactionAnalysisServiceTest напишите
+тест для созданного вами метода.
+
+Для тестирования используйте тестовые данные из класса TransactionTestData.

@@ -1,0 +1,20 @@
+Реализация метода для нахождения имен всех трейдеров из города Cambridge
+находится тут:
+TransactionAnalysisService.findUniqueTraderNamesFromCambridge().
+
+
+При реализации задачи из предыдущего задания у вас получился такой метод:
+
+    public Set<String> findUniqueTraderNamesFromCambridge(List<Transaction> transactions) {
+        return transactions.stream()
+                .map(Transaction::getTrader)
+                .filter(trader -> trader.getCity().equals("Cambridge"))
+                .map(Trader::getName)
+                .collect(Collectors.toSet());
+    }
+
+Представьте себе, что вас попросили найти имена трейдеров
+из других городов: Milan, London, и т.д. Для каждого города вы
+будете писать свой метод? Или есть более простой способ это сделать?
+
+Как сделать метод findUniqueTraderNamesFromCambridge() более универсальным?

@@ -1,0 +1,56 @@
+Конечно создавать для каждого города новый метод это не вариант.
+Слишком много городов, слишком много похожих методов.
+
+    public Set<String> findUniqueTraderNamesFromCambridge(List<Transaction> transactions) {
+        return transactions.stream()
+                .map(Transaction::getTrader)
+                .filter(trader -> trader.getCity().equals("Cambridge"))
+                .map(Trader::getName)
+                .collect(Collectors.toSet());
+    }
+
+    public Set<String> findUniqueTraderNamesFromLondon(List<Transaction> transactions) {
+        return transactions.stream()
+                .map(Transaction::getTrader)
+                .filter(trader -> trader.getCity().equals("London"))
+                .map(Trader::getName)
+                .collect(Collectors.toSet());
+    }
+
+    public Set<String> findUniqueTraderNamesFromMilan(List<Transaction> transactions) {
+        return transactions.stream()
+                .map(Transaction::getTrader)
+                .filter(trader -> trader.getCity().equals("Milan"))
+                .map(Trader::getName)
+                .collect(Collectors.toSet());
+    }
+
+Что бы сделать этот метод более универсальным можно вынести в параметр метода
+название города по которому надо искать и поменять немного название самого метода:
+
+    public Set<String> findUniqueTraderNamesByCity(List<Transaction> transactions, String city) {
+        return transactions.stream()
+                .map(Transaction::getTrader)
+                .filter(trader -> trader.getCity().equals(city))
+                .map(Trader::getName)
+                .collect(Collectors.toSet());
+    }
+
+Теперь этот метод можно вызывать следующими способами:
+
+List<Transaction> transactions = TransactionTestData.getTransactions();
+Set<String> traderNamesFromCambridge = findUniqueTraderNamesByCity(transactions, "Cambridge");
+Set<String> traderNamesFromLondon = findUniqueTraderNamesByCity(transactions, "London");
+Set<String> traderNamesFromMilan = findUniqueTraderNamesByCity(transactions, "Milan");
+
+С помощью тестов докажите, что наш новый метод работает правильно.
+
+
+Дополнительные задания:
+- посчитайте общий объём транзакций (value) за конкретный год;
+- посчитайте количество транзакций за конкретный год;
+- кто из трейдеров совершил наибольшее количество транзакций;
+- кто из трейдеров наторговал наибольший объём (value) транзакций;
+- найдите транзакцию с наименьшим объёмом;
+- найдите транзакцию с наибольшим объёмом;
+- вычислите средний объём среди всех транзакций.
