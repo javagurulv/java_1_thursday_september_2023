@@ -1,11 +1,11 @@
 package lv.javaguru.java1.student_igor_eglit.lesson_12_project_apple_warehouse;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
 class AppleWarehouse {
     List<Apple> allApples = new ArrayList<>();
-
 
     public List<Apple> getAllApples(Apple apple) {
         allApples.add(apple);
@@ -22,6 +22,7 @@ class AppleWarehouse {
         }
         return equals;
     }
+
 }
 
 

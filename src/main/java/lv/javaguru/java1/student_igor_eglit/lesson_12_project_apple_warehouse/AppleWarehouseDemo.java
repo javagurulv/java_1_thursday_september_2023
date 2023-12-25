@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 class AppleWarehouseDemo {
-    private static void appleStock() {
+    public static void appleStock() {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         String[] appleColorList = {"green", "red", "yellow"};
         List<Apple> stock = null;
@@ -16,8 +16,18 @@ class AppleWarehouseDemo {
         System.out.println(stock.size());
     }
 
+    private static void findByAppleColor() {
+        AppleWarehouse appleWarehouse = new AppleWarehouse();
+        List<Apple> stock = appleWarehouse.allApples;
+        Apple apple = new Apple("red");
+        List<Apple> stockByColor = appleWarehouse.findAppleColor(stock, apple);
+        System.out.println(stockByColor.size());
+
+    }
+
     public static void main(String[] args) {
-     appleStock();
+        appleStock();
+        findByAppleColor();
 
     }
 }
