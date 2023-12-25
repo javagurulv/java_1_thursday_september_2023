@@ -7,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class ShapeUtilDemoTest {
     @Test
     void findEqualsTest(){
-
     }
 
 }

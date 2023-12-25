@@ -2,7 +2,7 @@ package lv.javaguru.java1.student_igor_eglit.lesson_11_project_geometry_shape;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
+//import java.util.Objects;
 import java.util.Random;
 
 class ShapeUtil {
