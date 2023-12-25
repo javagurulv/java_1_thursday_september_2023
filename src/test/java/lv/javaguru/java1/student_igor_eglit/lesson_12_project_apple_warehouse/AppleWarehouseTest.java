@@ -13,7 +13,7 @@ class AppleWarehouseTest {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         var apples = getAllApples();
         Apple testApple1 = new Apple("green");
-        List<Apple> stockByColorGreen = appleWarehouse.findAppleByParameter(apples, testApple1);
+        List<Apple> stockByColorGreen = appleWarehouse.findAppleByColor(apples, testApple1);
         assertEquals(7, stockByColorGreen.size(), "тест- количество зеленых яблок на складе");
     }
 
@@ -22,7 +22,7 @@ class AppleWarehouseTest {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         var apples = getAllApples();
         Apple testApple2 = new Apple("red");
-        List<Apple> stockByColorRed = appleWarehouse.findAppleByParameter(apples, testApple2);
+        List<Apple> stockByColorRed = appleWarehouse.findAppleByColor(apples, testApple2);
         assertEquals(5, stockByColorRed.size(), "тест- количество красных яблок на складе");
     }
 

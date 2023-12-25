@@ -12,14 +12,14 @@ class Apple {
     public String getAppleColor() {
         return appleColor;
     }
-    @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof Apple) {
-            Apple other = (Apple) obj;
-            return this.appleColor.equals(other.appleColor) && Objects.equals(this.getAppleColor(), other.getAppleColor());
-        }
-        return false;
-    }
+//    @Override
+//    public boolean equals(Object obj) {
+//        if (obj instanceof Apple) {
+//            Apple other = (Apple) obj;
+//            return this.appleColor.equals(other.appleColor) && Objects.equals(this.getAppleColor(), other.getAppleColor());
+//        }
+//        return false;
+//    }
 
 
 }
