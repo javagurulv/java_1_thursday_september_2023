@@ -27,13 +27,13 @@ class AppleWarehouseDemo {
 
     private static void ByGreenColor(AppleWarehouse appleWarehouse, List<Apple> stock) {
         Apple apple = new Apple("green");
-        List<Apple> stockByColor = appleWarehouse.findAppleByColor(stock, apple);
+        List<Apple> stockByColor = appleWarehouse.findAppleByParameter(stock, apple);
         System.out.println("Найдено на складе яблок цвета " + apple.getAppleColor() + " в количестве " + stockByColor.size() + " штук");
     }
 
     private static void ByRedColor(AppleWarehouse appleWarehouse, List<Apple> stock) {
         Apple apple = new Apple("red");
-        List<Apple> stockByColor = appleWarehouse.findAppleByColor(stock, apple);
+        List<Apple> stockByColor = appleWarehouse.findAppleByParameter(stock, apple);
         System.out.println("Найдено на складе яблок цвета " + apple.getAppleColor() + " в количестве " + stockByColor.size() + " штук");
     }
 

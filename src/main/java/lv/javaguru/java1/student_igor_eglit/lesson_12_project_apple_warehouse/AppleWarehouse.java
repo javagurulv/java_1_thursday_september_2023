@@ -12,7 +12,7 @@ class AppleWarehouse {
         return allApples;
     }
 
-    public List<Apple> findAppleByColor(List<Apple> allApples, Apple apple) {
+    public List<Apple> findAppleByParameter(List<Apple> allApples, Apple apple) {
         List<Apple> equals = new ArrayList<>();
         for (Apple apples : allApples) {
             if (apple.equals(apples)) {
