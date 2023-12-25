@@ -13,15 +13,40 @@ class AppleWarehouse {
     }
 
     public List<Apple> findAppleByColor(List<Apple> allApples, Apple apple) {
-        List<Apple> equals = new ArrayList<>();
+        List<Apple> stockByColor = new ArrayList<>();
         for (Apple apples : allApples) {
             if (apple.getAppleColor().equals(apples.getAppleColor())) {
-                equals.add(apples);
+                stockByColor.add(apples);
             }
         }
-        return equals;
+        return stockByColor;
     }
 
+//    public List<Apple> collectLightAndHeavyApples(List<Apple> allApples, Apple apple) {
+//        List<Apple> stockLightApples = new ArrayList<>();
+//        List<Apple> stockHeavyApples = new ArrayList<>();
+//        for (Apple apples : allApples) {
+//            if (apple.getWeight() < 150) {
+//                stockLightApples.add(apples);
+//            } else {
+//                stockHeavyApples.add(apples);
+//            }
+//        }
+//        return (stockLightApples);
+//    }
+
+    public Apple separationByWeight(List<Apple> allApples) {
+        List<Apple> stockLightApples = new ArrayList<>();
+        List<Apple> stockHeavyApples = new ArrayList<>();
+        for (Apple apples : allApples) {
+            if (apples.getWeight() < 150) {
+                stockLightApples.add(apples);
+            } else {
+                stockHeavyApples.add(apples);
+            }
+        }
+        return new Apple(stockLightApples, stockHeavyApples);
+    }
 }
 
 

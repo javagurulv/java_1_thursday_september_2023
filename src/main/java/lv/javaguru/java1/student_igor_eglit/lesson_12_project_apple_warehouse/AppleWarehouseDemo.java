@@ -4,40 +4,55 @@ import java.util.List;
 import java.util.Random;
 
 class AppleWarehouseDemo {
+    private Apple apple;
+
     public List<Apple> appleStock() {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         String[] appleColorList = {"green", "red", "yellow"};
         List<Apple> stock = null;
-        for (int i = 1; i < 21; i++) {
+        for (int i = 1; i < 101; i++) {
             var indexColorList = new Random().nextInt(0, 3);
-            Apple apple = new Apple(appleColorList[indexColorList]);
+            Apple apple = new Apple(appleColorList[indexColorList], new Random().nextInt(70, 200));
             stock = appleWarehouse.getAllApples(apple);
         }
         return stock;
     }
 
-    private static void findByAppleColor() {
+    private static void findByAppleParameters() {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         AppleWarehouseDemo appleWarehouseDemo = new AppleWarehouseDemo();
         List<Apple> stock = appleWarehouseDemo.appleStock();
 
         ByGreenColor(appleWarehouse, stock);
         ByRedColor(appleWarehouse, stock);
+        appleWarehouseDemo.separationByWeight(appleWarehouse, stock);
+
     }
 
     private static void ByGreenColor(AppleWarehouse appleWarehouse, List<Apple> stock) {
-        Apple apple = new Apple("green");
+        Apple apple = new Apple("green", 150);
         List<Apple> stockByColor = appleWarehouse.findAppleByColor(stock, apple);
         System.out.println("Найдено на складе яблок цвета " + apple.getAppleColor() + " в количестве " + stockByColor.size() + " штук");
     }
 
     private static void ByRedColor(AppleWarehouse appleWarehouse, List<Apple> stock) {
-        Apple apple = new Apple("red");
+        Apple apple = new Apple("red", 150);
         List<Apple> stockByColor = appleWarehouse.findAppleByColor(stock, apple);
         System.out.println("Найдено на складе яблок цвета " + apple.getAppleColor() + " в количестве " + stockByColor.size() + " штук");
     }
 
+    private void separationByWeight(AppleWarehouse appleWarehouse, List<Apple> stock) {
+        this.apple = appleWarehouse.separationByWeight(stock);
+        var heavy = apple.heavyApples;
+        var light = apple.lightApples;
+        System.out.println("Разделение по весу:");
+        System.out.println("Тяжелых яблок " + heavy.size());
+        System.out.println("Легких яблок " + light.size());
+
+
+    }
+
     public static void main(String[] args) {
-        findByAppleColor();
+        findByAppleParameters();
     }
 }
