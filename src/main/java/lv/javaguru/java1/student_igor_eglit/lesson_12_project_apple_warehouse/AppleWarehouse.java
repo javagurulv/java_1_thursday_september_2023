@@ -7,11 +7,11 @@ class AppleWarehouse {
      static String[] apples = getAllApples();
 
     public static String[] getAllApples() {
-        String[] apples = {};
-        apples[1] = "green";
+        String[] apples = new String[4];
+        apples[0] = "green";
+        apples[1] = "red";
         apples[2] = "red";
-        apples[3] = "red";
-        apples[4] = "green";
+        apples[3] = "green";
         return apples;
     }
 
