@@ -4,11 +4,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 class AppleWarehouse {
-   List<Apple> allApples = new ArrayList<>();
-   Apple apple;
-    public List<Apple> getAllApples(String appleColor) {
+    List<Apple> allApples = new ArrayList<>();
+
+
+    public List<Apple> getAllApples(Apple apple) {
         allApples.add(apple);
         return allApples;
+    }
+
+    public List<Apple> findAppleColor(List<Apple> allApples, Apple appleColor) {
+        List<Apple> equals = new ArrayList<>();
+        for (Apple apples : allApples) {
+            if (appleColor.equals(apples)){
+                equals.add(apples);
+                System.out.println("Найдено на складе яблок цвета " + appleColor + " в количестве " + equals.size() + " штук");
+            }
+        }
+        return equals;
     }
 }
 

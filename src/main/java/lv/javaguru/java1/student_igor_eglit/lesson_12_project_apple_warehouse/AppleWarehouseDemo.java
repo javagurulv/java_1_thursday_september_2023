@@ -11,7 +11,7 @@ class AppleWarehouseDemo {
         for (int i = 1; i < 21; i++) {
             var indexColorList = new Random().nextInt(0, 3);
             Apple apple = new Apple(appleColorList[indexColorList]);
-            stock = appleWarehouse.getAllApples(String.valueOf(apple));
+            stock = appleWarehouse.getAllApples(apple);
         }
         System.out.println(stock.size());
     }
