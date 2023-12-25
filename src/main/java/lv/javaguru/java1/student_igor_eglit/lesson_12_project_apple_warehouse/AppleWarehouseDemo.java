@@ -13,24 +13,19 @@ class AppleWarehouseDemo {
             Apple apple = new Apple(appleColorList[indexColorList]);
             stock = appleWarehouse.getAllApples(apple);
         }
-        System.out.println(stock.size());
         return stock;
     }
 
     private static void findByAppleColor() {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         AppleWarehouseDemo appleWarehouseDemo = new AppleWarehouseDemo();
-        List<Apple> stock = appleWarehouseDemo.appleStock();;
-        Apple apple = new Apple("red");
-        List<Apple> stockByColor = appleWarehouse.findAppleColor(stock, apple);
-        System.out.println(stockByColor.size());
-
+        List<Apple> stock = appleWarehouseDemo.appleStock();
+        Apple apple = new Apple("green");
+        List<Apple> stockByColor = appleWarehouse.findAppleByColor(stock, apple);
+        System.out.println("Найдено на складе яблок цвета " + apple.getAppleColor() + " в количестве " + stockByColor.size() + " штук");
     }
 
     public static void main(String[] args) {
-//        AppleWarehouseDemo appleWarehouseDemo = new AppleWarehouseDemo();
-//        appleWarehouseDemo.appleStock();
         findByAppleColor();
-
     }
 }

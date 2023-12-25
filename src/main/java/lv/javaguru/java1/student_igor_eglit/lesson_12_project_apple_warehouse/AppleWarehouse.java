@@ -12,14 +12,13 @@ class AppleWarehouse {
         return allApples;
     }
 
-    public List<Apple> findAppleColor(List<Apple> allApples, Apple appleColor) {
+    public List<Apple> findAppleByColor(List<Apple> allApples, Apple apple) {
         List<Apple> equals = new ArrayList<>();
         for (Apple apples : allApples) {
-            if (appleColor.equals(apples)){
+            if (apple.equals(apples)) {
                 equals.add(apples);
             }
         }
-        System.out.println("Найдено на складе яблок цвета " + appleColor + " в количестве " + equals.size() + " штук");
         return equals;
     }
 
