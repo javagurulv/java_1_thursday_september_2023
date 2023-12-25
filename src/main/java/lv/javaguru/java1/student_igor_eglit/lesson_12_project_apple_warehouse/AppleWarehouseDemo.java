@@ -20,7 +20,19 @@ class AppleWarehouseDemo {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         AppleWarehouseDemo appleWarehouseDemo = new AppleWarehouseDemo();
         List<Apple> stock = appleWarehouseDemo.appleStock();
+
+        ByGreenColor(appleWarehouse, stock);
+        ByRedColor(appleWarehouse, stock);
+    }
+
+    private static void ByGreenColor(AppleWarehouse appleWarehouse, List<Apple> stock) {
         Apple apple = new Apple("green");
+        List<Apple> stockByColor = appleWarehouse.findAppleByColor(stock, apple);
+        System.out.println("Найдено на складе яблок цвета " + apple.getAppleColor() + " в количестве " + stockByColor.size() + " штук");
+    }
+
+    private static void ByRedColor(AppleWarehouse appleWarehouse, List<Apple> stock) {
+        Apple apple = new Apple("red");
         List<Apple> stockByColor = appleWarehouse.findAppleByColor(stock, apple);
         System.out.println("Найдено на складе яблок цвета " + apple.getAppleColor() + " в количестве " + stockByColor.size() + " штук");
     }
