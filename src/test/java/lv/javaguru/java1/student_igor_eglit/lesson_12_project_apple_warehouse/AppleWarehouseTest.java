@@ -9,8 +9,24 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppleWarehouseTest {
     @Test
-    void findApplesWithColor() {
+    void findApplesWithColorGreen() {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
+        var apples = getAllApples();
+        Apple testApple1 = new Apple("green");
+        List<Apple> stockByColorGreen = appleWarehouse.findAppleByColor(apples, testApple1);
+        assertEquals(7, stockByColorGreen.size(), "тест- количество зеленых яблок на складе");
+    }
+
+    @Test
+    void findApplesWithColorRed() {
+        AppleWarehouse appleWarehouse = new AppleWarehouse();
+        var apples = getAllApples();
+        Apple testApple2 = new Apple("red");
+        List<Apple> stockByColorRed = appleWarehouse.findAppleByColor(apples, testApple2);
+        assertEquals(5, stockByColorRed.size(), "тест- количество красных яблок на складе");
+    }
+
+    private static List<Apple> getAllApples() {
         List<Apple> apples = new ArrayList<>();
         apples.add(new Apple("green"));
         apples.add(new Apple("green"));
@@ -27,9 +43,7 @@ class AppleWarehouseTest {
         apples.add(new Apple("yellow"));
         apples.add(new Apple("red"));
         apples.add(new Apple("green"));
-        Apple testApple = new Apple("green");
-        List<Apple> stockByColorGreen = appleWarehouse.findAppleByColor(apples, testApple);
-        assertEquals(7,stockByColorGreen.size(),"тест- количество зеленых яблок на складе");
+        return apples;
     }
 
 }
