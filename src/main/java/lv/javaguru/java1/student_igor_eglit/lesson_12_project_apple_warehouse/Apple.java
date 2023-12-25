@@ -7,9 +7,9 @@ class Apple {
         this.appleColor = appleColor;
 
     }
-
     public String getAppleColor() {
         return appleColor;
     }
+
 
 }
