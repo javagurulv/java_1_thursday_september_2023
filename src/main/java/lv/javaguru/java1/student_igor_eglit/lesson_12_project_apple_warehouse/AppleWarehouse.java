@@ -17,9 +17,9 @@ class AppleWarehouse {
         for (Apple apples : allApples) {
             if (appleColor.equals(apples)){
                 equals.add(apples);
-                System.out.println("Найдено на складе яблок цвета " + appleColor + " в количестве " + equals.size() + " штук");
             }
         }
+        System.out.println("Найдено на складе яблок цвета " + appleColor + " в количестве " + equals.size() + " штук");
         return equals;
     }
 
