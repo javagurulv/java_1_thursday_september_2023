@@ -44,8 +44,8 @@ class AppleWarehouseDemo {
 
     private void separationByWeight(AppleWarehouse appleWarehouse, List<Apple> stock) {
         this.apple = appleWarehouse.separationByWeight(stock, 150);
-        var heavy = apple.heavyApples;
-        var light = apple.lightApples;
+        var heavy = apple.getHeavyApples();
+        var light = apple.getLightApples();
         System.out.println("Разделение по весу:");
         System.out.println("Тяжелых яблок " + heavy.size());
         System.out.println("Легких яблок " + light.size());
