@@ -7,8 +7,6 @@ class Apple {
     String appleColor;
     int weight;
     List<Apple> lightApples;
-
-
     List<Apple> heavyApples;
 
 
@@ -38,14 +36,14 @@ class Apple {
         return heavyApples;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof Apple) {
-            Apple other = (Apple) obj;
-            return this.weight == (other.weight) && this.getWeight() == other.getWeight();
-        }
-        return false;
-    }
+//    @Override
+//    public boolean equals(Object obj) {
+//        if (obj instanceof Apple) {
+//            Apple other = (Apple) obj;
+//            return this.weight == (other.weight) && this.getWeight() == other.getWeight();
+//        }
+//        return false;
+//    }
 
 }
 

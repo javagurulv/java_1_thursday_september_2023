@@ -5,44 +5,70 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AppleWarehouseTest {
     @Test
     void findApplesWithColorGreen() {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
-        var apples = getAllApples();
-        Apple testApple1 = new Apple("green", 149);
-        List<Apple> stockByColorGreen = appleWarehouse.findAppleByColor(apples, testApple1);
+        var apples = makeAppleStock();
+        List<Apple> stockByColorGreen = appleWarehouse.findAppleByColor(apples, "green");
         assertEquals(7, stockByColorGreen.size(), "тест- количество зеленых яблок на складе");
     }
 
     @Test
     void findApplesWithColorRed() {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
-        var apples = getAllApples();
-        Apple testApple2 = new Apple("red", 151);
-        List<Apple> stockByColorRed = appleWarehouse.findAppleByColor(apples, testApple2);
+        var apples = makeAppleStock();
+        List<Apple> stockByColorRed = appleWarehouse.findAppleByColor(apples, "red");
         assertEquals(5, stockByColorRed.size(), "тест- количество красных яблок на складе");
     }
 
     @Test
     void separationByHeavyWeightTest() {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
-        var apples = getAllApples();
-        Apple separatedApples = appleWarehouse.separationByWeight(apples);
+        var apples = makeAppleStock();
+        Apple separatedApples = appleWarehouse.separationByWeight(apples, 150);
         var heavy = separatedApples.heavyApples;
        assertEquals(7,heavy.size(),"тест - нахождение тяжелых яблок");
     }
     @Test
     void separationByLightWeightTest() {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
-        var apples = getAllApples();
-        Apple separatedApples = appleWarehouse.separationByWeight(apples);
+        var apples = makeAppleStock();
+        Apple separatedApples = appleWarehouse.separationByWeight(apples, 150);
         var light = separatedApples.lightApples;
         assertEquals(8,light.size(),"тест - нахождение легких яблок");
     }
-    private static List<Apple> getAllApples() {
+    @Test
+    void findByParametersOnlyColorTest(){
+        AppleWarehouse appleWarehouse = new AppleWarehouse();
+        var apples = makeAppleStock();
+        List<Apple> onlyByColor = appleWarehouse.findAppleByDifferentParameters(apples,"green",0,0);
+        assertEquals(7,onlyByColor.size(), "тест универсальный метод - только по цвету");
+    }
+    @Test
+    void findByParametersOnlyWeightTest(){
+        AppleWarehouse appleWarehouse = new AppleWarehouse();
+        var apples = makeAppleStock();
+        List<Apple> onlyByWeight = appleWarehouse.findAppleByDifferentParameters(apples,"",0,150);
+        assertEquals(8,onlyByWeight.size(), "тест универсальный метод - только по весу");
+    }
+    @Test
+    void findByParametersColorAndWeightTest(){
+        AppleWarehouse appleWarehouse = new AppleWarehouse();
+        var apples = makeAppleStock();
+        List<Apple> byColorAndWeight = appleWarehouse.findAppleByDifferentParameters(apples,"green",0,150);
+        assertEquals(5,byColorAndWeight.size(), "тест универсальный метод - по цвету и весу");
+    }
+
+
+
+
+
+
+    private static List<Apple> makeAppleStock() {
         List<Apple> apples = new ArrayList<>();
         apples.add(new Apple("green", 149));
         apples.add(new Apple("green", 120));
