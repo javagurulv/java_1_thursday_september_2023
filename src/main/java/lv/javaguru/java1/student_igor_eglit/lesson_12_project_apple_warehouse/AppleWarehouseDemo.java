@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 class AppleWarehouseDemo {
     private Apple apple;
+    private AppleSearchCriteria searchCriteria;
 
     public List<Apple> appleStock() {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
@@ -28,6 +29,9 @@ class AppleWarehouseDemo {
         appleWarehouseDemo.ByRedColor(appleWarehouse, stock);
         appleWarehouseDemo.separationByWeight(appleWarehouse, stock);
         appleWarehouseDemo.findByParameters(appleWarehouse,stock);
+        appleWarehouseDemo.findWithInterfaceColorSearch(appleWarehouse, stock);
+        appleWarehouseDemo.findWithInterfaceWeightSearch(appleWarehouse, stock);
+
 
     }
 
@@ -63,6 +67,14 @@ class AppleWarehouseDemo {
         List<Apple> stockByParameters =
                 appleWarehouse.findAppleByDifferentParameters(stock, color, weightFrom, weightTo);
         System.out.println("Найдено " + stockByParameters.size()+ " яблок соответствующих введенным параметрам");
+    }
+    private void findWithInterfaceColorSearch(AppleWarehouse appleWarehouse, List<Apple> stock){
+        var result = appleWarehouse.findApplesInterfaceSearch(new GreenAppleSearchCriteria(), stock);
+        System.out.println("Результат зеленые яблоки через интерфейс = "+ result.size() + "штук");
+    }
+    private void findWithInterfaceWeightSearch(AppleWarehouse appleWarehouse, List<Apple> stock){
+        var result = appleWarehouse.findApplesInterfaceSearch(new HeavyAppleSearchCriteria(), stock);
+        System.out.println("Результат тяжелые яблоки яблоки через интерфейс = "+ result.size() + "штук");
     }
 
     public static void main(String[] args) {

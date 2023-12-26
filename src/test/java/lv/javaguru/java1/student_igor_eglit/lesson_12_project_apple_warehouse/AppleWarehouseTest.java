@@ -31,7 +31,7 @@ class AppleWarehouseTest {
         var apples = makeAppleStock();
         Apple separatedApples = appleWarehouse.separationByWeight(apples, 150);
         var heavy = separatedApples.heavyApples;
-       assertEquals(7,heavy.size(),"тест - нахождение тяжелых яблок");
+       assertEquals(6,heavy.size(),"тест - нахождение тяжелых яблок");
     }
     @Test
     void separationByLightWeightTest() {
@@ -39,7 +39,7 @@ class AppleWarehouseTest {
         var apples = makeAppleStock();
         Apple separatedApples = appleWarehouse.separationByWeight(apples, 150);
         var light = separatedApples.lightApples;
-        assertEquals(8,light.size(),"тест - нахождение легких яблок");
+        assertEquals(9,light.size(),"тест - нахождение легких яблок");
     }
     @Test
     void findByParametersOnlyColorTest(){
@@ -61,6 +61,34 @@ class AppleWarehouseTest {
         var apples = makeAppleStock();
         List<Apple> byColorAndWeight = appleWarehouse.findAppleByDifferentParameters(apples,"green",0,150);
         assertEquals(5,byColorAndWeight.size(), "тест универсальный метод - по цвету и весу");
+    }
+    @Test
+    void interfaceCriteriaGreenTest(){
+        AppleWarehouse appleWarehouse = new AppleWarehouse();
+        var apples = makeAppleStock();
+        List<Apple> byInterfaceCriteria = appleWarehouse.findApplesInterfaceSearch(new GreenAppleSearchCriteria(), apples);
+        assertEquals(7,byInterfaceCriteria.size(),"тест поиска через интерфейс критерий - green");
+    }
+    @Test
+    void interfaceCriteriaRedTest(){
+        AppleWarehouse appleWarehouse = new AppleWarehouse();
+        var apples = makeAppleStock();
+        List<Apple> byInterfaceCriteria = appleWarehouse.findApplesInterfaceSearch(new RedAppleSearchCriteria(), apples);
+        assertEquals(5,byInterfaceCriteria.size(),"тест поиска через интерфейс критерий - red");
+    }
+    @Test
+    void interfaceCriteriaHeavyTest(){
+        AppleWarehouse appleWarehouse = new AppleWarehouse();
+        var apples = makeAppleStock();
+        List<Apple> byInterfaceCriteria = appleWarehouse.findApplesInterfaceSearch(new HeavyAppleSearchCriteria(), apples);
+        assertEquals(6,byInterfaceCriteria.size(),"тест поиска через интерфейс критерий - heavy");
+    }
+    @Test
+    void interfaceCriteriaLightTest(){
+        AppleWarehouse appleWarehouse = new AppleWarehouse();
+        var apples = makeAppleStock();
+        List<Apple> byInterfaceCriteria = appleWarehouse.findApplesInterfaceSearch(new LightAppleSearchCriteria(), apples);
+        assertEquals(9,byInterfaceCriteria.size(),"тест поиска через интерфейс критерий - light");
     }
 
 

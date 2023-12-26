@@ -27,7 +27,7 @@ class AppleWarehouse {
         List<Apple> stockLightApples = new ArrayList<>();
         List<Apple> stockHeavyApples = new ArrayList<>();
         for (Apple apples : allApples) {
-            if (apples.getWeight() < weight) {
+            if (apples.getWeight() <= weight) {
                 stockLightApples.add(apples);
             } else {
                 stockHeavyApples.add(apples);
@@ -60,6 +60,14 @@ class AppleWarehouse {
         return stockByParameters;
     }
 
+    List<Apple> findApplesInterfaceSearch(AppleSearchCriteria searchCriteria, List<Apple> allApples){
+        List<Apple> result = new ArrayList<>();
+        for (Apple apple: allApples){
+            if(searchCriteria.test(apple)){
+                result.add(apple);
+            }
+        }return result;
+    }
 }
 //     static String[] apples = getAllApples();
 //
