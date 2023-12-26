@@ -26,6 +26,22 @@ class AppleWarehouseTest {
         assertEquals(5, stockByColorRed.size(), "тест- количество красных яблок на складе");
     }
 
+    @Test
+    void separationByHeavyWeightTest() {
+        AppleWarehouse appleWarehouse = new AppleWarehouse();
+        var apples = getAllApples();
+        Apple separatedApples = appleWarehouse.separationByWeight(apples);
+        var heavy = separatedApples.heavyApples;
+       assertEquals(7,heavy.size(),"тест - нахождение тяжелых яблок");
+    }
+    @Test
+    void separationByLightWeightTest() {
+        AppleWarehouse appleWarehouse = new AppleWarehouse();
+        var apples = getAllApples();
+        Apple separatedApples = appleWarehouse.separationByWeight(apples);
+        var light = separatedApples.lightApples;
+        assertEquals(8,light.size(),"тест - нахождение легких яблок");
+    }
     private static List<Apple> getAllApples() {
         List<Apple> apples = new ArrayList<>();
         apples.add(new Apple("green", 149));
