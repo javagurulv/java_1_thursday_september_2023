@@ -90,6 +90,13 @@ class AppleWarehouseTest {
         List<Apple> byInterfaceCriteria = appleWarehouse.findApplesInterfaceSearch(new LightAppleSearchCriteria(), apples);
         assertEquals(9,byInterfaceCriteria.size(),"тест поиска через интерфейс критерий - light");
     }
+    @Test
+    void interfaceCriteriaHeavyAndGreenTest(){
+        AppleWarehouse appleWarehouse = new AppleWarehouse();
+        var apples = makeAppleStock();
+        List<Apple> byInterfaceCriteria = appleWarehouse.findApplesInterfaceSearch(new GreenHeavySearchCriteria(), apples);
+        assertEquals(2,byInterfaceCriteria.size(),"тест поиска через интерфейс критерий - green and heavy");
+    }
 
 
 

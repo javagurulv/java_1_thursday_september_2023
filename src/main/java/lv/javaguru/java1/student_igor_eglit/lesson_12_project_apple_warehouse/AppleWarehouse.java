@@ -83,17 +83,3 @@ class AppleWarehouse {
 //    public static void main(String[] args) {
 //        System.out.print(Arrays.toString(apples));
 //    }
-//
-//
-//    public List<Apple> collectLightAndHeavyApples(List<Apple> allApples, Apple apple) {
-////        List<Apple> stockLightApples = new ArrayList<>();
-////        List<Apple> stockHeavyApples = new ArrayList<>();
-////        for (Apple apples : allApples) {
-////            if (apple.getWeight() < 150) {
-////                stockLightApples.add(apples);
-////            } else {
-////                stockHeavyApples.add(apples);
-////            }
-////        }
-////        return (stockLightApples);
-////    }
