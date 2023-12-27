@@ -9,6 +9,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AppleWarehouseTest {
+
     @Test
     void findApplesWithColorGreen() {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
@@ -118,6 +119,7 @@ class AppleWarehouseTest {
             }
         }, apples);
         assertEquals(5, redApples.size(), "тест красных яблок через анонимный класс критериев");
+
         List<Apple> greenApples = appleWarehouse.findApplesInterfaceSearch(new AppleSearchCriteria() {
             @Override
             public boolean test(Apple apple) {
@@ -125,6 +127,7 @@ class AppleWarehouseTest {
             }
         }, apples);
         assertEquals(7, greenApples.size(), "тест зеленых яблок через анонимный класс критериев");
+
         List<Apple> heavyApples = appleWarehouse.findApplesInterfaceSearch(new AppleSearchCriteria() {
             @Override
             public boolean test(Apple apple) {
@@ -132,13 +135,40 @@ class AppleWarehouseTest {
             }
         }, apples);
         assertEquals(6, heavyApples.size(), "тест тяжелых яблок через анонимный класс критериев");
+
         List<Apple> lightApples = appleWarehouse.findApplesInterfaceSearch(new AppleSearchCriteria() {
             @Override
-            public boolean test(Apple apple) {return (apple.getWeight() <= 150);
+            public boolean test(Apple apple) {
+                return (apple.getWeight() <= 150);
             }
         }, apples);
         assertEquals(9, lightApples.size(), "тест легких яблок через анонимный класс критериев");
 
+    }
+
+    @Test
+    void lambdaTest() {
+        AppleWarehouse appleWarehouse = new AppleWarehouse();
+        var apples = makeAppleStock();
+        List<Apple> redApples = appleWarehouse.findApplesInterfaceSearch(
+                apple -> "red".equals(apple.getAppleColor()), apples
+        );
+        assertEquals(5, redApples.size(), "тест красных яблок через лямбду");
+
+        List<Apple> greenApples = appleWarehouse.findApplesInterfaceSearch(
+                apple -> "green".equals(apple.getAppleColor()), apples
+        );
+        assertEquals(7, greenApples.size(), "тест зеленых яблок через лямбду");
+
+        List<Apple> heavyApples = appleWarehouse.findApplesInterfaceSearch(
+                apple -> apple.getWeight() > 150, apples
+        );
+        assertEquals(6, heavyApples.size(), "тест тяжелых яблок через лямбду");
+
+        List<Apple> lightApples = appleWarehouse.findApplesInterfaceSearch(
+                apple -> apple.getWeight() <= 150, apples
+        );
+        assertEquals(9, lightApples.size(), "тест легких яблок через лямбду");
     }
 
 
