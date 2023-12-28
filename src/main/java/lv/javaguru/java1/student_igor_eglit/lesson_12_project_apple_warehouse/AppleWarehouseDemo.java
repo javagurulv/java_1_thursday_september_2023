@@ -91,7 +91,7 @@ class AppleWarehouseDemo {
                 new AppleSearchCriteria() {
                     @Override
                     public boolean test(Apple apple) {
-                        return "red".equals(apple.getAppleColor());
+                        return "red".equals(apple.getColor());
                     }
                 },
                 stock);

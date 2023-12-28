@@ -115,7 +115,7 @@ class AppleWarehouseTest {
         List<Apple> redApples = appleWarehouse.findApplesInterfaceSearch(new AppleSearchCriteria() {
             @Override
             public boolean test(Apple apple) {
-                return "red".equals(apple.getAppleColor());
+                return "red".equals(apple.getColor());
             }
         }, apples);
         assertEquals(5, redApples.size(), "тест красных яблок через анонимный класс критериев");
@@ -123,7 +123,7 @@ class AppleWarehouseTest {
         List<Apple> greenApples = appleWarehouse.findApplesInterfaceSearch(new AppleSearchCriteria() {
             @Override
             public boolean test(Apple apple) {
-                return "green".equals(apple.getAppleColor());
+                return "green".equals(apple.getColor());
             }
         }, apples);
         assertEquals(7, greenApples.size(), "тест зеленых яблок через анонимный класс критериев");
@@ -151,12 +151,12 @@ class AppleWarehouseTest {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         var apples = makeAppleStock();
         List<Apple> redApples = appleWarehouse.findApplesInterfaceSearch(
-                apple -> "red".equals(apple.getAppleColor()), apples
+                apple -> "red".equals(apple.getColor()), apples
         );
         assertEquals(5, redApples.size(), "тест красных яблок через лямбду");
 
         List<Apple> greenApples = appleWarehouse.findApplesInterfaceSearch(
-                apple -> "green".equals(apple.getAppleColor()), apples
+                apple -> "green".equals(apple.getColor()), apples
         );
         assertEquals(7, greenApples.size(), "тест зеленых яблок через лямбду");
 
