@@ -30,6 +30,15 @@ class TransactionAnalysisServiceTest {
     void sortValueAsc() {
         List<Transaction> sorted = TransactionAnalysisService.sortValueAsc(transactions);
         assertNotEquals(transactions, sorted);
+        assertEquals(sorted.get(0).getValue(), 50);
+        assertEquals(sorted.get(17).getValue(), 3000);
+    }
+    @Test
+    void sortValueDsc() {
+        List<Transaction> sorted = TransactionAnalysisService.sortValueDsc(transactions);
+        assertNotEquals(transactions, sorted);
+        assertEquals(sorted.get(0).getValue(), 3000);
+        assertEquals(sorted.get(17).getValue(), 50);
     }
 
 }

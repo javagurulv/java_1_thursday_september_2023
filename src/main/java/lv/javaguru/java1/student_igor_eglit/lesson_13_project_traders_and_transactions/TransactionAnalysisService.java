@@ -16,7 +16,11 @@ class TransactionAnalysisService {
                 sorted(Comparator.comparing(Transaction::getValue)).
                 collect(Collectors.toList());
     }
-
+    static List<Transaction> sortValueDsc(List<Transaction> transactions) {
+        return transactions.stream().
+                sorted(Comparator.comparing(Transaction::getValue).reversed()).
+                collect(Collectors.toList());
+    }
 
     public static void printTransactions(List<Transaction> transactions) {
         transactions.forEach(System.out::println);

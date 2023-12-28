@@ -13,10 +13,16 @@ class TransactionAnalysisServiceDemo {
         List<Transaction> sorted = TransactionAnalysisService.sortValueAsc(transactions);
         TransactionAnalysisService.printTransactions(sorted);
     }
+    public static void sortByValueDsc(){
+        List<Transaction> sorted = TransactionAnalysisService.sortValueDsc(transactions);
+        TransactionAnalysisService.printTransactions(sorted);
+    }
 
     public static void main(String[] args) {
-        filterByYear();
-        System.out.println("Sorted by Value Asc");
-        sortByValueAsc();
+//        filterByYear();
+//        System.out.println("Sorted by Value Asc");
+//        sortByValueAsc();
+        System.out.println("Sorted by Value Dsc");
+        sortByValueDsc();
     }
 }
