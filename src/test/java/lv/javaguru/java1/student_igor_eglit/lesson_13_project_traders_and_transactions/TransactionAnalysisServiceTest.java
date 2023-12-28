@@ -51,9 +51,14 @@ class TransactionAnalysisServiceTest {
     }
 
     @Test
-    void collectingYears() {
+    void collectingUniqueYears() {
         List<Integer> collected = TransactionAnalysisService.collectingYears(transactions);
         assertEquals(2011, collected.get(0));
         assertEquals(2014, collected.get(3));
+    }
+    @Test
+    void collectingUniqueTraders() {
+        List<Trader> collectedTraders = TransactionAnalysisService.collectingUniqueTraders(transactions);
+        assertEquals(3, collectedTraders.size());
     }
 }

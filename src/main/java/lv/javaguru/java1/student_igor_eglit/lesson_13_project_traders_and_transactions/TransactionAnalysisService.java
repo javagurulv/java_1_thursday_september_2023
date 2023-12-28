@@ -33,6 +33,11 @@ class TransactionAnalysisService {
                 map(Transaction::getYear).
                 distinct().collect(Collectors.toList());
     }
+    static List<Trader> collectingUniqueTraders(List<Transaction> transactions) {
+        return transactions.stream().
+                map(Transaction::getTrader).
+                distinct().collect(Collectors.toList());
+    }
 
     public static void printTransactions(List<Transaction> transactions) {
         transactions.forEach(System.out::println);
