@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 class TransactionAnalysisService {
-    static List<Transaction> filterByYear(List<Transaction> transactions) {
+    static List<Transaction> filterByYear(List<Transaction> transactions, int transactionYear) {
         return transactions.stream().
-                filter(year -> year.getYear() == 2011)
+                filter(year -> year.getYear() == transactionYear)
                 .collect(Collectors.toList());
     }
     public static void printTransactions(List<Transaction> transactions){

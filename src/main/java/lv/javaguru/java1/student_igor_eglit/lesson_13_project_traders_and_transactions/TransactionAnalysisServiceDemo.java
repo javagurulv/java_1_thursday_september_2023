@@ -6,12 +6,11 @@ class TransactionAnalysisServiceDemo {
     public static List<Transaction> transactions = TransactionTestData.getTransactions();
 
     public static void filterByYear() {
-        List<Transaction> year = TransactionAnalysisService.filterByYear(transactions);
+        List<Transaction> year = TransactionAnalysisService.filterByYear(transactions, 2011);
         TransactionAnalysisService.printTransactions(year);
     }
 
     public static void main(String[] args) {
-        TransactionAnalysisServiceDemo transactionAnalysisServiceDemo = new TransactionAnalysisServiceDemo();
         filterByYear();
     }
 }

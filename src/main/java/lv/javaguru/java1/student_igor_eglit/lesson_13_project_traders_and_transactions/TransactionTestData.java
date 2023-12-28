@@ -13,16 +13,19 @@ class TransactionTestData {
                 new Transaction(trader2, 2011, 1500),
                 new Transaction(trader3, 2011, 150),
                 new Transaction(trader3, 2011, 2000),
+
                 new Transaction(trader2, 2012, 900),
                 new Transaction(trader1, 2012, 2100),
                 new Transaction(trader2, 2012, 100),
                 new Transaction(trader3, 2012, 500),
                 new Transaction(trader2, 2012, 1900),
+
                 new Transaction(trader1, 2013, 1750),
                 new Transaction(trader2, 2013, 2200),
                 new Transaction(trader3, 2013, 3000),
                 new Transaction(trader2, 2013, 100),
                 new Transaction(trader1, 2013, 1200),
+
                 new Transaction(trader2, 2014, 1000),
                 new Transaction(trader3, 2014, 1900),
                 new Transaction(trader2, 2014, 1300),

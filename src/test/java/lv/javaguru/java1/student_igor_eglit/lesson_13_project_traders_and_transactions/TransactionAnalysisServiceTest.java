@@ -12,8 +12,17 @@ class TransactionAnalysisServiceTest {
 
     @Test
     void filterByYear(){
-        List<Transaction> year = TransactionAnalysisService.filterByYear(transactions);
-        assertEquals(4, year.size());
+        List<Transaction> year2011 = TransactionAnalysisService.filterByYear(transactions, 2011);
+        assertEquals(4, year2011.size());
+
+        List<Transaction> year2012 = TransactionAnalysisService.filterByYear(transactions, 2012);
+        assertEquals(5, year2012.size());
+
+        List<Transaction> year2013 = TransactionAnalysisService.filterByYear(transactions, 2013);
+        assertEquals(5, year2013.size());
+
+        List<Transaction> year2014 = TransactionAnalysisService.filterByYear(transactions, 2014);
+        assertEquals(4, year2014.size());
     }
 
 }
