@@ -39,7 +39,7 @@ class TransactionAnalysisServiceTest {
         List<Transaction> sorted = TransactionAnalysisService.sortValueDsc(transactions);
         assertNotEquals(transactions, sorted);
         assertEquals(3000, sorted.get(0).getValue());
-        assertEquals(50,sorted.get(17).getValue());
+        assertEquals(50, sorted.get(17).getValue());
     }
 
     @Test
@@ -48,5 +48,12 @@ class TransactionAnalysisServiceTest {
         assertEquals(2011, sorted.get(0).getYear());
         assertEquals(150, sorted.get(0).getValue());
         assertEquals(2000, sorted.get(3).getValue());
+    }
+
+    @Test
+    void collectingYears() {
+        List<Integer> collected = TransactionAnalysisService.collectingYears(transactions);
+        assertEquals(2011, collected.get(0));
+        assertEquals(2014, collected.get(3));
     }
 }

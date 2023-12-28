@@ -25,14 +25,21 @@ class TransactionAnalysisServiceDemo {
         TransactionAnalysisService.printTransactions(sorted);
     }
 
+    public static void searchAllYEars() {
+        List<Integer> yearsCollected = TransactionAnalysisService.collectingYears(transactions);
+        yearsCollected.forEach(System.out::println);
+    }
+
     public static void main(String[] args) {
 //        filterByYear();
 //        System.out.println("Sorted by Value Asc");
 //        sortByValueAsc();
 //        System.out.println("Sorted by Value Dsc");
 //        sortByValueDsc();
-        System.out.println("sort and filter");
-        sortAndFilter();
+//        System.out.println("sort and filter");
+//        sortAndFilter();
+        System.out.println("Year collected");
+        searchAllYEars();
 
     }
 }

@@ -28,6 +28,12 @@ class TransactionAnalysisService {
                 .collect(Collectors.toList());
     }
 
+    static List<Integer> collectingYears(List<Transaction> transactions){
+        return transactions.stream().
+                map(Transaction::getYear).
+                distinct().collect(Collectors.toList());
+    }
+
     public static void printTransactions(List<Transaction> transactions) {
         transactions.forEach(System.out::println);
     }
