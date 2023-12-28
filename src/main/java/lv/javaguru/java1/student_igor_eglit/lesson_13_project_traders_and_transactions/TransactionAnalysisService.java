@@ -21,6 +21,12 @@ class TransactionAnalysisService {
                 sorted(Comparator.comparing(Transaction::getValue).reversed()).
                 collect(Collectors.toList());
     }
+    static List<Transaction> filterAndSort(List<Transaction> transactions, int transactionYear){
+        return transactions.stream().
+                filter(year -> year.getYear() == transactionYear)
+                .sorted(Comparator.comparing(Transaction::getValue))
+                .collect(Collectors.toList());
+    }
 
     public static void printTransactions(List<Transaction> transactions) {
         transactions.forEach(System.out::println);

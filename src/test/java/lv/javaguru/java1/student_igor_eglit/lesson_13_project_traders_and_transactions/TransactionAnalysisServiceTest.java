@@ -33,12 +33,20 @@ class TransactionAnalysisServiceTest {
         assertEquals(sorted.get(0).getValue(), 50);
         assertEquals(sorted.get(17).getValue(), 3000);
     }
+
     @Test
     void sortValueDsc() {
         List<Transaction> sorted = TransactionAnalysisService.sortValueDsc(transactions);
         assertNotEquals(transactions, sorted);
-        assertEquals(sorted.get(0).getValue(), 3000);
-        assertEquals(sorted.get(17).getValue(), 50);
+        assertEquals(3000, sorted.get(0).getValue());
+        assertEquals(50,sorted.get(17).getValue());
     }
 
+    @Test
+    void filterAndSortAsc() {
+        List<Transaction> sorted = TransactionAnalysisService.filterAndSort(transactions, 2011);
+        assertEquals(2011, sorted.get(0).getYear());
+        assertEquals(150, sorted.get(0).getValue());
+        assertEquals(2000, sorted.get(3).getValue());
+    }
 }

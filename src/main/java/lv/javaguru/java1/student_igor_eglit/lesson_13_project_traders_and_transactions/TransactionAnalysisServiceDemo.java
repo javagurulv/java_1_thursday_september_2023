@@ -9,12 +9,19 @@ class TransactionAnalysisServiceDemo {
         List<Transaction> year = TransactionAnalysisService.filterByYear(transactions, 2011);
         TransactionAnalysisService.printTransactions(year);
     }
-    public static void sortByValueAsc(){
+
+    public static void sortByValueAsc() {
         List<Transaction> sorted = TransactionAnalysisService.sortValueAsc(transactions);
         TransactionAnalysisService.printTransactions(sorted);
     }
-    public static void sortByValueDsc(){
+
+    public static void sortByValueDsc() {
         List<Transaction> sorted = TransactionAnalysisService.sortValueDsc(transactions);
+        TransactionAnalysisService.printTransactions(sorted);
+    }
+
+    public static void sortAndFilter() {
+        List<Transaction> sorted = TransactionAnalysisService.filterAndSort(transactions, 2011);
         TransactionAnalysisService.printTransactions(sorted);
     }
 
@@ -22,7 +29,10 @@ class TransactionAnalysisServiceDemo {
 //        filterByYear();
 //        System.out.println("Sorted by Value Asc");
 //        sortByValueAsc();
-        System.out.println("Sorted by Value Dsc");
-        sortByValueDsc();
+//        System.out.println("Sorted by Value Dsc");
+//        sortByValueDsc();
+        System.out.println("sort and filter");
+        sortAndFilter();
+
     }
 }
