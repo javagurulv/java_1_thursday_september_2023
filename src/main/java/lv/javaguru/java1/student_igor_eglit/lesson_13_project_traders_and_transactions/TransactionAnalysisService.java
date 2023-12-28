@@ -1,5 +1,6 @@
 package lv.javaguru.java1.student_igor_eglit.lesson_13_project_traders_and_transactions;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -9,7 +10,15 @@ class TransactionAnalysisService {
                 filter(year -> year.getYear() == transactionYear)
                 .collect(Collectors.toList());
     }
-    public static void printTransactions(List<Transaction> transactions){
+
+    static List<Transaction> sortValueAsc(List<Transaction> transactions) {
+        return transactions.stream().
+                sorted(Comparator.comparing(Transaction::getValue)).
+                collect(Collectors.toList());
+    }
+
+
+    public static void printTransactions(List<Transaction> transactions) {
         transactions.forEach(System.out::println);
     }
 }

@@ -5,13 +5,14 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 import java.util.stream.Stream;
 
+import static lv.javaguru.java1.student_igor_eglit.lesson_13_project_traders_and_transactions.TransactionAnalysisService.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TransactionAnalysisServiceTest {
     List<Transaction> transactions = TransactionTestData.getTransactions();
 
     @Test
-    void filterByYear(){
+    void filterByYear() {
         List<Transaction> year2011 = TransactionAnalysisService.filterByYear(transactions, 2011);
         assertEquals(4, year2011.size());
 
@@ -23,6 +24,12 @@ class TransactionAnalysisServiceTest {
 
         List<Transaction> year2014 = TransactionAnalysisService.filterByYear(transactions, 2014);
         assertEquals(4, year2014.size());
+    }
+
+    @Test
+    void sortValueAsc() {
+        List<Transaction> sorted = TransactionAnalysisService.sortValueAsc(transactions);
+        assertNotEquals(transactions, sorted);
     }
 
 }

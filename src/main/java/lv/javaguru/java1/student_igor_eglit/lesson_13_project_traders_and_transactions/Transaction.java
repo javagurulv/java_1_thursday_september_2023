@@ -25,9 +25,9 @@ class Transaction {
     }
 
     public String toString() {
-        return "{" + this.trader + ", " +
-                "year: "+this.year+", " +
-                "value:" + this.value +"}";
+        return "{" + this.trader + ", " + '\t' +
+                "year: "+this.year+", " + '\t' +
+                "value:" + this.value +"}" +'\t';
     }
 
 }

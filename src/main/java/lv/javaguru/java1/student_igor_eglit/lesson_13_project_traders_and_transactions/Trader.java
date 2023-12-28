@@ -19,7 +19,7 @@ class Trader {
     }
 
     public String toString() {
-        return "Trader:"+this.name + " in " + this.city;
+        return "Trader:"+this.name + " in " + this.city +'\t';
     }
 
 }

@@ -9,8 +9,14 @@ class TransactionAnalysisServiceDemo {
         List<Transaction> year = TransactionAnalysisService.filterByYear(transactions, 2011);
         TransactionAnalysisService.printTransactions(year);
     }
+    public static void sortByValueAsc(){
+        List<Transaction> sorted = TransactionAnalysisService.sortValueAsc(transactions);
+        TransactionAnalysisService.printTransactions(sorted);
+    }
 
     public static void main(String[] args) {
         filterByYear();
+        System.out.println("Sorted by Value Asc");
+        sortByValueAsc();
     }
 }
