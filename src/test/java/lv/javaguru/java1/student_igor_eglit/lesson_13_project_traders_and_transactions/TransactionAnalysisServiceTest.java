@@ -3,9 +3,7 @@ package lv.javaguru.java1.student_igor_eglit.lesson_13_project_traders_and_trans
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-import java.util.stream.Stream;
 
-import static lv.javaguru.java1.student_igor_eglit.lesson_13_project_traders_and_transactions.TransactionAnalysisService.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TransactionAnalysisServiceTest {
@@ -57,8 +55,13 @@ class TransactionAnalysisServiceTest {
         assertEquals(2014, collected.get(3));
     }
     @Test
-    void collectingUniqueTraders() {
-        List<Trader> collectedTraders = TransactionAnalysisService.collectingUniqueTraders(transactions);
+    void collectingUniqueNames() {
+        List<String> collectedTraders = TransactionAnalysisService.collectingUniqueNames(transactions);
+        assertEquals(3, collectedTraders.size());
+    }
+    @Test
+    void collectingUniqueCities() {
+        List<String> collectedTraders = TransactionAnalysisService.collectingUniqueCity(transactions);
         assertEquals(3, collectedTraders.size());
     }
 }
