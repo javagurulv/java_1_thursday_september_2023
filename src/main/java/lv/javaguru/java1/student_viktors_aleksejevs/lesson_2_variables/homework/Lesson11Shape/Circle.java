@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.lessoncode.Lesson11Shape;
+package lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.homework.Lesson11Shape;
 
 public class Circle extends Shape {
 

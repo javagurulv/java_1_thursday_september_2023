@@ -33,9 +33,20 @@ class TransactionAnalysisService {
                 map(Transaction::getYear).
                 distinct().collect(Collectors.toList());
     }
-    static List<Trader> collectingUniqueTraders(List<Transaction> transactions) {
+    static List<String> collectingUniqueNames(List<Transaction> transactions) {
         return transactions.stream().
-                map(Transaction::getTrader).
+                map(trader -> trader.getTrader().getName()).
+                distinct().collect(Collectors.toList());
+    }
+    static List<String> collectingUniqueCity(List<Transaction> transactions) {
+        return transactions.stream().
+                map(trader -> trader.getTrader().getCity()).
+                distinct().collect(Collectors.toList());
+    }
+    static List<String> collectingTradersNameFromCity(List<Transaction> transactions, String city) {
+        return transactions.stream().
+                filter(trader -> trader.getTrader().getCity().equals(city)).
+                map(trader -> trader.getTrader().getName()).
                 distinct().collect(Collectors.toList());
     }
     static int sumTransactionVolume(List<Transaction> transactions){
