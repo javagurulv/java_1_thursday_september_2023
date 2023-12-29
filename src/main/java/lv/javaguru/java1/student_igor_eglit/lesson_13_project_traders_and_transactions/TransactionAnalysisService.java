@@ -43,6 +43,12 @@ class TransactionAnalysisService {
                 map(transaction -> transaction.getTrader().getCity()).
                 distinct().collect(Collectors.toList());
     }
+    static List<String> collectingTradersNameFromCity(List<Transaction> transactions) {
+        return transactions.stream().
+                filter(transaction -> transaction.getTrader().getCity().equals("Riga")).
+                map(transaction -> transaction.getTrader().getName()).
+                distinct().collect(Collectors.toList());
+    }
 
     public static void printTransactions(List<Transaction> transactions) {
         transactions.forEach(System.out::println);
