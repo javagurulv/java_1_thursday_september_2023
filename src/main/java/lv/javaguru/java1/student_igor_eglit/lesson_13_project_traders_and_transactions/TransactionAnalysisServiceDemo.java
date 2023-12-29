@@ -29,9 +29,15 @@ class TransactionAnalysisServiceDemo {
         List<Integer> yearsCollected = TransactionAnalysisService.collectingYears(transactions);
         yearsCollected.forEach(System.out::println);
     }
-    public static void collectUniqueTraders(){
+
+    public static void collectUniqueTraders() {
         List<Trader> tradersCollected = TransactionAnalysisService.collectingUniqueTraders(transactions);
         tradersCollected.forEach(System.out::println);
+    }
+
+    public static void sumTransactionsVolume() {
+        var sumVolumes = TransactionAnalysisService.sumTransactionVolume(transactions);
+        System.out.println(sumVolumes);
     }
 
     public static void main(String[] args) {
@@ -44,8 +50,9 @@ class TransactionAnalysisServiceDemo {
 //        sortAndFilter();
 //        System.out.println("Year collected");
 //        searchAllYEars();
-        System.out.println("Names collected");
-        collectUniqueTraders();
-
+//        System.out.println("Names collected");
+//        collectUniqueTraders();
+        System.out.println("Sum Volumes");
+        sumTransactionsVolume();
     }
 }

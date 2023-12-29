@@ -38,6 +38,11 @@ class TransactionAnalysisService {
                 map(Transaction::getTrader).
                 distinct().collect(Collectors.toList());
     }
+    static int sumTransactionVolume(List<Transaction> transactions){
+        return transactions.stream().
+                mapToInt(Transaction::getValue).sum();
+
+    }
 
     public static void printTransactions(List<Transaction> transactions) {
         transactions.forEach(System.out::println);
