@@ -35,18 +35,18 @@ class TransactionAnalysisService {
     }
     static List<String> collectingUniqueNames(List<Transaction> transactions) {
         return transactions.stream().
-                map(transaction -> transaction.getTrader().getName()).
+                map(trader -> trader.getTrader().getName()).
                 distinct().collect(Collectors.toList());
     }
     static List<String> collectingUniqueCity(List<Transaction> transactions) {
         return transactions.stream().
-                map(transaction -> transaction.getTrader().getCity()).
+                map(trader -> trader.getTrader().getCity()).
                 distinct().collect(Collectors.toList());
     }
     static List<String> collectingTradersNameFromCity(List<Transaction> transactions, String city) {
         return transactions.stream().
-                filter(transaction -> transaction.getTrader().getCity().equals(city)).
-                map(transaction -> transaction.getTrader().getName()).
+                filter(trader -> trader.getTrader().getCity().equals(city)).
+                map(trader -> trader.getTrader().getName()).
                 distinct().collect(Collectors.toList());
     }
 
