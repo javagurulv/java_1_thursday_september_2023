@@ -66,7 +66,7 @@ class TransactionAnalysisServiceTest {
     }
     @Test
     void collectingNamesFromRiga() {
-        List<String> collectedTraders = TransactionAnalysisService.collectingTradersNameFromCity(transactions);
+        List<String> collectedTraders = TransactionAnalysisService.collectingTradersNameFromCity(transactions, "Riga");
         assertEquals(1, collectedTraders.size());
     }
 }

@@ -43,9 +43,9 @@ class TransactionAnalysisService {
                 map(transaction -> transaction.getTrader().getCity()).
                 distinct().collect(Collectors.toList());
     }
-    static List<String> collectingTradersNameFromCity(List<Transaction> transactions) {
+    static List<String> collectingTradersNameFromCity(List<Transaction> transactions, String city) {
         return transactions.stream().
-                filter(transaction -> transaction.getTrader().getCity().equals("Riga")).
+                filter(transaction -> transaction.getTrader().getCity().equals(city)).
                 map(transaction -> transaction.getTrader().getName()).
                 distinct().collect(Collectors.toList());
     }

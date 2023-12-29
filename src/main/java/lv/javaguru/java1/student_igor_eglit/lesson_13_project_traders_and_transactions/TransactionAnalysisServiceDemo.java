@@ -38,7 +38,7 @@ class TransactionAnalysisServiceDemo {
         tradersCollected.forEach(System.out::println);
     }
     public static void collectTraderNamesFromRiga(){
-        List<String> tradersCollected = TransactionAnalysisService.collectingTradersNameFromCity(transactions);
+        List<String> tradersCollected = TransactionAnalysisService.collectingTradersNameFromCity(transactions, "Riga");
         tradersCollected.forEach(System.out::println);
     }
 
