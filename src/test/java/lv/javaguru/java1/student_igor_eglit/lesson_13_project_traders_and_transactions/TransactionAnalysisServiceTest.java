@@ -57,8 +57,23 @@ class TransactionAnalysisServiceTest {
         assertEquals(2014, collected.get(3));
     }
     @Test
-    void collectingUniqueTraders() {
-        List<Trader> collectedTraders = TransactionAnalysisService.collectingUniqueTraders(transactions);
+    void collectingUniqueNames() {
+        List<String> collectedTraders = TransactionAnalysisService.collectingUniqueNames(transactions);
         assertEquals(3, collectedTraders.size());
     }
+    @Test
+    void collectingUniqueCities() {
+        List<String> collectedTraders = TransactionAnalysisService.collectingUniqueCity(transactions);
+        assertEquals(3, collectedTraders.size());
+    }
+    @Test
+    void collectingUniqueNameFromCity() {
+        List<String> collectedTraders = TransactionAnalysisService.collectingTradersNameFromCity(transactions, "Riga");
+        assertEquals(1, collectedTraders.size());
+    }
+    @Test
+    void sumTransactionVolume() {
+        assertEquals(23700, TransactionAnalysisService.sumTransactionVolume(transactions));
+    }
+
 }

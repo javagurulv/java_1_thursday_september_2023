@@ -30,7 +30,11 @@ class TransactionAnalysisServiceDemo {
         yearsCollected.forEach(System.out::println);
     }
     public static void collectUniqueTraders(){
-        List<Trader> tradersCollected = TransactionAnalysisService.collectingUniqueTraders(transactions);
+        List<String> tradersCollected = TransactionAnalysisService.collectingUniqueNames(transactions);
+        tradersCollected.forEach(System.out::println);
+    }
+    public static void collectingTradersNameFromCity(){
+        List<String> tradersCollected = TransactionAnalysisService.collectingTradersNameFromCity(transactions, "Riga");
         tradersCollected.forEach(System.out::println);
     }
 
@@ -44,8 +48,9 @@ class TransactionAnalysisServiceDemo {
 //        sortAndFilter();
 //        System.out.println("Year collected");
 //        searchAllYEars();
-        System.out.println("Names collected");
-        collectUniqueTraders();
-
+//        System.out.println("Names collected");
+//        collectUniqueTraders();
+        System.out.println("Unique traders from Riga");
+        collectingTradersNameFromCity();
     }
 }
