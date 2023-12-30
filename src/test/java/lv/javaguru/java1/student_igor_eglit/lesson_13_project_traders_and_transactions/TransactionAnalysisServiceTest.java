@@ -54,32 +54,46 @@ class TransactionAnalysisServiceTest {
         assertEquals(2011, collected.get(0));
         assertEquals(2014, collected.get(3));
     }
+
     @Test
     void collectingUniqueNames() {
         List<String> collectedTraders = TransactionAnalysisService.collectingUniqueNames(transactions);
         assertEquals(3, collectedTraders.size());
     }
+
     @Test
     void collectingUniqueCities() {
         List<String> collectedTraders = TransactionAnalysisService.collectingUniqueCity(transactions);
         assertEquals(3, collectedTraders.size());
     }
+
     @Test
     void collectingUniqueNameFromCity() {
         List<String> collectedTraders = TransactionAnalysisService.collectingTradersNameFromCity(transactions, "Riga");
         assertEquals(1, collectedTraders.size());
     }
+
     @Test
     void sumTransactionVolume() {
         assertEquals(23700, TransactionAnalysisService.sumAllTransactionVolume(transactions));
     }
+
     @Test
     void calculateNumberOfTransactionYear2011() {
         assertEquals(4, TransactionAnalysisService.calculateNumbersOfTransactionsOfTheYear(transactions, 2011));
     }
+
     @Test
     void findTraderWithMostTransactionDone() {
         assertEquals("Optional[Jonh Smith]", TransactionAnalysisService.traderWithMostTransactionsDone(transactions));
+    }
+    @Test
+    void findTraderWithMinTransaction(){
+
+    }
+    @Test
+    void findTraderWithMaxTransaction(){
+
     }
 
 }

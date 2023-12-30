@@ -71,9 +71,27 @@ class TransactionAnalysisService {
     static String traderWithMostTransactionsDone(List<Transaction> transactions) {
         return transactions.stream().
                 map(trader -> trader.getTrader().getName()).
-                collect(Collectors.groupingBy(Function.identity(), Collectors.counting())).entrySet().stream()
+                collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .entrySet().stream()
                 .max(Map.Entry.comparingByValue())
                 .map(Map.Entry::getKey).toString();
+    }
+
+   /* static String traderWithMostTransactionsValue(List<Transaction> transactions) {
+        return transactions.stream()
+                .map(trader -> trader.getTrader().getName())
+                .collect(Collectors.groupingBy(Function.identity(),
+                        Collectors.summingInt(Transaction::getValue)))
+                .maxBy(Map.Entry.comparingByValue())
+                .map(Map.Entry::getKey)
+                .orElse("");
+
+    }*/
+    static String findTraderWithMinTransaction(List<Transaction> transactions){
+        return String.valueOf(transactions.stream().min(Comparator.comparing(Transaction::getValue)).orElse(null));
+    }
+    static String findTraderWithMaxTransaction(List<Transaction> transactions){
+        return String.valueOf(transactions.stream().max(Comparator.comparing(Transaction::getValue)).orElse(null));
     }
 
     public static void printTransactions(List<Transaction> transactions) {

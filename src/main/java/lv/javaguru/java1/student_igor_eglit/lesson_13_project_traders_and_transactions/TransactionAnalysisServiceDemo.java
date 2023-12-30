@@ -41,6 +41,14 @@ class TransactionAnalysisServiceDemo {
         String trader = TransactionAnalysisService.traderWithMostTransactionsDone(transactions);
         System.out.println(trader);
     }
+    public static void traderWithMinTransaction(){
+        String trader = TransactionAnalysisService.findTraderWithMinTransaction(transactions);
+        System.out.println(trader);
+    }
+    public static void traderWithMaxTransaction(){
+        String trader = TransactionAnalysisService.findTraderWithMaxTransaction(transactions);
+        System.out.println(trader);
+    }
 
     public static void main(String[] args) {
 //        filterByYear();
@@ -58,5 +66,9 @@ class TransactionAnalysisServiceDemo {
 //        collectingTradersNameFromCity();
         System.out.println("Trader with most Transactions Done");
         traderWithMostTransactionsDone();
+        System.out.println("Trader with min Transaction");
+        traderWithMinTransaction();
+        System.out.println("Trader with max Transaction");
+        traderWithMaxTransaction();
     }
 }
