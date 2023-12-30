@@ -1,7 +1,7 @@
 package lv.javaguru.java1.student_igor_eglit.lesson_13_project_traders_and_transactions;
 
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 class TransactionAnalysisService {
@@ -55,7 +55,7 @@ class TransactionAnalysisService {
                 distinct().collect(Collectors.toList());
     }
 
-    static int sumTransactionVolume(List<Transaction> transactions) {
+    static int sumAllTransactionVolume(List<Transaction> transactions) {
         return transactions.stream().
                 mapToInt(Transaction::getValue).sum();
 
@@ -66,6 +66,14 @@ class TransactionAnalysisService {
                 filter(year -> year.getYear() == transactionYear).
                 toList().
                 size();
+    }
+
+    static String traderWithMostTransactionsDone(List<Transaction> transactions) {
+        return transactions.stream().
+                map(trader -> trader.getTrader().getName()).
+                collect(Collectors.groupingBy(Function.identity(), Collectors.counting())).entrySet().stream()
+                .max(Map.Entry.comparingByValue())
+                .map(Map.Entry::getKey).toString();
     }
 
     public static void printTransactions(List<Transaction> transactions) {

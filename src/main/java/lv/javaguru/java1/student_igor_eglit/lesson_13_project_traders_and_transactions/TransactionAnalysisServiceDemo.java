@@ -1,6 +1,6 @@
 package lv.javaguru.java1.student_igor_eglit.lesson_13_project_traders_and_transactions;
 
-import java.util.List;
+import java.util.*;
 
 class TransactionAnalysisServiceDemo {
     public static List<Transaction> transactions = TransactionTestData.getTransactions();
@@ -37,6 +37,10 @@ class TransactionAnalysisServiceDemo {
         List<String> tradersCollected = TransactionAnalysisService.collectingTradersNameFromCity(transactions, "Riga");
         tradersCollected.forEach(System.out::println);
     }
+    public static void traderWithMostTransactionsDone(){
+        String trader = TransactionAnalysisService.traderWithMostTransactionsDone(transactions);
+        System.out.println(trader);
+    }
 
     public static void main(String[] args) {
 //        filterByYear();
@@ -50,7 +54,9 @@ class TransactionAnalysisServiceDemo {
 //        searchAllYEars();
 //        System.out.println("Names collected");
 //        collectUniqueTraders();
-        System.out.println("Unique traders from Riga");
-        collectingTradersNameFromCity();
+//        System.out.println("Unique traders from Riga");
+//        collectingTradersNameFromCity();
+        System.out.println("Trader with most Transactions Done");
+        traderWithMostTransactionsDone();
     }
 }

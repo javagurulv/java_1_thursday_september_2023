@@ -3,9 +3,7 @@ package lv.javaguru.java1.student_igor_eglit.lesson_13_project_traders_and_trans
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-import java.util.stream.Stream;
 
-import static lv.javaguru.java1.student_igor_eglit.lesson_13_project_traders_and_transactions.TransactionAnalysisService.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TransactionAnalysisServiceTest {
@@ -73,11 +71,15 @@ class TransactionAnalysisServiceTest {
     }
     @Test
     void sumTransactionVolume() {
-        assertEquals(23700, TransactionAnalysisService.sumTransactionVolume(transactions));
+        assertEquals(23700, TransactionAnalysisService.sumAllTransactionVolume(transactions));
     }
     @Test
     void calculateNumberOfTransactionYear2011() {
         assertEquals(4, TransactionAnalysisService.calculateNumbersOfTransactionsOfTheYear(transactions, 2011));
+    }
+    @Test
+    void findTraderWithMostTransactionDone() {
+        assertEquals("Optional[Jonh Smith]", TransactionAnalysisService.traderWithMostTransactionsDone(transactions));
     }
 
 }
