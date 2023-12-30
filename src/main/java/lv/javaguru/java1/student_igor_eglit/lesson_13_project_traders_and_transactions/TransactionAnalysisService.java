@@ -16,43 +16,56 @@ class TransactionAnalysisService {
                 sorted(Comparator.comparing(Transaction::getValue)).
                 collect(Collectors.toList());
     }
+
     static List<Transaction> sortValueDsc(List<Transaction> transactions) {
         return transactions.stream().
                 sorted(Comparator.comparing(Transaction::getValue).reversed()).
                 collect(Collectors.toList());
     }
-    static List<Transaction> filterAndSort(List<Transaction> transactions, int transactionYear){
+
+    static List<Transaction> filterAndSort(List<Transaction> transactions, int transactionYear) {
         return transactions.stream().
                 filter(year -> year.getYear() == transactionYear)
                 .sorted(Comparator.comparing(Transaction::getValue))
                 .collect(Collectors.toList());
     }
 
-    static List<Integer> collectingYears(List<Transaction> transactions){
+    static List<Integer> collectingYears(List<Transaction> transactions) {
         return transactions.stream().
                 map(Transaction::getYear).
                 distinct().collect(Collectors.toList());
     }
+
     static List<String> collectingUniqueNames(List<Transaction> transactions) {
         return transactions.stream().
                 map(trader -> trader.getTrader().getName()).
                 distinct().collect(Collectors.toList());
     }
+
     static List<String> collectingUniqueCity(List<Transaction> transactions) {
         return transactions.stream().
                 map(trader -> trader.getTrader().getCity()).
                 distinct().collect(Collectors.toList());
     }
+
     static List<String> collectingTradersNameFromCity(List<Transaction> transactions, String city) {
         return transactions.stream().
                 filter(trader -> trader.getTrader().getCity().equals(city)).
                 map(trader -> trader.getTrader().getName()).
                 distinct().collect(Collectors.toList());
     }
-    static int sumTransactionVolume(List<Transaction> transactions){
+
+    static int sumTransactionVolume(List<Transaction> transactions) {
         return transactions.stream().
                 mapToInt(Transaction::getValue).sum();
 
+    }
+
+    static int calculateNumbersOfTransactionsOfTheYear(List<Transaction> transactions, int transactionYear) {
+        return transactions.stream().
+                filter(year -> year.getYear() == transactionYear).
+                toList().
+                size();
     }
 
     public static void printTransactions(List<Transaction> transactions) {

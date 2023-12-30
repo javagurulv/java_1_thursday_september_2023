@@ -75,5 +75,9 @@ class TransactionAnalysisServiceTest {
     void sumTransactionVolume() {
         assertEquals(23700, TransactionAnalysisService.sumTransactionVolume(transactions));
     }
+    @Test
+    void calculateNumberOfTransactionYear2011() {
+        assertEquals(4, TransactionAnalysisService.calculateNumbersOfTransactionsOfTheYear(transactions, 2011));
+    }
 
 }
