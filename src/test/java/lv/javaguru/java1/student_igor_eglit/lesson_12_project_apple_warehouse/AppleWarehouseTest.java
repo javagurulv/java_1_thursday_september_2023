@@ -15,7 +15,7 @@ class AppleWarehouseTest {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         var apples = makeAppleStock();
         List<Apple> stockByColorGreen = appleWarehouse.findAppleByColor(apples, "green");
-        assertEquals(7, stockByColorGreen.size(), "тест- количество зеленых яблок на складе");
+        assertEquals(7, stockByColorGreen.size());
     }
 
     @Test
@@ -23,7 +23,7 @@ class AppleWarehouseTest {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         var apples = makeAppleStock();
         List<Apple> stockByColorRed = appleWarehouse.findAppleByColor(apples, "red");
-        assertEquals(5, stockByColorRed.size(), "тест- количество красных яблок на складе");
+        assertEquals(5, stockByColorRed.size());
     }
 
     @Test
@@ -32,7 +32,7 @@ class AppleWarehouseTest {
         var apples = makeAppleStock();
         Apple separatedApples = appleWarehouse.separationByWeight(apples, 150);
         var heavy = separatedApples.heavyApples;
-        assertEquals(6, heavy.size(), "тест - нахождение тяжелых яблок");
+        assertEquals(6, heavy.size());
     }
 
     @Test
@@ -41,7 +41,7 @@ class AppleWarehouseTest {
         var apples = makeAppleStock();
         Apple separatedApples = appleWarehouse.separationByWeight(apples, 150);
         var light = separatedApples.lightApples;
-        assertEquals(9, light.size(), "тест - нахождение легких яблок");
+        assertEquals(9, light.size());
     }
 
     @Test
@@ -49,7 +49,7 @@ class AppleWarehouseTest {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         var apples = makeAppleStock();
         List<Apple> onlyByColor = appleWarehouse.findAppleByDifferentParameters(apples, "green", 0, 0);
-        assertEquals(7, onlyByColor.size(), "тест универсальный метод - только по цвету");
+        assertEquals(7, onlyByColor.size());
     }
 
     @Test
@@ -57,7 +57,7 @@ class AppleWarehouseTest {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         var apples = makeAppleStock();
         List<Apple> onlyByWeight = appleWarehouse.findAppleByDifferentParameters(apples, "", 0, 150);
-        assertEquals(8, onlyByWeight.size(), "тест универсальный метод - только по весу");
+        assertEquals(8, onlyByWeight.size());
     }
 
     @Test
@@ -65,7 +65,7 @@ class AppleWarehouseTest {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         var apples = makeAppleStock();
         List<Apple> byColorAndWeight = appleWarehouse.findAppleByDifferentParameters(apples, "green", 0, 150);
-        assertEquals(5, byColorAndWeight.size(), "тест универсальный метод - по цвету и весу");
+        assertEquals(5, byColorAndWeight.size());
     }
 
     @Test
@@ -73,7 +73,7 @@ class AppleWarehouseTest {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         var apples = makeAppleStock();
         List<Apple> byInterfaceCriteria = appleWarehouse.findApplesInterfaceSearch(new GreenAppleSearchCriteria(), apples);
-        assertEquals(7, byInterfaceCriteria.size(), "тест поиска через интерфейс критерий - green");
+        assertEquals(7, byInterfaceCriteria.size());
     }
 
     @Test
@@ -81,7 +81,7 @@ class AppleWarehouseTest {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         var apples = makeAppleStock();
         List<Apple> byInterfaceCriteria = appleWarehouse.findApplesInterfaceSearch(new RedAppleSearchCriteria(), apples);
-        assertEquals(5, byInterfaceCriteria.size(), "тест поиска через интерфейс критерий - red");
+        assertEquals(5, byInterfaceCriteria.size());
     }
 
     @Test
@@ -89,7 +89,7 @@ class AppleWarehouseTest {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         var apples = makeAppleStock();
         List<Apple> byInterfaceCriteria = appleWarehouse.findApplesInterfaceSearch(new HeavyAppleSearchCriteria(), apples);
-        assertEquals(6, byInterfaceCriteria.size(), "тест поиска через интерфейс критерий - heavy");
+        assertEquals(6, byInterfaceCriteria.size());
     }
 
     @Test
@@ -97,7 +97,7 @@ class AppleWarehouseTest {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         var apples = makeAppleStock();
         List<Apple> byInterfaceCriteria = appleWarehouse.findApplesInterfaceSearch(new LightAppleSearchCriteria(), apples);
-        assertEquals(9, byInterfaceCriteria.size(), "тест поиска через интерфейс критерий - light");
+        assertEquals(9, byInterfaceCriteria.size());
     }
 
     @Test
@@ -105,7 +105,7 @@ class AppleWarehouseTest {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         var apples = makeAppleStock();
         List<Apple> byInterfaceCriteria = appleWarehouse.findApplesInterfaceSearch(new GreenHeavySearchCriteria(), apples);
-        assertEquals(2, byInterfaceCriteria.size(), "тест поиска через интерфейс критерий - green and heavy");
+        assertEquals(2, byInterfaceCriteria.size());
     }
 
     @Test
@@ -118,7 +118,7 @@ class AppleWarehouseTest {
                 return "red".equals(apple.getColor());
             }
         }, apples);
-        assertEquals(5, redApples.size(), "тест красных яблок через анонимный класс критериев");
+        assertEquals(5, redApples.size());
 
         List<Apple> greenApples = appleWarehouse.findApplesInterfaceSearch(new AppleSearchCriteria() {
             @Override
@@ -126,7 +126,7 @@ class AppleWarehouseTest {
                 return "green".equals(apple.getColor());
             }
         }, apples);
-        assertEquals(7, greenApples.size(), "тест зеленых яблок через анонимный класс критериев");
+        assertEquals(7, greenApples.size());
 
         List<Apple> heavyApples = appleWarehouse.findApplesInterfaceSearch(new AppleSearchCriteria() {
             @Override
@@ -134,7 +134,7 @@ class AppleWarehouseTest {
                 return (apple.getWeight() > 150);
             }
         }, apples);
-        assertEquals(6, heavyApples.size(), "тест тяжелых яблок через анонимный класс критериев");
+        assertEquals(6, heavyApples.size());
 
         List<Apple> lightApples = appleWarehouse.findApplesInterfaceSearch(new AppleSearchCriteria() {
             @Override
@@ -142,7 +142,7 @@ class AppleWarehouseTest {
                 return (apple.getWeight() <= 150);
             }
         }, apples);
-        assertEquals(9, lightApples.size(), "тест легких яблок через анонимный класс критериев");
+        assertEquals(9, lightApples.size());
 
     }
 
@@ -153,22 +153,22 @@ class AppleWarehouseTest {
         List<Apple> redApples = appleWarehouse.findApplesInterfaceSearch(
                 apple -> "red".equals(apple.getColor()), apples
         );
-        assertEquals(5, redApples.size(), "тест красных яблок через лямбду");
+        assertEquals(5, redApples.size());
 
         List<Apple> greenApples = appleWarehouse.findApplesInterfaceSearch(
                 apple -> "green".equals(apple.getColor()), apples
         );
-        assertEquals(7, greenApples.size(), "тест зеленых яблок через лямбду");
+        assertEquals(7, greenApples.size());
 
         List<Apple> heavyApples = appleWarehouse.findApplesInterfaceSearch(
                 apple -> apple.getWeight() > 150, apples
         );
-        assertEquals(6, heavyApples.size(), "тест тяжелых яблок через лямбду");
+        assertEquals(6, heavyApples.size());
 
         List<Apple> lightApples = appleWarehouse.findApplesInterfaceSearch(
                 apple -> apple.getWeight() <= 150, apples
         );
-        assertEquals(9, lightApples.size(), "тест легких яблок через лямбду");
+        assertEquals(9, lightApples.size());
     }
 
 
