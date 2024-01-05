@@ -29,28 +29,32 @@ class TransactionAnalysisServiceDemo {
         List<Integer> yearsCollected = TransactionAnalysisService.collectingYears(transactions);
         yearsCollected.forEach(System.out::println);
     }
-    public static void collectUniqueTraders(){
+
+    public static void collectUniqueTraders() {
         List<String> tradersCollected = TransactionAnalysisService.collectingUniqueNames(transactions);
         tradersCollected.forEach(System.out::println);
     }
-    public static void collectingTradersNameFromCity(){
+
+    public static void collectingTradersNameFromCity() {
         List<String> tradersCollected = TransactionAnalysisService.collectingTradersNameFromCity(transactions, "Riga");
         tradersCollected.forEach(System.out::println);
     }
-    public static void traderWithMostTransactionsDone(){
-        String trader = TransactionAnalysisService.traderWithMostTransactionsDone(transactions);
-        System.out.println(trader);
-    }
-    public static void traderWithMinTransaction(){
-        String trader = TransactionAnalysisService.findTraderWithMinTransaction(transactions);
-        System.out.println(trader);
-    }
-    public static void traderWithMaxTransaction(){
-        String trader = TransactionAnalysisService.findTraderWithMaxTransaction(transactions);
-        System.out.println(trader);
-    }
+//    public static void traderWithMostTransactionsDone(){
+//        String trader = TransactionAnalysisService.traderWithMostTransactionsDone(transactions);
+//        System.out.println(trader);}
 
-    public static void main(String[] args) {
+
+public static void traderWithMinTransaction() {
+    String trader = TransactionAnalysisService.findTraderWithMinTransaction(transactions);
+    System.out.println(trader);
+}
+
+public static void traderWithMaxTransaction() {
+    String trader = TransactionAnalysisService.findTraderWithMaxTransaction(transactions);
+    System.out.println(trader);
+}
+
+public static void main(String[] args) {
 //        filterByYear();
 //        System.out.println("Sorted by Value Asc");
 //        sortByValueAsc();
@@ -64,11 +68,11 @@ class TransactionAnalysisServiceDemo {
 //        collectUniqueTraders();
 //        System.out.println("Unique traders from Riga");
 //        collectingTradersNameFromCity();
-        System.out.println("Trader with most Transactions Done");
-        traderWithMostTransactionsDone();
-        System.out.println("Trader with min Transaction");
-        traderWithMinTransaction();
-        System.out.println("Trader with max Transaction");
-        traderWithMaxTransaction();
-    }
+//        System.out.println("Trader with most Transactions Done");
+//        traderWithMostTransactionsDone();
+//        System.out.println("Trader with min Transaction");
+//        traderWithMinTransaction();
+//        System.out.println("Trader with max Transaction");
+//        traderWithMaxTransaction();
+}
 }
