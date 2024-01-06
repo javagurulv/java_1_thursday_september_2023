@@ -70,16 +70,10 @@ class TransactionAnalysisService {
                 filter(year -> year.getYear() == transactionYear).count();
     }
 
-    //    static String traderWithMostTransactionsDone(List<Transaction> transactions) {
-//
-//       Map<Object, Object> collect = transactions.stream().
-//               map(transaction -> transaction.getTrader()).
-//
-//
-//    }
+//ТРЕЙДЕР С БОЛЬШИМ КОЛИЧЕСТВОМ ВХОЖДЕНИЙ - способ циклов и способ СТРИМ АПИ
     static String findTraderWithMostEntriesOldSchool(List<Transaction> transactions) {
         HashSet<String> temp = new HashSet<>();//сэт примет только уникальные имена, временный сэт
-        Map<Integer, String> entryCounter = new TreeMap<>(Comparator.reverseOrder());//сюда сложим уникальные имена и сколько раз определенное имя встречалось в таблице,
+        Map<Integer, String> entryCounter = new TreeMap<>();//сюда сложим уникальные имена и сколько раз определенное имя встречалось в таблице,
         //сортируем одновременно от больших вхождений в таблицу
         for (Transaction transaction : transactions) {//собираем уникальные
             temp.add(transaction.getTrader().getName());
@@ -96,37 +90,25 @@ class TransactionAnalysisService {
             }
             entryCounter.put(counter, (String) tempArray[indexSet]);//сложим в новый трисэт ключи=счетчик и соотвественное имя
         }
-
         Iterator<Map.Entry<Integer, String>> it = entryCounter.entrySet().iterator();//проитеррируем трисет
         Map.Entry<Integer, String> first = null;
         for (int ind = 0; ind < entryCounter.size(); ind++) {
             first = it.next();
         }
-
-
         return first.getValue();//вывод имени с большим вхождением в таблицу.
-
     }
 
-    /*static String traderWithMostTransactionsDone(List<Transaction> transactions) {
-        return transactions.stream().
-                map(trader -> trader.getTrader().getName()).
-                collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
-                .entrySet().stream()
+    static String findTraderWithMostEntries(List<Transaction> transactions) {
+        Map<String, Long> traderEntryCount = transactions.stream()
+                .collect(Collectors.groupingBy(transaction -> transaction.getTrader().getName(),
+                        Collectors.counting()));
+        String traderWithMostEntries = traderEntryCount.entrySet().stream()
                 .max(Map.Entry.comparingByValue())
-                .map(Map.Entry::getKey).toString();
-    }*/
+                .map(Map.Entry::getKey)
+                .orElse("");
+        return traderWithMostEntries;
+    }
 
-    /* static String traderWithMostTransactionsValue(List<Transaction> transactions) {
-         return transactions.stream()
-                 .map(trader -> trader.getTrader().getName())
-                 .collect(Collectors.groupingBy(Function.identity(),
-                         Collectors.summingInt(Transaction::getValue)))
-                 .maxBy(Map.Entry.comparingByValue())
-                 .map(Map.Entry::getKey)
-                 .orElse("");
-
-     }*/
     static String findTraderWithMinTransaction(List<Transaction> transactions) {
         return String.valueOf(transactions.stream().min(Comparator.comparing(Transaction::getValue)).orElse(null));
     }
