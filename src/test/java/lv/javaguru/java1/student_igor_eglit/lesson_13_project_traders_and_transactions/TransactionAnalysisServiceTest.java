@@ -88,12 +88,12 @@ class TransactionAnalysisServiceTest {
         assertEquals("Jonh Smith", TransactionAnalysisService.findTraderWithMostEntries(transactions));
     }
     @Test
-    void findTraderWithMinTransaction(){
-
+    void shouldFindMinTransactionValue(){
+assertEquals(50, TransactionAnalysisService.findMinTransactionValue(transactions));
     }
     @Test
-    void findTraderWithMaxTransaction(){
-
+    void shouldFindMaxTransactionValue(){
+assertEquals(3000, TransactionAnalysisService.findMaxTransactionValue(transactions));
     }
 
 }

@@ -109,13 +109,21 @@ class TransactionAnalysisService {
         return traderWithMostEntries;
     }
 
-    static String findTraderWithMinTransaction(List<Transaction> transactions) {
-        return String.valueOf(transactions.stream().min(Comparator.comparing(Transaction::getValue)).orElse(null));
+
+
+
+
+
+
+    static int findMinTransactionValue(List<Transaction> transactions) {
+        return transactions.stream().min(Comparator.comparing(Transaction::getValue)).get().getValue();
     }
 
-    static String findTraderWithMaxTransaction(List<Transaction> transactions) {
-        return String.valueOf(transactions.stream().max(Comparator.comparing(Transaction::getValue)).orElse(null));
+    static int findMaxTransactionValue(List<Transaction> transactions) {
+        return transactions.stream().max(Comparator.comparing(Transaction::getValue)).get().getValue();
     }
+
+
 
     public static void printTransactions(List<Transaction> transactions) {
         transactions.forEach(System.out::println);

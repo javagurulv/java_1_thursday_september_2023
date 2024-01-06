@@ -39,25 +39,26 @@ class TransactionAnalysisServiceDemo {
         List<String> tradersCollected = TransactionAnalysisService.collectingTradersNameFromCity(transactions, "Riga");
         tradersCollected.forEach(System.out::println);
     }
-//    public static void traderWithMostTransactionsDone(){
+
+    //    public static void traderWithMostTransactionsDone(){
 //        String trader = TransactionAnalysisService.traderWithMostTransactionsDone(transactions);
 //        System.out.println(trader);}
-    public static void traderWithMostEntries(){
+    public static void traderWithMostEntries() {
         System.out.println(TransactionAnalysisService.findTraderWithMostEntriesOldSchool(transactions));
     }
 
 
-public static void traderWithMinTransaction() {
-    String trader = TransactionAnalysisService.findTraderWithMinTransaction(transactions);
-    System.out.println(trader);
-}
+    public static void findMinTransaction() {
+        int value = TransactionAnalysisService.findMinTransactionValue(transactions);
+        System.out.println(value);
+    }
 
-public static void traderWithMaxTransaction() {
-    String trader = TransactionAnalysisService.findTraderWithMaxTransaction(transactions);
-    System.out.println(trader);
-}
+    public static void findMaxTransactionValue() {
+        int value = TransactionAnalysisService.findMaxTransactionValue(transactions);
+        System.out.println(value);
+    }
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
 //        filterByYear();
 //        System.out.println("Sorted by Value Asc");
 //        sortByValueAsc();
@@ -71,14 +72,13 @@ public static void main(String[] args) {
 //        collectUniqueTraders();
 //        System.out.println("Unique traders from Riga");
 //        collectingTradersNameFromCity();
-//        System.out.println("Trader with most Transactions Done");
-//        traderWithMostTransactionsDone();
-//        System.out.println("Trader with min Transaction");
-//        traderWithMinTransaction();
-//        System.out.println("Trader with max Transaction");
-//        traderWithMaxTransaction();
-    System.out.println("Trader with most entries ");
-    traderWithMostEntries();
+        System.out.println("Trader with most entries ");
+        traderWithMostEntries();
+        System.out.println("Find min Transaction Value");
+        findMinTransaction();
+        System.out.println("Find max Transaction Value");
+        findMaxTransactionValue();
 
-}
+
+    }
 }
