@@ -42,6 +42,9 @@ class TransactionAnalysisServiceDemo {
 //    public static void traderWithMostTransactionsDone(){
 //        String trader = TransactionAnalysisService.traderWithMostTransactionsDone(transactions);
 //        System.out.println(trader);}
+    public static void traderWithMostEntries(){
+        System.out.println(TransactionAnalysisService.findTraderWithMostEntriesOldSchool(transactions));
+    }
 
 
 public static void traderWithMinTransaction() {
@@ -74,5 +77,8 @@ public static void main(String[] args) {
 //        traderWithMinTransaction();
 //        System.out.println("Trader with max Transaction");
 //        traderWithMaxTransaction();
+    System.out.println("Trader with most entries ");
+    traderWithMostEntries();
+
 }
 }

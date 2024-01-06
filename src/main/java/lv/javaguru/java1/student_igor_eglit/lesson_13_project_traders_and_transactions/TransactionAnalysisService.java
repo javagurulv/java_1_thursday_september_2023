@@ -1,7 +1,6 @@
 package lv.javaguru.java1.student_igor_eglit.lesson_13_project_traders_and_transactions;
 
 import java.util.*;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.toMap;
@@ -71,17 +70,43 @@ class TransactionAnalysisService {
                 filter(year -> year.getYear() == transactionYear).count();
     }
 
-//    static String traderWithMostTransactionsDone(List<Transaction> transactions) {
+    //    static String traderWithMostTransactionsDone(List<Transaction> transactions) {
 //
 //       Map<Object, Object> collect = transactions.stream().
 //               map(transaction -> transaction.getTrader()).
 //
 //
 //    }
+    static String findTraderWithMostEntriesOldSchool(List<Transaction> transactions) {
+        HashSet<String> temp = new HashSet<>();//сэт примет только уникальные имена, временный сэт
+        Map<Integer, String> entryCounter = new TreeMap<>(Comparator.reverseOrder());//сюда сложим уникальные имена и сколько раз определенное имя встречалось в таблице,
+        //сортируем одновременно от больших вхождений в таблицу
+        for (Transaction transaction : transactions) {//собираем уникальные
+            temp.add(transaction.getTrader().getName());
+        }
+        var tempArray = temp.toArray();//массив уникальных типа стринг
+
+        for (int indexSet = 0; indexSet < tempArray.length; indexSet++) {//посчитаем на каждый стринг массива вхождения в таблицу
+
+            int counter = 0;
+            for (Transaction transaction : transactions) {
+                if (transaction.getTrader().getName().equals(tempArray[indexSet])) {
+                    counter++;
+                }
+            }
+            entryCounter.put(counter, (String) tempArray[indexSet]);//сложим в новый трисэт ключи=счетчик и соотвественное имя
+        }
+
+        Iterator<Map.Entry<Integer, String>> it = entryCounter.entrySet().iterator();//проитеррируем трисет
+        Map.Entry<Integer, String> first = null;
+        for (int ind = 0; ind < entryCounter.size(); ind++) {
+            first = it.next();
+        }
 
 
+        return first.getValue();//вывод имени с большим вхождением в таблицу.
 
-
+    }
 
     /*static String traderWithMostTransactionsDone(List<Transaction> transactions) {
         return transactions.stream().
