@@ -40,13 +40,13 @@ class TransactionAnalysisServiceDemo {
         tradersCollected.forEach(System.out::println);
     }
 
-    //    public static void traderWithMostTransactionsDone(){
-//        String trader = TransactionAnalysisService.traderWithMostTransactionsDone(transactions);
-//        System.out.println(trader);}
     public static void traderWithMostEntries() {
         System.out.println(TransactionAnalysisService.findTraderWithMostEntriesOldSchool(transactions));
     }
 
+    public static void traderWithMostTotalValueTransaction() {
+        System.out.println(TransactionAnalysisService.findTraderWIthMostTotalTransactionValue(transactions));
+    }
 
     public static void findMinTransaction() {
         int value = TransactionAnalysisService.findMinTransactionValue(transactions);
@@ -85,6 +85,7 @@ class TransactionAnalysisServiceDemo {
         findMaxTransactionValue();
         System.out.println("Find average transaction value");
         findAverageValue();
-
+        System.out.println("Find trader with the most Total value");
+        traderWithMostTotalValueTransaction();
     }
 }

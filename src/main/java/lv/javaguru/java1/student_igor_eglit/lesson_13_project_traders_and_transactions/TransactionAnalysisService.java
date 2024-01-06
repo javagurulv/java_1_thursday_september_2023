@@ -70,7 +70,7 @@ class TransactionAnalysisService {
                 filter(year -> year.getYear() == transactionYear).count();
     }
 
-//ТРЕЙДЕР С БОЛЬШИМ КОЛИЧЕСТВОМ ВХОЖДЕНИЙ - способ циклов и способ СТРИМ АПИ
+    //ТРЕЙДЕР С БОЛЬШИМ КОЛИЧЕСТВОМ ВХОЖДЕНИЙ - способ циклов и способ СТРИМ АПИ
     static String findTraderWithMostEntriesOldSchool(List<Transaction> transactions) {
         HashSet<String> temp = new HashSet<>();//сэт примет только уникальные имена, временный сэт
         Map<Integer, String> entryCounter = new TreeMap<>();//сюда сложим уникальные имена и сколько раз определенное имя встречалось в таблице,
@@ -109,10 +109,16 @@ class TransactionAnalysisService {
         return traderWithMostEntries;
     }
 
-
-
-
-
+static String  findTraderWIthMostTotalTransactionValue(List<Transaction> transactions){
+    Map<String, Long> tradersTotalValue = transactions.stream()
+            .collect(Collectors.groupingBy(transaction -> transaction.getTrader().getName(),
+                    Collectors.summingLong(Transaction ::getValue)));
+    String traderWithMostTotalValue = tradersTotalValue.entrySet().stream()
+            .max(Map.Entry.comparingByValue())
+            .map(Map.Entry::getKey)
+            .orElse("");
+    return traderWithMostTotalValue;
+}
 
 
     static int findMinTransactionValue(List<Transaction> transactions) {
@@ -122,10 +128,11 @@ class TransactionAnalysisService {
     static int findMaxTransactionValue(List<Transaction> transactions) {
         return transactions.stream().max(Comparator.comparing(Transaction::getValue)).get().getValue();
     }
+
     static int findAverageValue(List<Transaction> transactions) {
         int size = transactions.size();
         return transactions.stream().
-                mapToInt(transaction -> transaction.getValue()).sum() /size;
+                mapToInt(transaction -> transaction.getValue()).sum() / size;
     }
 
 
