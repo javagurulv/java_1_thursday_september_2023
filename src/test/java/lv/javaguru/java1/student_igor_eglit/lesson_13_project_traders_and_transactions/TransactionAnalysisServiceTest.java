@@ -95,5 +95,9 @@ assertEquals(50, TransactionAnalysisService.findMinTransactionValue(transactions
     void shouldFindMaxTransactionValue(){
 assertEquals(3000, TransactionAnalysisService.findMaxTransactionValue(transactions));
     }
+    @Test
+    void shouldFindAverageValue(){
+assertEquals(1316, TransactionAnalysisService.findAverageValue(transactions));
+    }
 
 }

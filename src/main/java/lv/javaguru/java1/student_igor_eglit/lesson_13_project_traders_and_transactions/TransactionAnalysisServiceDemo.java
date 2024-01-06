@@ -58,6 +58,11 @@ class TransactionAnalysisServiceDemo {
         System.out.println(value);
     }
 
+    public static void findAverageValue() {
+        System.out.println(TransactionAnalysisService.findAverageValue(transactions));
+
+    }
+
     public static void main(String[] args) {
 //        filterByYear();
 //        System.out.println("Sorted by Value Asc");
@@ -78,7 +83,8 @@ class TransactionAnalysisServiceDemo {
         findMinTransaction();
         System.out.println("Find max Transaction Value");
         findMaxTransactionValue();
-
+        System.out.println("Find average transaction value");
+        findAverageValue();
 
     }
 }

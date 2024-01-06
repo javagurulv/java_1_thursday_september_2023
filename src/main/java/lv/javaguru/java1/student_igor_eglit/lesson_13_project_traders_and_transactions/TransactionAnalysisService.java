@@ -122,7 +122,11 @@ class TransactionAnalysisService {
     static int findMaxTransactionValue(List<Transaction> transactions) {
         return transactions.stream().max(Comparator.comparing(Transaction::getValue)).get().getValue();
     }
-
+    static int findAverageValue(List<Transaction> transactions) {
+        int size = transactions.size();
+        return transactions.stream().
+                mapToInt(transaction -> transaction.getValue()).sum() /size;
+    }
 
 
     public static void printTransactions(List<Transaction> transactions) {
