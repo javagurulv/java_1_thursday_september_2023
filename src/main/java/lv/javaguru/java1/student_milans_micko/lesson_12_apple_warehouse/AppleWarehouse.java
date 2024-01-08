@@ -37,14 +37,14 @@ class AppleWarehouse {
         return colorApples;
     }
 
-    public List<Apple> findHeavyApples(int weight) {
-        List<Apple> weightApples = new ArrayList<>();
+    public List<Apple> findApplesHeavierThen(int weight) {
+        List<Apple> heavierApples = new ArrayList<>();
         for (Apple apple : apples) {
             if (apple.getWeight() > weight) {
-                weightApples.add(apple);
+                heavierApples.add(apple);
             }
         }
-        return weightApples;
+        return heavierApples;
     }
 
     public List<Apple> findApplesByColorAndWeight(String color, int weight) {
@@ -58,6 +58,24 @@ class AppleWarehouse {
         return colorWeightApples;
     }
 
+    public List<Apple> findApples(AppleSearchCriteria searchCriteria) {
+        List<Apple> searchApples = new ArrayList<>();
+        for (Apple apple : apples) {
+            if (searchCriteria.test(apple)) {
+                searchApples.add(apple);
+            }
+        }
+        return searchApples;
+    }
+
+    List<Apple> findApplesInterfaceSearch(AppleSearchCriteria searchCriteria, List<Apple> apples){
+        List<Apple> result = new ArrayList<>();
+        for (Apple apple: apples){
+            if (searchCriteria.test(apple)){
+                result.add(apple);
+            }
+        }return result;
+    }
 
 
     private List<Apple> getAllApples() {
