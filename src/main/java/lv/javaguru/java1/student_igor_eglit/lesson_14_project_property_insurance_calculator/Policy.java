@@ -1,7 +1,7 @@
 package lv.javaguru.java1.student_igor_eglit.lesson_14_project_property_insurance_calculator;
 
 class Policy {
-    private StringBuilder policyNumber;
+    private final StringBuilder policyNumber;
     private Status status;
     private Object[] object;
 
