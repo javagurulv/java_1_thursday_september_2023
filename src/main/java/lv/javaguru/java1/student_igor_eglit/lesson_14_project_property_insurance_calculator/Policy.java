@@ -27,10 +27,8 @@ class Policy {
 
     @Override
     public String toString() {
-        return "Policy{" +
-                "policyNumber=" + policyNumber +
+        return"policyNumber=" + policyNumber +
                 ", status=" + status +
-                ", insuredObject=" + Arrays.toString(insuredObject) +
-                '}';
+                Arrays.toString(insuredObject);
     }
 }

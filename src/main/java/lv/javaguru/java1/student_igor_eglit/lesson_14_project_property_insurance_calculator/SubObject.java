@@ -1,6 +1,7 @@
 package lv.javaguru.java1.student_igor_eglit.lesson_14_project_property_insurance_calculator;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 class SubObject {
     private String subObjectName;
@@ -27,10 +28,8 @@ class SubObject {
 
     @Override
     public String toString() {
-        return "SubObject{" +
-                "subObjectName='" + subObjectName + '\'' +
-                ", subObjectInsurancePrise=" + subObjectInsurancePrise +
-                ", riskType=" + riskType +
-                '}';
+        return  subObjectName + '\'' +
+                ", subObjectInsurancePrise=" + subObjectInsurancePrise.setScale(2, RoundingMode.HALF_UP) +
+                ", riskType=" + riskType;
     }
 }
