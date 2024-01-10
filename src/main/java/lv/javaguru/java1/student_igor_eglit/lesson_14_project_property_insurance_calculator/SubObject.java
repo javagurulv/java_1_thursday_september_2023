@@ -1,11 +1,13 @@
 package lv.javaguru.java1.student_igor_eglit.lesson_14_project_property_insurance_calculator;
 
+import java.math.BigDecimal;
+
 class SubObject {
     private String subObjectName;
-    private float subObjectInsurancePrise;
+    private BigDecimal subObjectInsurancePrise;
     private RiskType riskType;
 
-    public SubObject(String subObjectName, float subObjectInsurancePrise, RiskType riskType) {
+    public SubObject(String subObjectName, BigDecimal subObjectInsurancePrise, RiskType riskType) {
         this.subObjectName = subObjectName;
         this.subObjectInsurancePrise = subObjectInsurancePrise;
         this.riskType = riskType;
@@ -15,11 +17,20 @@ class SubObject {
         return subObjectName;
     }
 
-    public float getSubObjectInsurancePrise() {
+    public BigDecimal getSubObjectInsurancePrise() {
         return subObjectInsurancePrise;
     }
 
     public RiskType getRiskType() {
         return riskType;
+    }
+
+    @Override
+    public String toString() {
+        return "SubObject{" +
+                "subObjectName='" + subObjectName + '\'' +
+                ", subObjectInsurancePrise=" + subObjectInsurancePrise +
+                ", riskType=" + riskType +
+                '}';
     }
 }

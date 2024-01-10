@@ -1,14 +1,16 @@
 package lv.javaguru.java1.student_igor_eglit.lesson_14_project_property_insurance_calculator;
 
+import java.util.Arrays;
+
 class Policy {
     private final StringBuilder policyNumber;
     private Status status;
-    private Object[] object;
+    private InsuredObject[] insuredObject;
 
-    public Policy(StringBuilder policyNumber, Status status, Object ...object) {
+    public Policy(StringBuilder policyNumber, Status status, InsuredObject... insuredObject) {
         this.policyNumber = policyNumber;
         this.status = status;
-        this.object = object;
+        this.insuredObject = insuredObject;
     }
 
     public StringBuilder getPolicyNumber() {
@@ -19,7 +21,16 @@ class Policy {
         return status;
     }
 
-    public Object[] getObject() {
-        return object;
+    public InsuredObject[] getObject() {
+        return insuredObject;
+    }
+
+    @Override
+    public String toString() {
+        return "Policy{" +
+                "policyNumber=" + policyNumber +
+                ", status=" + status +
+                ", insuredObject=" + Arrays.toString(insuredObject) +
+                '}';
     }
 }
