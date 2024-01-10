@@ -28,9 +28,11 @@ class AppleWarehouseDemo {
         appleWarehouseDemo.ByGreenColor(appleWarehouse, stock);
         appleWarehouseDemo.ByRedColor(appleWarehouse, stock);
         appleWarehouseDemo.separationByWeight(appleWarehouse, stock);
-        appleWarehouseDemo.findByParameters(appleWarehouse,stock);
+        appleWarehouseDemo.findByParameters(appleWarehouse, stock);
         appleWarehouseDemo.findWithInterfaceColorSearch(appleWarehouse, stock);
         appleWarehouseDemo.findWithInterfaceWeightSearch(appleWarehouse, stock);
+        appleWarehouseDemo.findWithInterfaceGreenAndHeavySearch(appleWarehouse, stock);
+        appleWarehouseDemo.findWithAnnonymClass(appleWarehouse,stock);
 
 
     }
@@ -66,15 +68,34 @@ class AppleWarehouseDemo {
         var weightTo = new Scanner(System.in).nextInt();
         List<Apple> stockByParameters =
                 appleWarehouse.findAppleByDifferentParameters(stock, color, weightFrom, weightTo);
-        System.out.println("Найдено " + stockByParameters.size()+ " яблок соответствующих введенным параметрам");
+        System.out.println("Найдено " + stockByParameters.size() + " яблок соответствующих введенным параметрам");
     }
-    private void findWithInterfaceColorSearch(AppleWarehouse appleWarehouse, List<Apple> stock){
+
+    private void findWithInterfaceColorSearch(AppleWarehouse appleWarehouse, List<Apple> stock) {
         var result = appleWarehouse.findApplesInterfaceSearch(new GreenAppleSearchCriteria(), stock);
-        System.out.println("Результат зеленые яблоки через интерфейс = "+ result.size() + "штук");
+        System.out.println("Результат зеленые яблоки через интерфейс = " + result.size() + "штук");
     }
-    private void findWithInterfaceWeightSearch(AppleWarehouse appleWarehouse, List<Apple> stock){
+
+    private void findWithInterfaceWeightSearch(AppleWarehouse appleWarehouse, List<Apple> stock) {
         var result = appleWarehouse.findApplesInterfaceSearch(new HeavyAppleSearchCriteria(), stock);
-        System.out.println("Результат тяжелые яблоки яблоки через интерфейс = "+ result.size() + "штук");
+        System.out.println("Результат тяжелые яблоки яблоки через интерфейс = " + result.size() + "штук");
+    }
+
+    private void findWithInterfaceGreenAndHeavySearch(AppleWarehouse appleWarehouse, List<Apple> stock) {
+        var result = appleWarehouse.findApplesInterfaceSearch(new GreenHeavySearchCriteria(), stock);
+        System.out.println("Результат зеленые тяжелые яблоки яблоки через интерфейс = " + result.size() + "штук");
+    }
+
+    private void findWithAnnonymClass(AppleWarehouse appleWarehouse, List<Apple> stock) {
+        List<Apple> redApples = appleWarehouse.findApplesInterfaceSearch(
+                new AppleSearchCriteria() {
+                    @Override
+                    public boolean test(Apple apple) {
+                        return "red".equals(apple.getColor());
+                    }
+                },
+                stock);
+        System.out.println("Красные яблоки, найденные анонимным классом = " + redApples.size());
     }
 
     public static void main(String[] args) {

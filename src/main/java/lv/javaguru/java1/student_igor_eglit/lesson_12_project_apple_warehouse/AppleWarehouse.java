@@ -15,7 +15,7 @@ class AppleWarehouse {
     public List<Apple> findAppleByColor(List<Apple> allApples, String color) {
         List<Apple> stockByColor = new ArrayList<>();
         for (Apple apples : allApples) {
-            if (color.equals(apples.getAppleColor())) {
+            if (color.equals(apples.getColor())) {
                 stockByColor.add(apples);
             }
         }
@@ -46,12 +46,12 @@ class AppleWarehouse {
             }
 
             if (weightFrom == 0 && weightTo == 0) {
-                if (color.equals(apples.getAppleColor())) {
+                if (color.equals(apples.getColor())) {
                     stockByParameters.add(apples);
                 }
             }
 
-            if (color.equals(apples.getAppleColor())
+            if (color.equals(apples.getColor())
                     && weightFrom < apples.getWeight()
                     && apples.getWeight() < weightTo) {
                 stockByParameters.add(apples);
@@ -68,6 +68,7 @@ class AppleWarehouse {
             }
         }return result;
     }
+
 }
 //     static String[] apples = getAllApples();
 //
@@ -83,17 +84,3 @@ class AppleWarehouse {
 //    public static void main(String[] args) {
 //        System.out.print(Arrays.toString(apples));
 //    }
-//
-//
-//    public List<Apple> collectLightAndHeavyApples(List<Apple> allApples, Apple apple) {
-////        List<Apple> stockLightApples = new ArrayList<>();
-////        List<Apple> stockHeavyApples = new ArrayList<>();
-////        for (Apple apples : allApples) {
-////            if (apple.getWeight() < 150) {
-////                stockLightApples.add(apples);
-////            } else {
-////                stockHeavyApples.add(apples);
-////            }
-////        }
-////        return (stockLightApples);
-////    }

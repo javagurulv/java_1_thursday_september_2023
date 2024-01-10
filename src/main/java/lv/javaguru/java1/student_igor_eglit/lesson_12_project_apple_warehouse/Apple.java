@@ -4,28 +4,27 @@ import java.util.List;
 
 
 class Apple {
-    String appleColor;
-    int weight;
+    private String color;
+    private int weight;
     List<Apple> lightApples;
     List<Apple> heavyApples;
 
-
-    public Apple(String appleColor, int weight) {
-        this.appleColor = appleColor;
+    public Apple(String color, int weight) {
+        this.color = color;
         this.weight = weight;
     }
 
+    public Apple(List<Apple> lightApples, List<Apple> heavyApples) {
+        this.lightApples = lightApples;
+        this.heavyApples = heavyApples;
+    }
 
-    public String getAppleColor() {
-        return appleColor;
+    public String getColor() {
+        return color;
     }
 
     public int getWeight() {
         return weight;
-    }
-    public Apple(List<Apple> lightApples, List<Apple> heavyApples) {
-        this.lightApples = lightApples;
-        this.heavyApples = heavyApples;
     }
 
     public List<Apple> getLightApples() {
