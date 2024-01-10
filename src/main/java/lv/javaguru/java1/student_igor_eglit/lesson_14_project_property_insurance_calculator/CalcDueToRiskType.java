@@ -2,8 +2,7 @@ package lv.javaguru.java1.student_igor_eglit.lesson_14_project_property_insuranc
 
 import java.math.BigDecimal;
 
-class PremiumCalculator {
-    BigDecimal calculate(Policy policy) {
-        return BigDecimal.ZERO;
-    }
+@FunctionalInterface
+interface CalcDueToRiskType {
+    BigDecimal calculate(Policy policy);
 }

@@ -6,7 +6,7 @@ class PolicyCreatorExample {
 
 
     //Example 1
-    private final SubObject TV = new SubObject("TVset", new BigDecimal(100), RiskType.THEFT);
+    private final SubObject TV = new SubObject("TVset", new BigDecimal(100.25), RiskType.THEFT);
     private final InsuredObject house = new InsuredObject("House", TV);
     Policy policy = new Policy(new StringBuilder("1C-4567-LV"), Status.REGISTERED, house);
 

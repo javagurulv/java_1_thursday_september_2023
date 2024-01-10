@@ -2,7 +2,7 @@ package lv.javaguru.java1.student_igor_eglit.lesson_14_project_property_insuranc
 
 import java.math.BigDecimal;
 
-class Premium_FIRE implements PremiumCalculator{
+class Premium_FIRE implements CalcDueToRiskType {
     @Override
     public BigDecimal calculate(Policy policy) {
         return BigDecimal.valueOf(0);
