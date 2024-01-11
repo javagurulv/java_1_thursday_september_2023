@@ -3,13 +3,10 @@ package lv.javaguru.java1.student_igor_eglit.lesson_14_project_property_insuranc
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-class Premium_FIRE implements CalcDueToRiskType {
+class Premium_FIRE{
 
-    @Override
+    //@Override
     public BigDecimal calculate(Policy policy) {
 
         List<InsuredObject> insuredObjects = Arrays.asList(policy.getInsuredObject());

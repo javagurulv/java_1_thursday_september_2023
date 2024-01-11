@@ -4,9 +4,9 @@ import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
-class Premium_THEFT implements CalcDueToRiskType {
+class Premium_THEFT {
 
-    @Override
+   // @Override
     public BigDecimal calculate(Policy policy) {
 
         List<InsuredObject> insuredObjects = Arrays.asList(policy.getInsuredObject());//Забираю из policy объекты SubObjects
