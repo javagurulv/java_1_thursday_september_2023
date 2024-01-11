@@ -6,7 +6,7 @@ import java.util.List;
 
 class Premium_THEFT {
 
-   // @Override
+
     public BigDecimal calculate(Policy policy) {
 
         List<InsuredObject> insuredObjects = Arrays.asList(policy.getInsuredObject());//Забираю из policy объекты SubObjects
@@ -15,12 +15,14 @@ class Premium_THEFT {
                 .flatMap(insuredObject -> Arrays.stream(insuredObject.getSubobject()))
                 .toList();
 
-        return subObjects.stream()
+        var sum = subObjects.stream()
                 .filter(subObject -> subObject.getRiskType().equals(RiskType.THEFT))//фильтрация по типу риска
                 //собираю стоимость каждого застрахованного объекта
                 .map(SubObject::getSubObjectInsurancePrise)
                 //сумма всех стоимостей - reduce сохраняет результат и затем опять же применяет к этому результату и следующему элементу
-                .reduce(BigDecimal.ZERO, BigDecimal::add);
-        //Возврат BigDecimal.
+                .reduce(BigDecimal.ZERO, BigDecimal::add); //получаем бигдецимал как сумму всех подобъектов
+
+        return sum.compareTo(BigDecimal.valueOf(15))<=0 ? sum.multiply(BigDecimal.valueOf(0.11)) : sum.multiply(BigDecimal.valueOf(0.05));
+        //Возврат BigDecimal сумма*коефициент.
     }
 }

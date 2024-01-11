@@ -23,7 +23,17 @@ class PolicyCreatorExample {
 
     public static void main(String[] args) {
         PolicyCreatorExample policyCreatorExample = new PolicyCreatorExample();
+        PremiumCalculator premiumCalculator = new PremiumCalculator();
+        var test1 = premiumCalculator.calculate(policyCreatorExample.policy);
+        var test2 = premiumCalculator.calculate(policyCreatorExample.policy2);
+        var test3 = premiumCalculator.calculate(policyCreatorExample.policy3);
+        System.out.println(policyCreatorExample.policy);
+        System.out.println(test1);
+        System.out.println(policyCreatorExample.policy2);
+        System.out.println(test2);
         System.out.println(policyCreatorExample.policy3);
+        System.out.println(test3);
+
     }
 }
 

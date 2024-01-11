@@ -21,7 +21,7 @@ class InsuredObject {
 
     @Override
     public String toString() {
-        return "objectName='" + objectName + '\'' +
-                ", subobject=" + Arrays.toString(subobject);
+        return "objectName= " + objectName + '\'' +
+                ", subobject= " + Arrays.toString(subobject);
     }
 }

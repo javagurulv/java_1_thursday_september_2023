@@ -8,8 +8,17 @@ class PremiumCalculator {
     Premium_FIRE premium_fire = new Premium_FIRE();
 
     BigDecimal calculate(Policy policy) {
+        return premium_fire.calculate(policy).add(premium_theft.calculate(policy)).setScale(2, RoundingMode.HALF_UP);
 
-        var premium_THEFT = premium_theft.calculate(policy).compareTo(BigDecimal.valueOf(15)) <= 0 ? premium_theft.calculate(policy)
+    }
+}
+
+
+
+
+/*      ВАРИАНТ ПОДСЧЕТА СУММА*КОЕФИЦИЕНТ В КЛАССЕ КАЛЬКУЛЯТОРА
+
+var premium_THEFT = premium_theft.calculate(policy).compareTo(BigDecimal.valueOf(15)) <= 0 ? premium_theft.calculate(policy)
                 .multiply(BigDecimal.valueOf(0.11)) : premium_theft.calculate(policy)
                 .multiply(BigDecimal.valueOf(0.05));
         //COEFFICIENT_THEFT - by default 0.11 but if SUM_INSURED_THEFT equal or greater than
@@ -19,8 +28,4 @@ class PremiumCalculator {
                 .multiply(BigDecimal.valueOf(0.024));
 //COEFFICIENT_FIRE - by default 0.014 but if SUM_INSURED_FIRE is over 100 then 0.024. PREMIUM_THEFT = SUM_INSURED_THEFT * COEFFICIENT_THEFT
 
-
-        return premium_FIRE.add(premium_THEFT).setScale(2, RoundingMode.HALF_UP);
-
-    }
-}
+*/

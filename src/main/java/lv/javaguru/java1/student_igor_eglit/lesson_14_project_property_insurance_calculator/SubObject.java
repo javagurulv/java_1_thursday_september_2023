@@ -29,7 +29,7 @@ class SubObject {
     @Override
     public String toString() {
         return  subObjectName + '\'' +
-                ", subObjectInsurancePrise=" + subObjectInsurancePrise.setScale(2, RoundingMode.HALF_UP) +
-                ", riskType=" + riskType;
+                "subObjectInsurancePrise= " + subObjectInsurancePrise.setScale(2, RoundingMode.HALF_UP) +
+                " riskType= " + riskType;
     }
 }
