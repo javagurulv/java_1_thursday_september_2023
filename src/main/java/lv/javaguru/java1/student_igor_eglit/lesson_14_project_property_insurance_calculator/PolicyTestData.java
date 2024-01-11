@@ -15,4 +15,11 @@ class PolicyTestData {
     SubObject subObject_2_2=new SubObject("PC", new BigDecimal("102.51"), RiskType.THEFT);
     InsuredObject insuredObject_2_1 = new InsuredObject("House 1", subObject_2_1, subObject_2_2);
     Policy testPolicy_2 = new Policy(new StringBuilder("1-C-1346-LV"),Status.REGISTERED , insuredObject_2_1);
+
+    public static void main(String[] args) {
+        PolicyTestData policyTestData = new PolicyTestData();
+        PremiumCalculator premiumCalculator = new PremiumCalculator();
+       var test = premiumCalculator.calculate(policyTestData.testPolicy_1);
+        System.out.println(test);
+    }
 }

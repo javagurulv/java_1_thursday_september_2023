@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 class PremiumCalculator {
-    Premium_THEFT premium_theft;
-    Premium_FIRE premium_fire;
+    Premium_THEFT premium_theft = new Premium_THEFT();
+    Premium_FIRE premium_fire = new Premium_FIRE();
 
     BigDecimal calculate(Policy policy) {
 
