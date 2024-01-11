@@ -21,13 +21,13 @@ class Policy {
         return status;
     }
 
-    public InsuredObject[] getObject() {
+    public InsuredObject[] getInsuredObject() {
         return insuredObject;
     }
 
     @Override
     public String toString() {
-        return"policyNumber=" + policyNumber +
+        return"policyNumber= " + policyNumber +
                 ", status=" + status +
                 Arrays.toString(insuredObject);
     }
