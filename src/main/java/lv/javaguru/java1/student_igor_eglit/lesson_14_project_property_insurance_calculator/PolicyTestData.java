@@ -4,22 +4,21 @@ import java.math.BigDecimal;
 
 class PolicyTestData {
     //First Policy
-    SubObject subObject_1_1 = new SubObject("TV", new BigDecimal("100.00"), RiskType.FIRE);
-    SubObject subObject_1_2 =new SubObject("PC", new BigDecimal("8.00"), RiskType.THEFT);
-    InsuredObject insuredObject_1_1 = new InsuredObject("House 1", subObject_1_1, subObject_1_2);
-    Policy testPolicy_1 = new Policy(new StringBuilder("1-C-1346-LV"),Status.REGISTERED , insuredObject_1_1);
-
+    static Policy example1() {
+        var subObject_1_1 = new SubObject("TV", new BigDecimal("100.00"), RiskType.FIRE);
+        var subObject_1_2 = new SubObject("PC", new BigDecimal("8.00"), RiskType.THEFT);
+        var insuredObject_1_1 = new InsuredObject("House 1", subObject_1_1, subObject_1_2);
+        return new Policy(new StringBuilder("1-C-1346-LV"), Status.REGISTERED, insuredObject_1_1);
+    }
     //Second Policy
-
-    SubObject subObject_2_1 = new SubObject("TV", new BigDecimal("500.00"), RiskType.FIRE);
-    SubObject subObject_2_2=new SubObject("PC", new BigDecimal("102.51"), RiskType.THEFT);
-    InsuredObject insuredObject_2_1 = new InsuredObject("House 1", subObject_2_1, subObject_2_2);
-    Policy testPolicy_2 = new Policy(new StringBuilder("1-C-1346-LV"),Status.REGISTERED , insuredObject_2_1);
-
+static Policy example2() {
+    var subObject_2_1 = new SubObject("TV", new BigDecimal("500.00"), RiskType.FIRE);
+    var subObject_2_2 = new SubObject("PC", new BigDecimal("102.51"), RiskType.THEFT);
+    var insuredObject_2_1 = new InsuredObject("House 1", subObject_2_1, subObject_2_2);
+    return  new Policy(new StringBuilder("1-C-1346-LV"), Status.REGISTERED, insuredObject_2_1);
+}
     public static void main(String[] args) {
-        PolicyTestData policyTestData = new PolicyTestData();
-        PremiumCalculator premiumCalculator = new PremiumCalculator();
-       var test = premiumCalculator.calculate(policyTestData.testPolicy_1);
-        System.out.println(test);
+
+        System.out.println(example1());
     }
 }
