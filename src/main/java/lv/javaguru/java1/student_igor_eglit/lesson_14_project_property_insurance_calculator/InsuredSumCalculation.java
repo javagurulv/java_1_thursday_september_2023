@@ -5,13 +5,18 @@ import java.util.Arrays;
 
 
 class InsuredSumCalculation {
-    public BigDecimal toSumSubObjectsInsuredPrice(Policy policy, RiskType riskType){
+    public BigDecimal toSumSubObjectsInsuredPrice(Policy policy, RiskType riskType) {
 
-      return Arrays.stream(policy.getInsuredObject())
-              .flatMap(insuredObject -> Arrays.stream(insuredObject.getSubobject()))
-                      .filter(subObject -> subObject.getRiskType().equals(riskType))
-                      .map(SubObject::getSubObjectInsurancePrise)
-                      .reduce(BigDecimal.ZERO, BigDecimal::add);
+        return Arrays.stream(policy.getInsuredObject())
+                .flatMap(insuredObject -> Arrays.stream(insuredObject.getSubobject()))
+                .filter(subObject -> subObject.getRiskType().equals(riskType))
+                .map(SubObject::getSubObjectInsurancePrise)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+    }
+}
+
+
+
 
 
 
@@ -28,6 +33,3 @@ class InsuredSumCalculation {
                 //сумма всех стоимостей - reduce сохраняет результат и затем опять же применяет к этому результату и следующему элементу
                 .reduce(BigDecimal.ZERO, BigDecimal::add); //получаем бигдецимал как сумму всех подобъектов
         */
-
-    }
-}

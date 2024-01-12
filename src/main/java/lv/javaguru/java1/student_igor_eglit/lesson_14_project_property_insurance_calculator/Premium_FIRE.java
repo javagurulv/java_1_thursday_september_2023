@@ -13,17 +13,10 @@ class Premium_FIRE {
        final BigDecimal defaultCoef = new BigDecimal("0.014");
        final BigDecimal highCoef = new BigDecimal("0.024");
 
-        List<InsuredObject> insuredObjects = Arrays.asList(policy.getInsuredObject());
-        List<SubObject> subObjects = insuredObjects.stream()
-                .flatMap(insuredObject -> Arrays.stream(insuredObject.getSubobject()))
-                .toList();
-
-        var sum =  subObjects.stream()
-                .filter(subObject -> subObject.getRiskType().equals(RiskType.FIRE))
-                .map(SubObject::getSubObjectInsurancePrise)
-                .reduce(BigDecimal.ZERO, BigDecimal::add);
-
+        var insuredSumCalculation = new InsuredSumCalculation();
+        var sum = insuredSumCalculation.toSumSubObjectsInsuredPrice(policy, RiskType.FIRE);
         var sumToImplementCoef = new InsuredSumMultiplyCoef();
+
         return sumToImplementCoef.toApplieCoef(sum, threshold, defaultCoef, highCoef);
 
     }
