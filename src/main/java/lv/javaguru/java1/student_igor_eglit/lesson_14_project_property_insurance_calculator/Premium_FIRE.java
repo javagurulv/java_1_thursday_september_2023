@@ -4,10 +4,14 @@ import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
-class Premium_FIRE{
+class Premium_FIRE {
 
 
     public BigDecimal calculate(Policy policy) {
+
+        BigDecimal threshold = new BigDecimal("100");
+        BigDecimal defaultCoef = new BigDecimal("0.014");
+        BigDecimal highCoef = new BigDecimal("0.024");
 
         List<InsuredObject> insuredObjects = Arrays.asList(policy.getInsuredObject());
         List<SubObject> subObjects = insuredObjects.stream()
@@ -18,6 +22,9 @@ class Premium_FIRE{
                 .filter(subObject -> subObject.getRiskType().equals(RiskType.FIRE))
                 .map(SubObject::getSubObjectInsurancePrise)
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
-        return sum.compareTo(BigDecimal.valueOf(100))<=0 ? sum.multiply(BigDecimal.valueOf(0.014)) : sum.multiply(BigDecimal.valueOf(0.024));
+
+        var sumToImplementCoef = new InsuredSumMultiplyCoef();
+        return sumToImplementCoef.toApplieCoef(sum, threshold, defaultCoef, highCoef);
+
     }
 }

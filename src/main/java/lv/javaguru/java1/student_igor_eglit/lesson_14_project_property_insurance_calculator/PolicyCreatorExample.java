@@ -24,9 +24,9 @@ class PolicyCreatorExample {
     public static void main(String[] args) {
         PolicyCreatorExample policyCreatorExample = new PolicyCreatorExample();
         PremiumCalculatorImp premiumCalculatorImp = new PremiumCalculatorImp();
-        var test1 = premiumCalculatorImp.calculate(policyCreatorExample.policy);
-        var test2 = premiumCalculatorImp.calculate(policyCreatorExample.policy2);
-        var test3 = premiumCalculatorImp.calculate(policyCreatorExample.policy3);
+        var test1 = premiumCalculatorImp.calculator(policyCreatorExample.policy);
+        var test2 = premiumCalculatorImp.calculator(policyCreatorExample.policy2);
+        var test3 = premiumCalculatorImp.calculator(policyCreatorExample.policy3);
         System.out.println(policyCreatorExample.policy);
         System.out.println(test1);
         System.out.println(policyCreatorExample.policy2);

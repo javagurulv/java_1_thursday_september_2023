@@ -7,14 +7,16 @@ import java.math.BigDecimal;
 
 class PremiumCalculatorImpTest {
 
-PremiumCalculatorImp premiumCalculatorImp =new PremiumCalculatorImp();
-   @Test
-    void shouldCalculatePremiumByAcceptanceCriteriaDefaultCoef(){
-      Assertions.assertEquals(new BigDecimal("2.28"), premiumCalculatorImp.calculate(PolicyTestData.example1()));
+PremiumCalculatorImp premiumCalculator =new PremiumCalculatorImp();
+
+
+    @Test
+    void shouldCalculatePremiumByAcceptanceCriteriaDefaultCoef() {
+        Assertions.assertEquals(new BigDecimal("2.28"), premiumCalculator.calculator(PolicyTestData.example1()));
     }
 
     @Test
-    void shouldCalculatePremiumByAcceptanceCriteriaHighCoef(){
-      Assertions.assertEquals(new BigDecimal("17.13"), premiumCalculatorImp.calculate(PolicyTestData.example2()));
+    void shouldCalculatePremiumByAcceptanceCriteriaHighCoef() {
+        Assertions.assertEquals(new BigDecimal("17.13"), premiumCalculator.calculator(PolicyTestData.example2()));
     }
 }

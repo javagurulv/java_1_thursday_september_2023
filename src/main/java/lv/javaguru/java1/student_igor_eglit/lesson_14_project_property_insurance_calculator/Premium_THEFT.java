@@ -8,6 +8,9 @@ class Premium_THEFT {
 
 
     public BigDecimal calculate(Policy policy) {
+        BigDecimal threshold = new BigDecimal("15");
+        BigDecimal defaultCoef = new BigDecimal("0.11");
+        BigDecimal highCoef = new BigDecimal("0.05");
 
         List<InsuredObject> insuredObjects = Arrays.asList(policy.getInsuredObject());//Забираю из policy объекты SubObjects
         List<SubObject> subObjects = insuredObjects.stream()
@@ -22,7 +25,8 @@ class Premium_THEFT {
                 //сумма всех стоимостей - reduce сохраняет результат и затем опять же применяет к этому результату и следующему элементу
                 .reduce(BigDecimal.ZERO, BigDecimal::add); //получаем бигдецимал как сумму всех подобъектов
 
-        return sum.compareTo(BigDecimal.valueOf(15))<=0 ? sum.multiply(BigDecimal.valueOf(0.11)) : sum.multiply(BigDecimal.valueOf(0.05));
+        var sumToImplementCoef = new InsuredSumMultiplyCoef();
+        return sumToImplementCoef.toApplieCoef(sum, threshold, defaultCoef, highCoef);
         //Возврат BigDecimal сумма*коефициент.
     }
 }
