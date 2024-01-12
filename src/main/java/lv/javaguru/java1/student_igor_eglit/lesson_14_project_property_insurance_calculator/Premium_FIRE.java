@@ -9,9 +9,9 @@ class Premium_FIRE {
 
     public BigDecimal calculate(Policy policy) {
 
-        BigDecimal threshold = new BigDecimal("100");
-        BigDecimal defaultCoef = new BigDecimal("0.014");
-        BigDecimal highCoef = new BigDecimal("0.024");
+       final BigDecimal threshold = new BigDecimal("100");
+       final BigDecimal defaultCoef = new BigDecimal("0.014");
+       final BigDecimal highCoef = new BigDecimal("0.024");
 
         List<InsuredObject> insuredObjects = Arrays.asList(policy.getInsuredObject());
         List<SubObject> subObjects = insuredObjects.stream()
