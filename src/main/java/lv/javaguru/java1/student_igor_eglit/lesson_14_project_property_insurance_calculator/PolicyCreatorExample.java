@@ -1,6 +1,7 @@
 package lv.javaguru.java1.student_igor_eglit.lesson_14_project_property_insurance_calculator;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 class PolicyCreatorExample {
 
@@ -24,7 +25,8 @@ class PolicyCreatorExample {
     public static void main(String[] args) {
         PolicyCreatorExample policyCreatorExample = new PolicyCreatorExample();
         PremiumCalculatorImp premiumCalculatorImp = new PremiumCalculatorImp();
-        var test1 = premiumCalculatorImp.calculator(policyCreatorExample.policy);
+
+        /*var test1 = premiumCalculatorImp.calculator(policyCreatorExample.policy);
         var test2 = premiumCalculatorImp.calculator(policyCreatorExample.policy2);
         var test3 = premiumCalculatorImp.calculator(policyCreatorExample.policy3);
         System.out.println(policyCreatorExample.policy);
@@ -32,7 +34,10 @@ class PolicyCreatorExample {
         System.out.println(policyCreatorExample.policy2);
         System.out.println(test2);
         System.out.println(policyCreatorExample.policy3);
-        System.out.println(test3);
+        System.out.println(test3);*/
+        var premiumBrokenForEachSub = new PremiumBrokenToEachSubObject();
+        List<SubObject> list = premiumBrokenForEachSub.toShowPremiumForEachSub(policyCreatorExample.policy2);
+        list.forEach(System.out::println);
 
     }
 }
