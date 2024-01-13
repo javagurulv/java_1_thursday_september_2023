@@ -1,0 +1,32 @@
+Premium calculation formula:
+PREMIUM = PREMIUM_FIRE + PREMIUM_THEFT
+
+PREMIUM_FIRE = SUM_INSURED_FIRE * COEFFICIENT_FIRE
+SUM_INSURED_FIRE - total sum insured of all policy's sub-objects with type "Fire"
+COEFFICIENT_FIRE - by default 0.014 but if SUM_INSURED_FIRE is over 100 then 0.024
+
+PREMIUM_THEFT = SUM_INSURED_THEFT * COEFFICIENT_THEFT
+SUM_INSURED_THEFT - total sum insured of all policy's sub-objects with type "Theft"
+COEFFICIENT_THEFT - by default 0.11 but if SUM_INSURED_THEFT equal or greater than
+15 then 0.05
+
+1 подзадача: создать функцию, которая будет принимать
+структуру данных о полисе и
+возвращать страховую премию по формуле.
+
+2 подзадача: в функции, рассчитать сумму
+страхования по пожару и по краже, суммируя
+страховые суммы суб-объектов соответствующих типов.
+
+3 подзадача: в функции, рассчитать коэффициенты
+по пожару и по краже, используя условия из задания.
+
+4 подзадача: в функции, рассчитать премию
+по пожару и по краже, умножая суммы
+страхования на коэффициенты.
+
+5 подзадача: в функции, рассчитать общую
+премию, складывая премии по пожару и по краже.
+
+6 подзадача: вернуть общую премию из функции.
+

@@ -66,5 +66,72 @@ class AppleWarehouseTest {
         assertEquals(heavyApples.size(),2);
     }
 
+    @Test
+    public void shouldFindApplesHeavierThen() {
+        AppleWarehouse appleWarehouse = new AppleWarehouse();
+        List<Apple> applesHeavierThen150 = appleWarehouse.findApplesHeavierThen(150);
+        assertEquals(applesHeavierThen150.size(), 4);
+    }
+    @Test
+    public void shouldFindAppleUsingSearchCriteria() {
+        AppleWarehouse appleWarehouse = new AppleWarehouse();
+        List<Apple> greenApples = appleWarehouse.findApples(new GreenAppleSearchCriteria());
+        assertEquals(greenApples.size(), 3);
 
+        List<Apple> redApples = appleWarehouse.findApples(new RedAppleSearchCriteria());
+        assertEquals(redApples.size(), 3);
+
+        List<Apple> heavyApples = appleWarehouse.findApples(new HeavyAppleSearchCriteria());
+        assertEquals(heavyApples.size(), 4);
+
+        List<Apple> lightApples = appleWarehouse.findApples(new LightAppleSearchCriteria());
+        assertEquals(lightApples.size(), 4);
+    }
+    @Test
+    public void shouldFindApplesUsingAnonymousClass(){
+        AppleWarehouse appleWarehouse = new AppleWarehouse();
+        List<Apple> greenApples = appleWarehouse.findApples(new AppleSearchCriteria() {
+            @Override
+            public boolean test(Apple apple) {
+                return "green".equals(apple.getColor());
+            }
+        }); assertEquals(greenApples.size(), 3);
+
+        List<Apple> redApples = appleWarehouse.findApples(new AppleSearchCriteria() {
+            @Override
+            public boolean test(Apple apple) {
+                return "red".equals(apple.getColor());
+            }
+        }); assertEquals(redApples.size(), 3);
+
+        List<Apple> heavyApples = appleWarehouse.findApples(new AppleSearchCriteria() {
+            @Override
+            public boolean test(Apple apple) {
+                return apple.getWeight() > 150 ;
+            }
+        }); assertEquals(heavyApples.size(), 4);
+
+        List<Apple> lightApples = appleWarehouse.findApples(new AppleSearchCriteria() {
+            @Override
+            public boolean test(Apple apple) {
+                return apple.getWeight() < 150 ;
+            }
+        }); assertEquals(lightApples.size(), 4);
+    }
+
+    @Test
+    public void shouldFindApplesUsingLambdaExpression() {
+        AppleWarehouse warehouse = new AppleWarehouse();
+        List<Apple> greenApples = warehouse.findApples(apple -> "green".equals(apple.getColor()));
+        assertEquals(greenApples.size(), 3);
+
+        List<Apple> redApples = warehouse.findApples(apple -> "red".equals(apple.getColor()));
+        assertEquals(redApples.size(), 3);
+
+        List<Apple> applesHeavierThen150 = warehouse.findApples(apple -> apple.getWeight() > 150);
+        assertEquals(applesHeavierThen150.size(), 4);
+
+        List<Apple> applesLightThen150 = warehouse.findApples(apple -> apple.getWeight() < 150);
+        assertEquals(applesLightThen150.size(), 4);
+    }
 }

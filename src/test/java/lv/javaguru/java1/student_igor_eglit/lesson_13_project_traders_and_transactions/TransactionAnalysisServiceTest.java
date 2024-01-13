@@ -3,9 +3,7 @@ package lv.javaguru.java1.student_igor_eglit.lesson_13_project_traders_and_trans
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-import java.util.stream.Stream;
 
-import static lv.javaguru.java1.student_igor_eglit.lesson_13_project_traders_and_transactions.TransactionAnalysisService.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TransactionAnalysisServiceTest {
@@ -56,9 +54,54 @@ class TransactionAnalysisServiceTest {
         assertEquals(2011, collected.get(0));
         assertEquals(2014, collected.get(3));
     }
+
     @Test
-    void collectingUniqueTraders() {
-        List<Trader> collectedTraders = TransactionAnalysisService.collectingUniqueTraders(transactions);
+    void collectingUniqueNames() {
+        List<String> collectedTraders = TransactionAnalysisService.collectingUniqueNames(transactions);
         assertEquals(3, collectedTraders.size());
     }
+
+    @Test
+    void collectingUniqueCities() {
+        List<String> collectedTraders = TransactionAnalysisService.collectingUniqueCity(transactions);
+        assertEquals(3, collectedTraders.size());
+    }
+
+    @Test
+    void collectingUniqueNameFromCity() {
+        List<String> collectedTraders = TransactionAnalysisService.collectingTradersNameFromCity(transactions, "Riga");
+        assertEquals(1, collectedTraders.size());
+    }
+
+    @Test
+    void sumTransactionVolume() {
+        assertEquals(23700, TransactionAnalysisService.sumAllTransactionVolume(transactions));
+    }
+
+    @Test
+    void calculateNumberOfTransactionYear2011() {
+        assertEquals(4, TransactionAnalysisService.calculateNumbersOfTransactionsOfTheYear(transactions, 2011));
+    }
+
+   @Test
+    void shouldFindTraderWithMostEntries() {
+        assertEquals("Jonh Smith", TransactionAnalysisService.findTraderWithMostEntries(transactions));
+    }
+    @Test
+    void shouldFindTraderWithMostTotalValue() {
+        assertEquals("Jonh Smith",TransactionAnalysisService.findTraderWIthMostTotalTransactionValue(transactions));
+    }
+    @Test
+    void shouldFindMinTransactionValue(){
+assertEquals(50, TransactionAnalysisService.findMinTransactionValue(transactions));
+    }
+    @Test
+    void shouldFindMaxTransactionValue(){
+assertEquals(3000, TransactionAnalysisService.findMaxTransactionValue(transactions));
+    }
+    @Test
+    void shouldFindAverageValue(){
+assertEquals(1316, TransactionAnalysisService.findAverageValue(transactions));
+    }
+
 }
