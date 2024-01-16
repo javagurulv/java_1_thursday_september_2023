@@ -16,17 +16,14 @@ class PremiumBrokenToEachSubObject {
         var insuredSumMultiplyCoef = new InsuredSumMultiplyCoef();
         List<SubObject> list = new ArrayList<>();
         int i = 0;
-        for (InsuredObject insuredObject : policy.getInsuredObject()) {
-            for (SubObject subObject : insuredObject.getSubobject()) {
-                var sumWithCoef = insuredSumMultiplyCoef.toApplieCoef(subObject.getSubObjectInsurancePrise()
-                        , threshold
-                        , defaultCoef
-                        , highCoef);
-                SubObject subObjectNew = new SubObject(subObject.getSubObjectName(), sumWithCoef, subObject.getRiskType());
-                list.add(i, subObjectNew);
-
-            }
-        }
+        Arrays.stream(policy.getInsuredObject()).flatMap(insuredObject -> Arrays.stream(insuredObject.getSubobject())).forEach(subObject -> {
+            var sumWithCoef = insuredSumMultiplyCoef.toApplieCoef(subObject.getSubObjectInsurancePrise()
+                    , threshold
+                    , defaultCoef
+                    , highCoef);
+            SubObject subObjectNew = new SubObject(subObject.getSubObjectName(), sumWithCoef, subObject.getRiskType());
+            list.add(i, subObjectNew);
+        });
         return list;
 
 
