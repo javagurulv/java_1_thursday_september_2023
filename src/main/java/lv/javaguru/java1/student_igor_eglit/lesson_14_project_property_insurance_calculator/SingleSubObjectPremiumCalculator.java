@@ -2,7 +2,6 @@ package lv.javaguru.java1.student_igor_eglit.lesson_14_project_property_insuranc
 
 import java.math.BigDecimal;
 
-@FunctionalInterface
-interface CalcDueToRiskType {
-    BigDecimal calculate(Policy policy);
+interface SingleSubObjectPremiumCalculator {
+    BigDecimal singleSubObjCalculator(SingleSubObject singleSubObject);
 }
