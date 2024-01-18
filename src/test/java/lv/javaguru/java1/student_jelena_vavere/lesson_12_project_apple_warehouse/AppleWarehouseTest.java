@@ -14,9 +14,9 @@ class AppleWarehouseTest {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         List<Apple> greenApples = warehouse.findGreenApples();
         assertEquals(greenApples.size(), 3);
-        assertEquals(greenApples.get(0).getWeight(), "green");
-        assertEquals(greenApples.get(1).getWeight(), "green");
-        assertEquals(greenApples.get(2).getWeight(), "green");
+        assertEquals(greenApples.get(0).getColor(), "green");
+        assertEquals(greenApples.get(1).getColor(), "green");
+        assertEquals(greenApples.get(2).getColor(), "green");
 
     }
 
@@ -25,9 +25,9 @@ class AppleWarehouseTest {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         List<Apple> redApples = appleWarehouse.findRedApples();
         assertEquals(redApples.size(), 3);
-        assertEquals(redApples.get(0).getWeight(), "red");
-        assertEquals(redApples.get(1).getWeight(), "red");
-        assertEquals(redApples.get(2).getWeight(), "red");
+        assertEquals(redApples.get(0).getColor(), "red");
+        assertEquals(redApples.get(1).getColor(), "red");
+        assertEquals(redApples.get(2).getColor(), "red");
 
     }
 
@@ -36,9 +36,8 @@ class AppleWarehouseTest {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         List<Apple> yellowApples = appleWarehouse.findYellowApples();
         assertEquals(yellowApples.size(), 2);
-        assertEquals(yellowApples.get(0).getWeight(), "yellow");
-        assertEquals(yellowApples.get(1).getWeight(), "yellow");
-
+        assertEquals(yellowApples.get(0).getColor(), "yellow");
+        assertEquals(yellowApples.get(1).getColor(), "yellow");
     }
 
     @Test
