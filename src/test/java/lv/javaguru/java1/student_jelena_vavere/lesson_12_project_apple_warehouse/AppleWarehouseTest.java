@@ -46,8 +46,7 @@ class AppleWarehouseTest {
         List<Apple> redApples = appleWarehouse.findApplesByColor("red");
         assertEquals(redApples.size(), 3);
         List<Apple> greenApples = appleWarehouse.findApplesByColor("green");
-        assertEquals(redApples.size(), 3);
-
+        assertEquals(greenApples.size(), 3);
     }
 
     // @Test
