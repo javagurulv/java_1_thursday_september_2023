@@ -8,5 +8,11 @@ public class RobotApplication {
         System.out.println("Name = " + robot1.getName());
         System.out.println("Name = " + robot2.getName());
 
+         robot1.setName("Bauer");
+         robot2.setName("Bosh");
+
+        System.out.println("Robot1 = " + robot1.getName());
+        System.out.println("Robot2 = " + robot2.getName());
+
     }
 }
