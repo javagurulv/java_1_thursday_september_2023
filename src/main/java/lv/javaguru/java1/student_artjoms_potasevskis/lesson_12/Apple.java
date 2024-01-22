@@ -1,6 +1,6 @@
 package lv.javaguru.java1.student_artjoms_potasevskis.lesson_12;
 
-class Apple {
+public class Apple {
 
     private String color;
     private int weight;

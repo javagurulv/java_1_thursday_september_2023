@@ -1,43 +1,64 @@
 package lv.javaguru.java1.student_artjoms_potasevskis.lesson_12;
 
 
+
 import java.util.ArrayList;
 import java.util.List;
 
-class AppleWarehouse {
+public class AppleWarehouse {
 
     private List<Apple> apples = getAllApples();
 
     public List<Apple> findGreenApples() {
-
-        List<Apple> greenApples = new ArrayList<>();
-        for (Apple apple : apples) {
-            if (apple.getColor().equals("green")) {
-                greenApples.add(apple);
+        List<Apple> result = new ArrayList<>();
+        for(Apple apple : apples) {
+            if("green".equals(apple.getColor())) {
+                result.add(apple);
             }
         }
-        return greenApples;
+        return result;
     }
+
     public List<Apple> findRedApples() {
-
-        List<Apple> redApples = new ArrayList<>();
-        for (Apple apple : apples) {
-            if (apple.getColor().equals("red")) {
-                redApples.add(apple);
+        List<Apple> result = new ArrayList<>();
+        for(Apple apple : apples) {
+            if("red".equals(apple.getColor())) {
+                result.add(apple);
             }
         }
-        return redApples;
+        return result;
     }
-    public List<Apple> findYellowApples() {
 
-        List<Apple> yellowApples = new ArrayList<>();
-        for (Apple apple : apples) {
-            if (apple.getColor().equals("yellow")) {
-                yellowApples.add(apple);
+    public List<Apple> findApplesByColor(String color) {
+        List<Apple> result = new ArrayList<>();
+        for(Apple apple : apples) {
+            if(apple.getColor().equals(color)) {
+                result.add(apple);
             }
         }
-        return yellowApples;
+        return result;
     }
+
+    public List<Apple> findApplesHeavierThen(int weight) {
+        List<Apple> result = new ArrayList<>();
+        for(Apple apple : apples) {
+            if(apple.getWeight() > weight) {
+                result.add(apple);
+            }
+        }
+        return result;
+    }
+
+    public List<Apple> findApples(AppleSearchCriteria searchCriteria) {
+        List<Apple> result = new ArrayList<>();
+        for(Apple apple : apples) {
+            if(searchCriteria.test(apple)) {
+                result.add(apple);
+            }
+        }
+        return result;
+    }
+
 
     private List<Apple> getAllApples() {
         List<Apple> apples = new ArrayList<>();
