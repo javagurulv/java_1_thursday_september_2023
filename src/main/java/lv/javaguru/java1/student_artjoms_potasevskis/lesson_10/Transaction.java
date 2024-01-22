@@ -1,6 +1,7 @@
 package lv.javaguru.java1.student_artjoms_potasevskis.lesson_10;
 
 
+import lv.javaguru.java1.student_artjoms_potasevskis.lesson_10.Trader;
 
 public class Transaction {
 
