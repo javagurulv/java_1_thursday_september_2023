@@ -32,10 +32,10 @@
 #### Домашние задания
 
 **Лекция 1 - Introduction**
-* (https://github.com/javagurulv/java_1_thursday_september_2023/tree/main/src/main/java/lv/javaguru/java1/teacher/lesson_1_introduction/homework/)
+* (https://github.com/javagurulv/java_1_thursday_september_2023/tree/main/src/main/java/lv/javaguru/java1/teacher/lesson_1_introduction/lv.javaguru.java1.student_artjoms_potasevskis.lesson_3.homework/)
 
 **Лекция 2 - Variables**
-* (https://github.com/javagurulv/java_1_thursday_september_2023/tree/main/src/main/java/lv/javaguru/java1/teacher/lesson_2_variables/homework/)
+* (https://github.com/javagurulv/java_1_thursday_september_2023/tree/main/src/main/java/lv/javaguru/java1/teacher/lesson_2_variables/lv.javaguru.java1.student_artjoms_potasevskis.lesson_3.homework/)
 
 
 #### Сертификат

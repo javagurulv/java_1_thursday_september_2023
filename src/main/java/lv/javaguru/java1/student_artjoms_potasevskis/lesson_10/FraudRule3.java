@@ -1,16 +1,13 @@
 package lv.javaguru.java1.student_artjoms_potasevskis.lesson_10;
 
-
-class FraudRule1 implements FraudRule{
-
+class FraudRule3 implements FraudRule {
     @Override
     public boolean isFraud(Transaction transaction) {
         Trader trader = transaction.getTrader();
-        return trader.getFullName().equals("Pokemon");
+        return trader.getCity().equals("Sydney");
     }
     @Override
     public String getRuleName() {
-        return "FraudRule1";
+        return "FraudRule3";
     }
-
 }

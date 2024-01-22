@@ -2,7 +2,7 @@ package lv.javaguru.java1.student_artjoms_potasevskis.lesson_10;
 
 
 
-class Transaction {
+public class Transaction {
 
     private Trader trader;
     private int amount;

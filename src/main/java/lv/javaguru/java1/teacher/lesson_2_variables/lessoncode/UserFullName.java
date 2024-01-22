@@ -23,23 +23,9 @@ public class UserFullName {
         System.out.println("Enter first name: ");
         String firstName = scanner.nextLine();
 
-        System.out.println("Enter last name: ");
+        System.out.println("Enter first name: ");
         String lastName = scanner.nextLine();
 
-        String fullName = firstName + " " + lastName;
-        System.out.println("FULL NAME: = " + fullName);
-
-        System.out.println("Enter age: ");
-        int age = scanner.nextInt();
-
-        System.out.println("Money: ");
-        double money = scanner.nextDouble();
-
-        System.out.println(firstName +
-                " " + lastName +
-                " = " + age +
-                " = " + money
-        );
 
     }
 
