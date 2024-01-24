@@ -8,5 +8,8 @@ package lv.javaguru.java1.student_jelena_vavere.lesson_3_oop_first_look.homework
 
      public String getName(){ return this.name;}
 
+     public void setName(String name) {
+         this.name = name;
      }
+ }
 
