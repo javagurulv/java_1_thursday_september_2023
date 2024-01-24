@@ -2,7 +2,7 @@ package lv.javaguru.java1.student_artjoms_potasevskis.lesson_10;
 
 
 
-class FraudRule5 implements FraudRule{
+class FraudRule5 implements FraudRule {
 
     @Override
     public boolean isFraud(Transaction transaction) {

@@ -1,5 +1,6 @@
 package lv.javaguru.java1.student_artjoms_potasevskis.lesson_10;
 
+
 class FraudRule4 implements FraudRule {
 
     @Override
