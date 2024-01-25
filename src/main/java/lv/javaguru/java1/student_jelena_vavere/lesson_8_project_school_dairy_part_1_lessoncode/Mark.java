@@ -1,4 +1,4 @@
-package lv.javaguru.java1.student_jelena_vavere.lesson_8_project_school_dairy_part_1.lessoncode;
+package lv.javaguru.java1.student_jelena_vavere.lesson_8_project_school_dairy_part_1_lessoncode;
 
 public class Mark {
     private String subject;
