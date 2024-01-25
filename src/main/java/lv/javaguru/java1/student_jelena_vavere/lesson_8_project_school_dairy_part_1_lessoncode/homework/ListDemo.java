@@ -1,9 +1,9 @@
-package lv.javaguru.java1.student_jelena_vavere.lesson_8_project_school_dairy_part_1.lessoncode.homework;
+package lv.javaguru.java1.student_jelena_vavere.lesson_8_project_school_dairy_part_1_lessoncode.homework;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListDemo {
+class ListDemo {
     public static void main(String[] args) {
         List<Integer> integerList = new ArrayList<>(); //создание списка для целых чисел
         integerList.add(6); //добавление элементов в список
