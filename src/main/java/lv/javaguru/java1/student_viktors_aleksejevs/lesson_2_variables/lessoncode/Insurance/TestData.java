@@ -11,7 +11,7 @@ public class TestData {
 
         var house = new InsuredObjects("house", List.of(tv, notebook));
 
-       // var policy = new Policy("12345", PolicyStatus.APPROVED, List.of(house));
+     var policy = new Policy("12345", PolicyStatus.APPROVED, List.of(house));
 
     }
 
@@ -20,12 +20,12 @@ public class TestData {
         var tv = new SubObjects("tv", new BigDecimal("100.00"), RiskType.FIRE);
         var notebook = new SubObjects("notebook", new BigDecimal("8.00"), RiskType.THEFT);
         var house = new InsuredObjects("house", List.of(tv, notebook));
-        //return new  Policy("12345", PolicyStatus.APPROVED, List.of(house));
+       return new  Policy("12345", PolicyStatus.APPROVED, List.of(house));
 
-        return null;
+
     }
 
-    private static void example2() {
+    private static Policy example2() {
         var tv1 = new SubObjects("tv", new BigDecimal("100.00"), RiskType.FIRE);
         var notebook = new SubObjects("notebook", new BigDecimal("8.00"), RiskType.THEFT);
 
@@ -36,7 +36,7 @@ public class TestData {
         var house = new InsuredObjects("house", List.of(tv1,tv2, notebook));
         var flat = new InsuredObjects("house", List.of(mobile, bicycle));
 
-        //return new Policy("12345", PolicyStatus.APPROVED, List.of(house,flat));
+        return new Policy("12345", PolicyStatus.APPROVED, List.of(house,flat));
     }
 
 

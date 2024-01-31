@@ -1,16 +1,13 @@
 package lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.lessoncode.Insurance;
 
-import lv.javaguru.java1.teacher.lesson_14_project_property_insurance_calculator.step_9.insurance.InsuredObject;
-import lv.javaguru.java1.teacher.lesson_14_project_property_insurance_calculator.step_9.insurance.PolicyStatus;
-
 import java.util.List;
 
 public class Policy {
     private String policyNumber;
-    private PolicyStatus status;
-    private List<InsuredObject> insuredObjectList;
+    private lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.lessoncode.Insurance.PolicyStatus status;
+    private List<InsuredObjects> insuredObjectList;
 
-    public Policy(String policyNumber, PolicyStatus status, List<InsuredObject> insuredObjectList) {
+    public Policy(String policyNumber, lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.lessoncode.Insurance.PolicyStatus status, List<InsuredObjects> insuredObjectList) {
         this.policyNumber = policyNumber;
         this.status = status;
         this.insuredObjectList = insuredObjectList;
@@ -24,7 +21,7 @@ public class Policy {
         return status;
     }
 
-    public List<InsuredObject> getInsuredObjectList() {
+    public List<InsuredObjects> getInsuredObjectList() {
         return insuredObjectList;
     }
 }
