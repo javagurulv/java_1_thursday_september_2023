@@ -1,6 +1,6 @@
 package lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.lessoncode.Lesson10;
 
-class Trader {
+public class Trader {
 
     private String fullName;
     private String city;

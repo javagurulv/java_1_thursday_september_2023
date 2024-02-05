@@ -1,7 +1,8 @@
 package lv.javaguru.java1.student_viktors_aleksejevs.lesson_2_variables.lessoncode.Lesson10;
 
-class Transaction {
+public class Transaction {
 
+    public boolean getYear;
     private Trader trader;
     private int amount;
 
